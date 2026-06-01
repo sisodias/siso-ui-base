@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SISO UI Base — Walkthrough</title>
+<style>
+  :root{--pink:#ff0069;--gold:#f5c842;--ink:#0f172a;--soft:#756670;--line:rgba(15,23,42,.10);--warm:#fffef9;--ship:#16a34a}
+  *{box-sizing:border-box}
+  body{font:15px/1.65 -apple-system,system-ui,'Segoe UI',sans-serif;color:var(--ink);background:var(--warm);margin:0 auto;max-width:920px;padding:36px 24px 80px}
+  h1{font-size:30px;margin:0 0 4px;letter-spacing:-.01em}
+  h1 .b{color:var(--pink)}
+  .lede{font-size:17px;color:#334;margin:0 0 8px}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 11px;font-size:12px;color:var(--soft);margin:0 5px 5px 0}
+  h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+  h3{font-size:15px;margin:18px 0 4px}
+  img{max-width:100%;border:1px solid var(--line);border-radius:12px;display:block;margin:14px 0}
+  code{background:#f1efe9;padding:1px 6px;border-radius:5px;font:13px ui-monospace,Menlo,monospace}
+  pre{background:#0f172a;color:#e2e8f0;padding:15px 17px;border-radius:12px;overflow:auto;font:12.5px/1.55 ui-monospace,Menlo,monospace}
+  .step{display:flex;gap:16px;margin:16px 0;align-items:flex-start}
+  .step .n{flex:0 0 36px;height:36px;border-radius:50%;background:var(--pink);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .step .n.g{background:var(--ship)}.step .n.k{background:var(--ink)}.step .n.d{background:var(--gold);color:#0f172a}
+  .step h3{margin:0 0 3px}
+  .note{background:#fff;border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:14px}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13.5px}
+  th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+  .proof{background:#0f172a;color:#fff;border-radius:12px;padding:16px 18px;margin:16px 0}
+  .proof b{color:var(--gold)} .proof code{background:rgba(255,255,255,.12);color:#fff}
+  kbd{background:#fff;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 6px;font:12px ui-monospace,Menlo}
+</style>
+</head>
+<body>
+<h1><span class="b">◆</span> SISO UI Base — Walkthrough</h1>
+<p class="lede">How to build UI with an agent fleet and you in the loop. Forge → show → react → iterate → graduate.</p>
+<div>
+  <span class="pill">agent-neutral (Claude or Codex)</span>
+  <span class="pill">zero build step</span>
+  <span class="pill">filesystem-as-state</span>
+  <span class="pill">tenant zero = Oracle Streaming</span>
+</div>
+
+<h2>The idea in one breath</h2>
+<p>Agents are great at emitting a self-contained HTML file — no build, no broken imports, it just renders. So you let them sling HTML fast, show it to you <b>cleanly and ranked</b>, you react in plain words, they iterate, and only a <b>blessed</b> design gets ported to React. You spend your attention on <b>taste</b>; the agent does the <b>production</b>. This is the way to build UI with AI.</p>
+
+<img src="uibox-grid.png" alt="The UI Box — live grid of ranked goal-bar variations"/>
+<p class="meta" style="color:var(--soft);font-size:13px;margin-top:-6px">↑ The UI Box, live: 4 forged goal-bar variations, scored 0–10 against the Oracle DNA, ranked, with the winner blessed (green). Feedback bar at the bottom.</p>
+
+<h2>Run it (60 seconds)</h2>
+<pre>cd ~/SISO_Workspace/siso-ui-base
+UIBASE_TENANT=tenants/oracle node app/serve.mjs
+# → open http://127.0.0.1:8810/</pre>
+<div class="note">Zero dependencies — it's one Node built-in server + one HTML file (React via CDN). No <code>npm i</code>, no Vite, no build. Editing <code>app/index.html</code> updates the live page on refresh.</div>
+
+<h2>The loop, step by step</h2>
+
+<div class="step"><div class="n">1</div><div>
+  <h3>Forge — the agent makes variations</h3>
+  <p>You say "build me 4 variations of the goal bar." The agent writes 4 standalone <code>.html</code> files into the tenant folder, following the design DNA:</p>
+  <pre>tenants/oracle/variations/goal-bar/
+  meta.json              { "name":"Goal Bar", "prompt":"...", "slotId":"goalbar" }
+  v1-thermometer.html    ← each one self-contained, renders alone
+  v2-warm-gradient.html
+  v3-minimal-bare.html
+  v4-pill-stack.html</pre>
+  <p>Command: <code>/forge-variations goal-bar 4</code>. The grid auto-refreshes as files land (SSE folder-watch).</p>
+</div></div>
+
+<div class="step"><div class="n k">2</div><div>
+  <h3>Score — the machine ranks before you look</h3>
+  <p>Each variation is screenshot and scored 0–10 on <b>warmth · playful · clarity · craft · coherence</b> against the tenant DNA, so slop never reaches you — you see ranked options with a TOP badge on the winner.</p>
+  <pre>node pipeline/shoot.mjs        # screenshot each variation
+node pipeline/judge.mjs ...    # Codex-vision scores vs rubric.mjs (built from dna.md)</pre>
+  <p>Command: <code>/score-panel goal-bar</code>.</p>
+</div></div>
+
+<div class="step"><div class="n">3</div><div>
+  <h3>React — you give feedback in plain words</h3>
+  <p>Type in the feedback bar: <i>"2nd one but warmer, kill the milestone dots."</i> Or click into one for the full-screen deep-look (live interactive render + score breakdown + agent notes), or compare two side-by-side with score deltas. Your words land in <code>tenants/oracle/feedback-latest.json</code> — the agent reads it.</p>
+</div></div>
+
+<div class="step"><div class="n d">4</div><div>
+  <h3>Iterate — the agent makes v2</h3>
+  <p>The agent reads your feedback, produces <code>v5-warm-gradient-v2.html</code> in the same set (with <code>parentId</code> set), keeping what scored well and fixing what you called out. The UI Box shows v1 → v2 with the score delta (↑ coherence +2). Command: <code>/iterate</code>.</p>
+</div></div>
+
+<div class="step"><div class="n g">5</div><div>
+  <h3>Graduate — the winner becomes real React</h3>
+  <p>You bless one. That writes <code>tenants/oracle/winner.json</code>. The blessed HTML is now the <b>source of truth</b>: the agent ports it to a React component pixel-for-pixel, then screenshot-diffs the React render against the HTML to verify they match. Command: <code>/graduate</code>.</p>
+</div></div>
+
+<h2>Proven, not promised</h2>
+<div class="proof">
+  This loop ran end-to-end on real Oracle UI before this doc was written:
+  <ul>
+    <li>4 goal-bar variations <b>forged</b> as self-contained HTML by an agent</li>
+    <li><b>scored + ranked</b> by the visual judge: v2-warm-gradient <code>6.89</code> → v1 <code>6.09</code> → v4 <code>5.64</code> → v3 <code>4.52</code> — and the critiques were correct (v4 flagged for "AI-default pill stacking", v3 as "fintech card, not performer cockpit")</li>
+    <li>the calibration anchor (Oracle chat rail) scores <b>9.24</b> — proving the judge agrees with the human eye</li>
+    <li><b>feedback</b> and <b>bless</b> writes verified → <code>feedback-latest.json</code> + <code>winner.json</code> produced for the agent</li>
+    <li>the UI Box <b>renders</b> with zero page errors (4 live iframes, ranked, blessed badge)</li>
+  </ul>
+</div>
+
+<h2>The sub-commands</h2>
+<table>
+  <tr><th>Command</th><th>Does</th></tr>
+  <tr><td><code>/forge-variations &lt;c&gt; [N]</code></td><td>Forge N self-contained HTML variations following tenant DNA</td></tr>
+  <tr><td><code>/show-me</code></td><td>Boot the UI Box, hand you the URL</td></tr>
+  <tr><td><code>/score-panel [set]</code></td><td>Screenshot + judge a set; write scores so the grid ranks</td></tr>
+  <tr><td><code>/iterate</code></td><td>Read your feedback → next variation with lineage</td></tr>
+  <tr><td><code>/graduate</code></td><td>Blessed HTML → React pixel-for-pixel, screenshot-diff verified</td></tr>
+  <tr><td><code>/calibrate</code></td><td>Re-score the anchor; must stay ~9 — catches judge drift</td></tr>
+  <tr><td><code>/add-library &lt;src&gt;</code></td><td>Register a component library the forge can pull from</td></tr>
+</table>
+
+<h2>Adopt it in another project</h2>
+<p>Point <code>UIBASE_TENANT</code> at that project's tenant dir (e.g. <code>&lt;project&gt;/.uihub</code>), drop in a <code>dna.md</code> (its design rules), and run the server. The engine is generic; the taste DNA is per-project. Oracle is the worked example.</p>
+
+<div class="note">Full spec, the home decision, the harvest manifest (what we reused vs built), and the viewer architecture all live in <code>../CANONICAL.html</code>. The 33-repo prior-art catalog is <code>../registry/repos.json</code> (run <code>./clone.sh</code> to vendor any for study).</div>
+
+</body>
+</html>

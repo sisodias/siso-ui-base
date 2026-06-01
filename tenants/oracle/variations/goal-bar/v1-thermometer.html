@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Goal Bar — v1 Thermometer</title>
+<style>
+  :root {
+    --panel: #f8f8f5;
+    --surface: #fffef9;
+    --ink: #0f172a;
+    --ink-05: rgba(15, 23, 42, .05);
+    --ink-08: rgba(15, 23, 42, .08);
+    --ink-32: rgba(15, 23, 42, .32);
+    --ink-62: rgba(15, 23, 42, .62);
+    --pink: #ff0069;
+    --gold: #f5c842;
+    --pink-soft: #ffe1ec;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #efece6;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .stage {
+    width: 420px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border-radius: 22px;
+    padding: 22px 22px 24px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 12px 32px -18px rgba(15,23,42,.18),
+      0 2px 6px -3px rgba(15,23,42,.08);
+  }
+
+  .row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .label {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-62);
+  }
+
+  .pct {
+    font-size: 22px;
+    font-weight: 850;
+    letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  .sub {
+    margin-top: 2px;
+    font-size: 9.5px;
+    font-weight: 650;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-32);
+  }
+
+  /* Thermometer */
+  .thermo {
+    margin-top: 16px;
+    position: relative;
+    height: 46px;
+    display: flex;
+    align-items: center;
+  }
+
+  .track {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    background: var(--surface);
+    border: 1px solid var(--ink-08);
+    border-radius: 999px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.9) inset,
+      0 -1px 0 rgba(15,23,42,.03) inset;
+    overflow: visible;
+  }
+
+  .fill {
+    position: absolute;
+    inset: 2px auto 2px 2px;
+    width: calc(61.3% - 4px);
+    border-radius: 999px;
+    background:
+      linear-gradient(180deg, #ff4d8d 0%, #ff0069 100%);
+    box-shadow:
+      0 0 0 1px rgba(255,0,105,.18),
+      0 6px 14px -6px rgba(255,0,105,.45);
+  }
+
+  .fill::after {
+    content: "";
+    position: absolute;
+    left: 8px; right: 8px; top: 2px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));
+  }
+
+  .bubble {
+    position: absolute;
+    left: 61.3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1.5px solid var(--ink);
+    box-shadow:
+      0 4px 10px -4px rgba(15,23,42,.25),
+      0 0 0 4px var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bubble::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
+  /* Tick row */
+  .ticks {
+    margin-top: 10px;
+    position: relative;
+    height: 18px;
+  }
+  .tick {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 9.5px;
+    font-weight: 650;
+    letter-spacing: .08em;
+    color: var(--ink-32);
+    font-variant-numeric: tabular-nums;
+  }
+  .tick.start { left: 0%; transform: translateX(0); }
+  .tick.mid   { left: 50%; }
+  .tick.end   { left: 100%; transform: translateX(-100%); }
+
+  /* Footer amount row */
+  .amounts {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .now {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  .slash {
+    color: var(--ink-32);
+    font-size: 18px;
+    font-weight: 750;
+    margin: 0 1px;
+  }
+  .target {
+    font-size: 13px;
+    font-weight: 750;
+    color: var(--ink-62);
+    font-variant-numeric: tabular-nums;
+  }
+  .unit {
+    font-size: 9.5px;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-32);
+    margin-left: 4px;
+  }
+
+  .coin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 5px 11px 5px 8px;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .02em;
+    font-variant-numeric: tabular-nums;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.55) inset,
+      0 -1px 0 rgba(15,23,42,.06) inset,
+      0 4px 10px -6px rgba(245,200,66,.5);
+  }
+  .coin svg { display: block; }
+
+  .meta {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-62);
+    font-size: 11px;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+  }
+  .meta .dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 0 0 3px var(--pink-soft);
+  }
+  .meta .sep { color: var(--ink-32); }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel" role="group" aria-label="Tonight's tip goal progress">
+      <div class="row">
+        <div>
+          <div class="label">Tonight's goal</div>
+          <div class="sub">In progress · 2h 14m left</div>
+        </div>
+        <div class="pct">61%</div>
+      </div>
+
+      <div class="thermo" aria-hidden="true">
+        <div class="track">
+          <div class="fill"></div>
+          <div class="bubble"></div>
+        </div>
+      </div>
+
+      <div class="ticks" aria-hidden="true">
+        <div class="tick start">0</div>
+        <div class="tick mid">1.5k</div>
+        <div class="tick end">3k</div>
+      </div>
+
+      <div class="amounts">
+        <div>
+          <div class="numbers">
+            <span class="now">1,840</span>
+            <span class="slash">/</span>
+            <span class="target">3,000</span>
+            <span class="unit">tokens</span>
+          </div>
+        </div>
+        <div class="coin" title="Tokens earned">
+          <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" fill="#f5c842" stroke="#0f172a" stroke-width="1.1"/>
+            <text x="6" y="8.4" text-anchor="middle" font-size="6.5" font-weight="900" fill="#0f172a" font-family="-apple-system,Inter,Helvetica,Arial,sans-serif">T</text>
+          </svg>
+          1,840
+        </div>
+      </div>
+
+      <div class="meta">
+        <span class="dot"></span>
+        <span>1,160 to go</span>
+        <span class="sep">·</span>
+        <span>~12 tips / hr</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Goal Bar",
+  "prompt": "tonight's tip-goal progress — 4 directions",
+  "slotId": "goalbar"
+}

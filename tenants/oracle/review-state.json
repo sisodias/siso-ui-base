@@ -1,0 +1,80 @@
+{
+  "reviews": {
+    "goal-bar/v1-thermometer": {
+      "scores": {
+        "overall": 6.09,
+        "scores": {
+          "warmth": 7,
+          "playful": 6.5,
+          "clarity": 7.5,
+          "craft": 5,
+          "coherence": 5
+        },
+        "worst": "coherence",
+        "critique": "The glossy pink thermometer reads more like a polished habit/fintech widget than the chat rail's restrained performer cockpit language. Its oversized radius, heavy progress fill, and roomy hero-card composition break the one-ink, bare-text, hairline-restraint DNA."
+      },
+      "status": "reviewed",
+      "at": "2026-06-01T18:15:14.065Z"
+    },
+    "goal-bar/v2-warm-gradient": {
+      "scores": {
+        "overall": 6.89,
+        "scores": {
+          "warmth": 8,
+          "playful": 7.5,
+          "clarity": 8,
+          "craft": 5.5,
+          "coherence": 6
+        },
+        "worst": "craft",
+        "critique": "The warmth and candy energy are close, but the big saturated gradient bar, oversized radius, and glossy chip make it read like a polished progress widget rather than the chat rail's restrained performer cockpit. It needs the same one-ink opacity ladder and hairline restraint instead of broad effects carrying the design."
+      },
+      "status": "reviewed",
+      "at": "2026-06-01T18:15:15.401Z"
+    },
+    "goal-bar/v3-minimal-bare": {
+      "scores": {
+        "overall": 4.52,
+        "scores": {
+          "warmth": 5.5,
+          "playful": 3,
+          "clarity": 7,
+          "craft": 4,
+          "coherence": 3.5
+        },
+        "worst": "playful",
+        "critique": "This reads as a polished fintech progress card, not a performer cockpit panel with chat-rail energy. The oversized round card, centered KPI, and generic progress meter miss the bare-text restraint, off-round tuning, and playful motion cues of the anchor."
+      },
+      "status": "reviewed",
+      "at": "2026-06-01T18:15:15.472Z"
+    },
+    "goal-bar/v4-pill-stack": {
+      "scores": {
+        "overall": 5.64,
+        "scores": {
+          "warmth": 7,
+          "playful": 7,
+          "clarity": 7,
+          "craft": 4,
+          "coherence": 4
+        },
+        "worst": "craft",
+        "critique": "The panel has warmth and candy energy, but it leans hard into AI-default pill stacking: title pill, token pill, percent pill, next pill, and rounded progress capsules all compete with the chat rail's bare-text restraint. The bright pink filled segment bar makes the accent feel like the product skin instead of one restrained performer-facing action."
+      },
+      "status": "reviewed",
+      "at": "2026-06-01T18:15:15.516Z"
+    }
+  },
+  "blessed": {
+    "goal-bar": "v2-warm-gradient"
+  },
+  "feedback": [
+    {
+      "setId": "goal-bar",
+      "id": "v2-warm-gradient",
+      "text": "v2 but kill the milestone dots, too busy",
+      "signals": {},
+      "at": "now"
+    }
+  ]
+}

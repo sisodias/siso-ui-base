@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Goal Bar — v2 Warm Gradient</title>
+<style>
+  :root {
+    --panel: #f8f8f5;
+    --surface: #fffef9;
+    --ink: #0f172a;
+    --ink-05: rgba(15, 23, 42, .05);
+    --ink-08: rgba(15, 23, 42, .08);
+    --ink-12: rgba(15, 23, 42, .12);
+    --ink-32: rgba(15, 23, 42, .32);
+    --ink-62: rgba(15, 23, 42, .62);
+    --pink: #ff0069;
+    --gold: #f5c842;
+    --rose: #ff7a59;
+    --amber: #ffb547;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #efece6;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .stage { width: 420px; }
+
+  .panel {
+    background: var(--panel);
+    border-radius: 24px;
+    padding: 20px 22px 22px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 18px 40px -22px rgba(15,23,42,.22),
+      0 3px 8px -4px rgba(15,23,42,.08);
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .label {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-62);
+  }
+  .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9.5px;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-62);
+  }
+  .live .pulse {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 0 0 0 rgba(255,0,105,.5);
+    animation: pulse 1.6s ease-out infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,0,105,.45); }
+    70%  { box-shadow: 0 0 0 8px rgba(255,0,105,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,0,105,0); }
+  }
+
+  /* Hero number */
+  .hero {
+    margin-top: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .hero .now {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hero .of {
+    color: var(--ink-32);
+    font-size: 13px;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero .tgt {
+    color: var(--ink-62);
+    font-size: 16px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero .unit {
+    color: var(--ink-32);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-left: 4px;
+  }
+
+  /* Warm gradient bar */
+  .bar {
+    margin-top: 16px;
+    position: relative;
+    height: 10px;
+    background: var(--ink-05);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 61.3%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ffd28a 0%, #ffb547 28%, #ff7a59 62%, #ff0069 100%);
+    box-shadow:
+      0 0 18px -2px rgba(255,0,105,.35),
+      0 0 0 1px rgba(255,0,105,.10);
+  }
+  .bar-fill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 55%);
+  }
+
+  /* End cap glow */
+  .glow {
+    position: absolute;
+    top: 50%;
+    left: 61.3%;
+    transform: translate(-50%, -50%);
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,0,105,.55) 0%, rgba(255,0,105,0) 70%);
+    pointer-events: none;
+  }
+
+  /* Footer row */
+  .foot {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .pct {
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pct::before {
+    content: "";
+    display: block;
+    width: 22px; height: 1.5px;
+    background: var(--pink);
+    border-radius: 2px;
+  }
+  .left {
+    font-size: 11px;
+    font-weight: 650;
+    color: var(--ink-62);
+    font-variant-numeric: tabular-nums;
+  }
+  .left b {
+    color: var(--ink);
+    font-weight: 850;
+  }
+
+  /* Coin chip on the right */
+  .coin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 4px 10px 4px 7px;
+    font-size: 11px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.5) inset,
+      0 -1px 0 rgba(15,23,42,.06) inset,
+      0 5px 12px -7px rgba(245,200,66,.55);
+  }
+  .coin svg { display: block; }
+
+  /* Segment dots row — milestone markers */
+  .milestones {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .milestones::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 5px;
+    height: 1px;
+    background: var(--ink-08);
+  }
+  .ms {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .ms .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--panel);
+    border: 1.5px solid var(--ink-32);
+  }
+  .ms.done .dot {
+    background: var(--pink);
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px var(--panel), 0 0 0 4.5px var(--pink-soft, rgba(255,0,105,.15));
+  }
+  .ms.next .dot {
+    background: var(--panel);
+    border: 1.5px solid var(--pink);
+  }
+  .ms .lbl {
+    font-size: 9.5px;
+    font-weight: 650;
+    letter-spacing: .08em;
+    color: var(--ink-32);
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+  }
+  .ms.done .lbl, .ms.next .lbl { color: var(--ink-62); }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel" role="group" aria-label="Tonight's tip goal progress">
+      <div class="head">
+        <div class="label">Tonight's goal</div>
+        <div class="live"><span class="pulse"></span> live</div>
+      </div>
+
+      <div class="hero">
+        <span class="now">1,840</span>
+        <span class="of">of</span>
+        <span class="tgt">3,000</span>
+        <span class="unit">tokens</span>
+      </div>
+
+      <div class="bar" aria-hidden="true">
+        <div class="bar-fill"></div>
+        <div class="glow"></div>
+      </div>
+
+      <div class="foot">
+        <div class="pct">61% reached</div>
+        <div class="left">1,160 <b>tokens</b> to go</div>
+        <div class="coin" title="Tokens earned">
+          <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" fill="#f5c842" stroke="#0f172a" stroke-width="1.1"/>
+            <text x="6" y="8.4" text-anchor="middle" font-size="6.5" font-weight="900" fill="#0f172a" font-family="-apple-system,Inter,Helvetica,Arial,sans-serif">T</text>
+          </svg>
+          1,840
+        </div>
+      </div>
+
+      <div class="milestones" aria-hidden="true">
+        <div class="ms done"><div class="dot"></div><div class="lbl">1k</div></div>
+        <div class="ms done"><div class="dot"></div><div class="lbl">1.5k</div></div>
+        <div class="ms next"><div class="dot"></div><div class="lbl">2k</div></div>
+        <div class="ms"><div class="dot"></div><div class="lbl">2.5k</div></div>
+        <div class="ms"><div class="dot"></div><div class="lbl">3k</div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

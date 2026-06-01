@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Goal Bar — v3 Minimal Bare</title>
+<style>
+  :root {
+    --panel: #f8f8f5;
+    --surface: #fffef9;
+    --ink: #0f172a;
+    --ink-05: rgba(15, 23, 42, .05);
+    --ink-08: rgba(15, 23, 42, .08);
+    --ink-12: rgba(15, 23, 42, .12);
+    --ink-32: rgba(15, 23, 42, .32);
+    --ink-62: rgba(15, 23, 42, .62);
+    --pink: #ff0069;
+    --gold: #f5c842;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #efece6;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .stage { width: 420px; }
+
+  .panel {
+    background: var(--panel);
+    border-radius: 18px;
+    padding: 24px 24px 26px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 10px 28px -20px rgba(15,23,42,.18),
+      0 2px 6px -3px rgba(15,23,42,.06);
+  }
+
+  /* Top line: tiny label + coin chip */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .label {
+    font-size: 9.5px;
+    font-weight: 750;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-32);
+  }
+
+  .coin {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 3px 9px 3px 6px;
+    font-size: 10px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.5) inset,
+      0 -1px 0 rgba(15,23,42,.06) inset;
+  }
+  .coin svg { display: block; }
+
+  /* Headline numbers: bare, large */
+  .numbers {
+    margin-top: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .now {
+    font-size: 32px;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .slash {
+    color: var(--ink-32);
+    font-size: 18px;
+    font-weight: 750;
+  }
+  .target {
+    font-size: 18px;
+    font-weight: 750;
+    color: var(--ink-32);
+    font-variant-numeric: tabular-nums;
+  }
+  .unit {
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-32);
+    margin-left: 4px;
+  }
+
+  /* Hairline progress: just a 1px line with a pink segment */
+  .hairline {
+    margin-top: 14px;
+    position: relative;
+    height: 1px;
+    background: var(--ink-08);
+  }
+  .hairline-fill {
+    position: absolute;
+    left: 0; top: -0.5px;
+    height: 2px;
+    width: 61.3%;
+    background: var(--pink);
+    border-radius: 2px;
+  }
+  .hairline-cap {
+    position: absolute;
+    left: 61.3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  /* Sub-line: percent + remaining, bare text */
+  .sub {
+    margin-top: 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .pct {
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .04em;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .pct .pct-unit {
+    color: var(--ink-32);
+    font-weight: 750;
+    margin-left: 3px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: 9.5px;
+  }
+  .remaining {
+    font-size: 11px;
+    font-weight: 650;
+    color: var(--ink-62);
+    font-variant-numeric: tabular-nums;
+  }
+  .remaining b {
+    color: var(--ink);
+    font-weight: 850;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel" role="group" aria-label="Tonight's tip goal progress">
+      <div class="top">
+        <div class="label">Tonight's goal</div>
+        <div class="coin" title="Tokens earned">
+          <svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" fill="#f5c842" stroke="#0f172a" stroke-width="1.1"/>
+            <text x="6" y="8.4" text-anchor="middle" font-size="6.5" font-weight="900" fill="#0f172a" font-family="-apple-system,Inter,Helvetica,Arial,sans-serif">T</text>
+          </svg>
+          1,840
+        </div>
+      </div>
+
+      <div class="numbers">
+        <span class="now">1,840</span>
+        <span class="slash">/</span>
+        <span class="target">3,000</span>
+        <span class="unit">tokens</span>
+      </div>
+
+      <div class="hairline" aria-hidden="true">
+        <div class="hairline-fill"></div>
+        <div class="hairline-cap"></div>
+      </div>
+
+      <div class="sub">
+        <div class="pct">61<span class="pct-unit">%</span></div>
+        <div class="remaining">1,160 <b>tokens</b> to go</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Goal Bar — v4 Pill Stack</title>
+<style>
+  :root {
+    --panel: #f8f8f5;
+    --surface: #fffef9;
+    --ink: #0f172a;
+    --ink-05: rgba(15, 23, 42, .05);
+    --ink-08: rgba(15, 23, 42, .08);
+    --ink-12: rgba(15, 23, 42, .12);
+    --ink-32: rgba(15, 23, 42, .32);
+    --ink-62: rgba(15, 23, 42, .62);
+    --pink: #ff0069;
+    --pink-soft: #ffd6e5;
+    --gold: #f5c842;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #efece6;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .stage { width: 420px; }
+
+  .panel {
+    background: var(--panel);
+    border-radius: 22px;
+    padding: 22px 22px 22px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 14px 34px -20px rgba(15,23,42,.2),
+      0 2px 6px -3px rgba(15,23,42,.08);
+  }
+
+  /* Top row: label pill + count pill */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .label-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ink-05);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .label-pill .spark {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 0 0 2.5px var(--pink-soft);
+  }
+
+  .coin-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 4px 10px 4px 7px;
+    font-size: 11px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.5) inset,
+      0 -1px 0 rgba(15,23,42,.06) inset;
+  }
+  .coin-pill svg { display: block; }
+
+  /* Headline: large bare numbers + tiny unit pill */
+  .hero {
+    margin-top: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .now {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .of {
+    color: var(--ink-32);
+    font-size: 13px;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+  }
+  .tgt {
+    color: var(--ink-62);
+    font-size: 16px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .unit-pill {
+    align-self: center;
+    margin-left: 4px;
+    background: var(--ink-05);
+    color: var(--ink-62);
+    border-radius: 999px;
+    padding: 3px 9px;
+    font-size: 9.5px;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  /* Pill stack: 20 segments */
+  .stack {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .seg {
+    flex: 1 1 0;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--ink-08);
+    transition: background .15s ease;
+  }
+  /* Lit segments = warm pink fill, 12/20 = 60% but we offset so 13 lights read as 61.3% */
+  .seg.lit {
+    background: var(--pink);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.35) inset,
+      0 0 8px -2px rgba(255,0,105,.4);
+  }
+  .seg.head {
+    background: var(--pink);
+    box-shadow:
+      0 0 0 1.5px var(--panel),
+      0 0 0 3px var(--pink-soft);
+  }
+
+  /* Stacks separated into groups of 5 with breathing room */
+  .gap {
+    width: 6px;
+    flex: 0 0 6px;
+  }
+
+  /* Group label row under the stacks */
+  .group-labels {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5px;
+    font-weight: 650;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-32);
+    font-variant-numeric: tabular-nums;
+  }
+  .group-labels span:first-child { transform: translateX(-2px); }
+  .group-labels span:last-child  { transform: translateX(2px); }
+
+  /* Footer row */
+  .foot {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .pct-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ink);
+    color: var(--panel);
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .04em;
+    font-variant-numeric: tabular-nums;
+  }
+  .pct-pill .pct-mark {
+    display: inline-block;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
+  .remaining {
+    font-size: 11px;
+    font-weight: 650;
+    color: var(--ink-62);
+    font-variant-numeric: tabular-nums;
+  }
+  .remaining b { color: var(--ink); font-weight: 850; }
+
+  /* A second tiny "lit" indicator that doubles as the next-segment target */
+  .hint {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    color: var(--ink-62);
+    border-radius: 999px;
+    padding: 5px 11px 5px 7px;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: .04em;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid var(--ink-08);
+  }
+  .hint .swatch {
+    width: 10px; height: 10px;
+    border-radius: 3px;
+    background: var(--ink-08);
+  }
+  .hint b { color: var(--ink); font-weight: 850; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel" role="group" aria-label="Tonight's tip goal progress">
+      <div class="top">
+        <div class="label-pill"><span class="spark"></span>Tonight's goal</div>
+        <div class="coin-pill" title="Tokens earned">
+          <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true">
+            <circle cx="6" cy="6" r="5" fill="#f5c842" stroke="#0f172a" stroke-width="1.1"/>
+            <text x="6" y="8.4" text-anchor="middle" font-size="6.5" font-weight="900" fill="#0f172a" font-family="-apple-system,Inter,Helvetica,Arial,sans-serif">T</text>
+          </svg>
+          1,840
+        </div>
+      </div>
+
+      <div class="hero">
+        <span class="now">1,840</span>
+        <span class="of">of</span>
+        <span class="tgt">3,000</span>
+        <span class="unit-pill">tokens</span>
+      </div>
+
+      <!-- 20-segment pill stack, 13 lit + 7 dark, grouped by 5 -->
+      <div class="stack" aria-hidden="true">
+        <div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div>
+        <div class="gap"></div>
+        <div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div><div class="seg lit"></div>
+        <div class="gap"></div>
+        <div class="seg head"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+        <div class="gap"></div>
+        <div class="seg"></div><div class="seg"></div>
+      </div>
+
+      <div class="group-labels" aria-hidden="true">
+        <span>0</span>
+        <span>1k</span>
+        <span>2k</span>
+        <span>3k</span>
+      </div>
+
+      <div class="foot">
+        <div class="pct-pill"><span class="pct-mark"></span>61%</div>
+        <div class="remaining">1,160 <b>tokens</b> to go</div>
+      </div>
+
+      <div class="hint">
+        <span class="swatch"></span>
+        Next: <b>2,000</b> at 1,840
+      </div>
+    </div>
+  </div>
+</body>
+</html>

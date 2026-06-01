@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SISO UI Base — UI Box</title>
+<style>
+  :root{--pink:#ff0069;--gold:#f5c842;--ink:#0f172a;--soft:#756670;--line:rgba(15,23,42,.10);--warm:#fffef9;--ship:#16a34a;--card:#fff}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,system-ui,'Segoe UI',sans-serif;color:var(--ink);background:var(--warm)}
+  a{color:inherit}
+  .top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px 20px;background:rgba(255,254,249,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .brand{font-weight:900;letter-spacing:-.01em;font-size:16px}
+  .brand .b{color:var(--pink)}
+  .crumb{color:var(--soft);font-size:13px}
+  .crumb a{cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--line)}
+  .sp{flex:1}
+  .live{font-size:11px;font-weight:750;color:var(--soft);display:flex;align-items:center;gap:5px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ship);box-shadow:0 0 0 0 rgba(22,163,74,.5);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.4)}70%{box-shadow:0 0 0 6px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+  main{padding:18px 20px 80px}
+  .sec{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--soft);margin:6px 0 12px}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(15,23,42,.08)}
+  .card.top{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+  .card.blessed{border-color:var(--ship);box-shadow:0 0 0 1px var(--ship) inset}
+  .thumb{position:relative;height:230px;background:#f1efea;overflow:hidden;border-bottom:1px solid var(--line)}
+  .thumb iframe{position:absolute;top:0;left:0;width:200%;height:200%;transform:scale(.5);transform-origin:top left;border:0;pointer-events:none;background:#fff}
+  .cap{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;gap:8px}
+  .cap .nm{font-weight:750;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .badge{font-size:10px;font-weight:900;border-radius:999px;padding:1px 8px}
+  .badge.top{background:#fff3cd;color:#7a5b00}.badge.bless{background:#dcfce7;color:#166534}
+  .score{display:flex;align-items:center;gap:6px;padding:0 12px 11px}
+  .bar{flex:1;height:7px;border-radius:999px;background:rgba(15,23,42,.06);overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--pink),var(--gold))}
+  .num{font-variant-numeric:tabular-nums;font-weight:900;font-size:13px;min-width:30px;text-align:right}
+  .pending{color:var(--soft);font-size:11px;font-weight:700;padding:0 12px 11px}
+  /* set header */
+  .sethead{display:flex;align-items:baseline;gap:10px;margin:26px 0 10px}
+  .sethead h2{font-size:17px;margin:0}.sethead .pmt{color:var(--soft);font-size:13px}
+  /* deep look */
+  .deep{display:grid;grid-template-columns:1fr 300px;gap:16px}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;height:72vh}
+  .stage iframe{width:100%;height:100%;border:0;background:#fff}
+  .side{display:flex;flex-direction:column;gap:14px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .panel h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+  .axis{display:flex;align-items:center;gap:8px;margin:5px 0}
+  .axis .l{width:80px;font-size:11px;color:var(--soft)}
+  .notes{font-size:13px;color:#334;line-height:1.5}
+  .btn{display:block;width:100%;text-align:center;border:0;border-radius:10px;padding:11px;font-weight:850;font-size:13px;cursor:pointer;margin-top:8px}
+  .btn.bless{background:var(--ship);color:#fff}.btn.iter{background:var(--pink);color:#fff}.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  /* compare */
+  .cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .cmp .stage{height:64vh}
+  .cmp .lbl{font-size:12px;font-weight:750;color:var(--soft);margin:0 0 6px}
+  .deltarow{display:flex;gap:6px;align-items:center;font-size:12px;margin:3px 0}
+  .delta.up{color:var(--ship);font-weight:900}.delta.dn{color:#e5484d;font-weight:900}.delta.eq{color:var(--soft)}
+  .feedbar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:12px 20px;background:rgba(255,254,249,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .feedbar input{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font:14px inherit;background:#fff}
+  .feedbar button{border:0;border-radius:10px;padding:10px 18px;font-weight:850;background:var(--ink);color:#fff;cursor:pointer}
+  .empty{color:var(--soft);text-align:center;padding:60px 20px}
+  .empty code{background:#f4f1ee;padding:2px 7px;border-radius:6px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/htm@3/dist/htm.umd.js"></script>
+<script>
+const { useState, useEffect, useRef, createElement } = React
+const html = htm.bind(createElement)
+const api = (p, opts) => fetch(p, opts).then(r => r.json())
+const post = (p, body) => fetch(p, { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ ...body, at: new Date().toISOString() }) }).then(r=>r.json())
+
+// safe iframe: srcdoc fetched from server, sandboxed, nav guard injected. interactive flag toggles pointer-events.
+function Frame({ file, interactive }) {
+  const [src, setSrc] = useState('')
+  useEffect(() => { let on=true; fetch('/api/html/'+encodeURIComponent(file)).then(r=>r.text()).then(t=>{ if(on) setSrc(injectGuard(t)) }); return ()=>{on=false} }, [file])
+  return html`<iframe sandbox="allow-scripts allow-same-origin" srcdoc=${src} style=${interactive?{pointerEvents:'auto'}:{pointerEvents:'none'}}></iframe>`
+}
+function injectGuard(t){
+  const guard = "<script>document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(a){e.preventDefault()}},true);<\\/script>"
+  return /<\/body>/i.test(t) ? t.replace(/<\/body>/i, guard+'</body>') : t+guard
+}
+
+function ScoreBar({ s }) {
+  if (!s || s.overall==null) return html`<div class="pending">⏳ not scored yet</div>`
+  return html`<div class="score"><div class="bar"><i style=${{width:(s.overall*10)+'%'}}></i></div><div class="num">${s.overall}</div></div>`
+}
+
+function Card({ v, top, onOpen }) {
+  const cls = 'card' + (v.status==='blessed'?' blessed':(top?' top':''))
+  return html`<div class=${cls} onClick=${()=>onOpen(v)}>
+    <div class="thumb"><${Frame} file=${v.file} interactive=${false}/></div>
+    <div class="cap"><span class="nm">${v.name}</span>
+      ${v.status==='blessed' ? html`<span class="badge bless">BLESSED</span>` : top ? html`<span class="badge top">TOP</span>` : null}
+    </div>
+    <${ScoreBar} s=${v.scores}/>
+  </div>`
+}
+
+function Grid({ manifest, onOpen }) {
+  if (!manifest || !manifest.sets.length) return html`<div class="empty">No variations yet.<br/>Agents drop self-contained <code>.html</code> into <code>${manifest?manifest.varsDir:'the tenant variations dir'}</code> (one subfolder per set).<br/>This view auto-refreshes when they appear.</div>`
+  return manifest.sets.map(set => html`<div key=${set.id}>
+    <div class="sethead"><h2>${set.name}</h2>${set.prompt?html`<span class="pmt">"${set.prompt}"</span>`:null}</div>
+    <div class="grid">${set.variations.map((v,i)=>html`<${Card} key=${v.id} v=${v} top=${i===0 && v.scores} onOpen=${onOpen}/>`)}</div>
+  </div>`)
+}
+
+const AXES = ['warmth','playful','clarity','craft','coherence']
+function Deep({ v, set, onBack, onCompare }) {
+  const s = v.scores
+  return html`<div>
+    <div class="crumb" style=${{margin:'4px 0 14px'}}><a onClick=${onBack}>← ${set.name}</a> / <b>${v.name}</b></div>
+    <div class="deep">
+      <div class="stage"><${Frame} file=${v.file} interactive=${true}/></div>
+      <div class="side">
+        <div class="panel"><h3>Score · ${s?s.overall:'—'}</h3>
+          ${s ? AXES.map(a=>html`<div class="axis" key=${a}><span class="l">${a}</span><div class="bar"><i style=${{width:((s.scores?.[a]||0)*10)+'%'}}></i></div><span class="num">${s.scores?.[a]??'·'}</span></div>`) : html`<div class="pending">not scored — run the judge</div>`}
+          ${s&&s.worst?html`<div class="notes" style=${{marginTop:8}}><b>Weakest:</b> ${s.worst}</div>`:null}
+          ${s&&s.critique?html`<div class="notes" style=${{marginTop:6}}>${s.critique}</div>`:null}
+        </div>
+        ${v.agentNotes?html`<div class="panel"><h3>Agent notes</h3><div class="notes">${v.agentNotes}</div></div>`:null}
+        <div class="panel">
+          <button class="btn bless" onClick=${()=>post('/api/bless',{setId:set.id,id:v.id}).then(()=>location.reload())}>✦ Bless this one</button>
+          <button class="btn iter" onClick=${onBack}>↻ Back to set & iterate</button>
+          ${set.variations.length>1?html`<button class="btn ghost" onClick=${()=>onCompare(v)}>⇄ Compare with another</button>`:null}
+        </div>
+      </div>
+    </div>
+  </div>`
+}
+
+function Compare({ a, b, set, onBack }) {
+  const d = (ax) => { const av=a.scores?.scores?.[ax], bv=b.scores?.scores?.[ax]; if(av==null||bv==null) return null; const diff=bv-av; return {av,bv,diff} }
+  return html`<div>
+    <div class="crumb" style=${{margin:'4px 0 14px'}}><a onClick=${onBack}>← ${set.name}</a> / compare</div>
+    <div class="cmp">
+      <div><div class="lbl">WAS · ${a.name} · ${a.scores?a.scores.overall:'—'}</div><div class="stage"><${Frame} file=${a.file} interactive=${true}/></div></div>
+      <div><div class="lbl">VS · ${b.name} · ${b.scores?b.scores.overall:'—'}</div><div class="stage"><${Frame} file=${b.file} interactive=${true}/></div></div>
+    </div>
+    <div class="panel" style=${{marginTop:14}}><h3>Score delta</h3>
+      ${AXES.map(ax=>{const x=d(ax); if(!x) return null; const cls=x.diff>0?'up':x.diff<0?'dn':'eq'; const arrow=x.diff>0?'▲':x.diff<0?'▼':'=';
+        return html`<div class="deltarow" key=${ax}><span class="l" style=${{width:80,color:'var(--soft)'}}>${ax}</span> ${x.av} → ${x.bv} <span class=${'delta '+cls}>${arrow} ${x.diff>0?'+':''}${x.diff||''}</span></div>`})}
+    </div>
+  </div>`
+}
+
+function App() {
+  const [m, setM] = useState(null)
+  const [view, setView] = useState({ name:'grid' })
+  const [agents, setAgents] = useState(0)
+  const load = () => api('/api/manifest').then(setM)
+  useEffect(() => { load(); const es=new EventSource('/api/events'); es.onmessage=()=>load(); return ()=>es.close() }, [])
+
+  const open = (v) => { const set=m.sets.find(s=>s.variations.some(x=>x.id===v.id&&x.setId===v.setId)); setView({name:'deep', v, set}) }
+  const compare = (a) => { const set=view.set; const b=set.variations.find(x=>x.id!==a.id); setView({name:'compare', a, b, set}) }
+  const back = () => setView({name:'grid'})
+
+  const sendFeedback = (e) => { e.preventDefault(); const f=e.target.fb; if(!f.value.trim())return; const ctx=view.name==='deep'?{setId:view.set.id,id:view.v.id}:view.name==='compare'?{setId:view.set.id,id:view.b.id}:{setId:m?.sets[0]?.id};
+    post('/api/feedback',{...ctx,text:f.value}).then(()=>{f.value=''}) }
+
+  const crumb = view.name==='grid' ? html`<span class="crumb">all sets</span>` : html`<span class="crumb"><a onClick=${back}>UI Box</a></span>`
+  return html`<div>
+    <div class="top">
+      <span class="brand"><span class="b">◆</span> SISO UI Base</span> ${crumb}
+      <span class="sp"></span>
+      <span class="live"><span class="dot"></span> live · ${m?m.sets.reduce((n,s)=>n+s.variations.length,0):0} variations · tenant ${m?m.tenant:'…'}</span>
+    </div>
+    <main>
+      ${view.name==='grid' && html`<${Grid} manifest=${m} onOpen=${open}/>`}
+      ${view.name==='deep' && html`<${Deep} v=${view.v} set=${view.set} onBack=${back} onCompare=${compare}/>`}
+      ${view.name==='compare' && html`<${Compare} a=${view.a} b=${view.b} set=${view.set} onBack=${back}/>`}
+    </main>
+    <form class="feedbar" onSubmit=${sendFeedback}>
+      <input name="fb" placeholder="React in plain words — &quot;2nd one but warmer, kill the pill&quot; — agents read this back"/>
+      <button>Send to agent ↵</button>
+    </form>
+  </div>`
+}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`)
+</script>
+</body>
+</html>
