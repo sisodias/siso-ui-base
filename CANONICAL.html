@@ -153,6 +153,19 @@ LAYER 3 — PER-PROJECT TENANT DATA (lives in each consuming project)
   </tr>
 </table>
 
+<h2>VIEWER ARCHITECTURE — the app you run (researched 2026-06-01)</h2>
+<p class="sub">The viewer/gallery layer is a SOLVED problem — confirmed across 8 repos (F-viewer family in <code>registry/repos.json</code>). The recipe is consistent; we adopt it wholesale and harvest ~60% from our own <code>design-system/viewer</code>. No guessing.</p>
+<table>
+  <tr><th>Layer</th><th>Proven pattern (source)</th><th>Decision</th></tr>
+  <tr><td><b>Data flow</b></td><td>reg-cli-report-ui — agent drops <code>&lt;id&gt;.html</code> + <code>&lt;id&gt;.meta.json</code> → <code>chokidar</code> watch → SSE → React refetches a JSON manifest → grid re-renders. <code>POST /api/bless/{id}</code> writes <code>winner.json</code>.</td><td><b>Filesystem-as-state.</b> No DB for variations, no polling, no framework lock-in. Matches our no-build principle.</td></tr>
+  <tr><td><b>Variation grid</b></td><td>promptfoo matrix + image-grid skeleton + our <code>Card.tsx:85-123</code> — CSS grid of <code>&lt;iframe srcdoc&gt;</code> at <code>transform:scale(.25)</code>, <code>pointer-events:none</code> until expanded.</td><td><b>Harvest <code>Card.tsx</code></b> from design-system (scaled-iframe render already coded, lazy hover-to-interactive).</td></tr>
+  <tr><td><b>Safe render of agent HTML</b></td><td>open-design (57k★) + godaddy guard — inject via <code>srcdoc</code> (never blob), <code>sandbox="allow-scripts allow-same-origin"</code> minus <code>allow-top-navigation</code>, on-load guard kills <code>a[href]</code> clicks + referrer.</td><td><b>Adopt the guard recipe.</b> This was the missing piece — render arbitrary agent HTML with no eval/CDP leak.</td></tr>
+  <tr><td><b>Iteration / compare</b></td><td>react-compare-slider — two <code>&lt;iframe srcdoc&gt;</code> as <code>itemOne</code>/<code>itemTwo</code>, draggable divider. BackstopJS 3-panel (ref/test/diff) for chrome.</td><td><b>Drop in react-compare-slider</b> for v1-vs-v2; optional pixel-diff overlay later.</td></tr>
+  <tr><td><b>Agent↔human handoff</b></td><td><b>Our <code>/pick</code> postMessage contract</b> (design-system <code>lib/pick.ts</code> + <code>PickClient.tsx</code>): <code>{type:"siso:pick", session, mode, components[], pickedAt}</code> / <code>siso:cancel</code>; keyboard nav; webhook fallback.</td><td><b>Harvest the contract.</b> The "agent: have a look at these 4" handoff is already designed + coded.</td></tr>
+  <tr><td><b>Taste capture</b></td><td>Our <code>ratings.db</code> — <code>components(elo,votes)</code> / <code>comparisons(a,b,winner)</code> / <code>swipes</code> / <code>component_tags</code>.</td><td><b>Reuse the ELO schema</b> as the moat's data substrate (the labeled corpus).</td></tr>
+</table>
+<p class="meta"><b>Net:</b> the <code>app/</code> build is ~60% harvest (Card render + /pick contract + ratings schema from <code>design-system/viewer</code>), ~40% glue (the chokidar→SSE→manifest data flow + the compare view + the bless write). Every choice backed by a 5k–57k★ pattern, not a guess. <code>design-system/viewer</code> is runnable (Next.js :3005) but needs <code>npm i</code>; we lift its code rather than depend on it.</p>
+
 <h2>What's left to build (clean slate, my architecture)</h2>
 <ol>
   <li><span class="tag build">BUILD</span> <b>The React viewer app</b> (<code>app/</code>) — harvest <code>design-system</code>'s iframe-preview + <code>/pick</code> callback; the grid / deep-look / iteration-diff / graduation screens.</li>
