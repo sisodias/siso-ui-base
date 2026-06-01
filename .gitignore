@@ -1,0 +1,6 @@
+node_modules/
+app/node_modules/
+pipeline/_shots/
+pipeline/_verdicts/
+pipeline/scores.json
+.DS_Store

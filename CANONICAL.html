@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SISO UI Base — Canonical</title>
+<style>
+  :root{--pink:#ff0069;--gold:#f5c842;--ink:#0f172a;--soft:#756670;--line:rgba(15,23,42,.10);--warm:#fffef9;--ship:#16a34a}
+  *{box-sizing:border-box}
+  body{font:14px/1.6 -apple-system,system-ui,'Segoe UI',sans-serif;color:var(--ink);background:var(--warm);margin:0 auto;max-width:1060px;padding:32px}
+  h1{font-size:26px;margin:0 0 2px}
+  h2{font-size:19px;margin:34px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+  h3{font-size:15px;margin:18px 0 6px}
+  .sub{color:var(--soft);margin:0 0 6px;font-size:15px}
+  .meta{color:var(--soft);font-size:12px}
+  code{background:#f4f1ee;padding:1px 5px;border-radius:5px;font:12.5px ui-monospace,Menlo,monospace}
+  pre{background:#0f172a;color:#e2e8f0;padding:15px 17px;border-radius:12px;overflow:auto;font:12px/1.5 ui-monospace,Menlo,monospace}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+  .verdict{background:#0f172a;color:#fff;border-radius:14px;padding:20px 22px;margin:16px 0}
+  .verdict h2{color:#fff;border:none;margin-top:0}.verdict b{color:var(--gold)}
+  .tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11px;font-weight:700}
+  .have{background:#dcfce7;color:#166534}.harvest{background:#fff3cd;color:#7a5b00}.build{background:var(--pink);color:#fff}
+  ul li,ol li{margin:4px 0}
+  .home{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:8px;padding:12px 16px;margin:10px 0}
+</style>
+</head>
+<body>
+<h1>SISO UI Base</h1>
+<p class="sub">The single source of truth. Everything else that mentions "UI base / uihub / design gallery" defers to this file.</p>
+<p class="meta">Canonical home: <code>~/SISO_Workspace/siso-ui-base/</code> (own git repo) · Tenant zero: Oracle Streaming · Status: v1 in build · Updated 2026-06-01</p>
+
+<div class="verdict">
+  <h2>What it is</h2>
+  <p>A <b>drop-in, agent-neutral package</b> that turns any coding-agent fleet (Claude <i>or</i> Codex) into an elite human-in-the-loop UI builder. Agents build UI as <b>self-contained HTML</b>; a human reviews variations in a clean React viewer + voice/chat; agents iterate; winners <b>graduate</b> to production React components. The batteries that make this good — a taste-grading pipeline, component libraries, domain frameworks — <b>ship inside the package</b>. The human stays on <b>taste</b>; the agent does <b>production</b>. This is the HTML-first loop, proven clean in practice: generate → show → react → iterate → graduate.</p>
+</div>
+
+<h2>Why it exists (the problem)</h2>
+<p>Taste doesn't scale and AI defaults to slop. The quality bar lives in one head; every panel needs that eye or it drifts; at 40 models × N platforms × M panels you can't eyeball everything. SISO UI Base encodes the bar once and enforces it at machine scale — so a human reviews <i>pre-vetted, scored</i> options and never wastes a glance on obvious failures.</p>
+
+<h2>The home (settled)</h2>
+<div class="home">
+  <b>Own git repo at <code>~/SISO_Workspace/siso-ui-base/</code></b> — a peer of <code>SISO_Agency/</code> and <code>SISO_Library/</code>, not buried in either.
+</div>
+<p><b>Why here, and not the alternatives:</b></p>
+<ul>
+  <li><b>Not <code>oracle-streaming/</code></b> — it's agent infrastructure for <i>every</i> project; Oracle is just tenant zero. Trapping it in one tenant is the original mistake.</li>
+  <li><b>Not <code>~/.claude/</code></b> — it's <b>agent-neutral</b>. Codex builds UI too. A Claude-only home is wrong.</li>
+  <li><b>Not (yet) <code>SISO_Agent_Base/</code></b> — that's the correct <i>eventual</i> owner (it already fans skills out to <code>.claude</code> + <code>.codex</code> via symlink/<code>install.sh</code>), <b>but it is mid-reramp</b> (2026-06-01). Building on shifting ground = merge churn. So: build standalone now, migrate onto its skill-shelf when the reramp settles.</li>
+</ul>
+<p>The package is shaped Superpowers-style (<code>SKILL.md</code> + <code>framework/</code> + <code>app/</code> + <code>commands/</code>) precisely so the later migration is one <code>mv</code> + a symlink — zero rework.</p>
+
+<h2>The three-layer delivery model (proven by Superpowers + Claude)</h2>
+<pre>LAYER 1 — SOURCE (canonical, agent-neutral)
+  ~/SISO_Workspace/siso-ui-base/        ← this repo. the product + the package.
+
+LAYER 2 — FAN-OUT (when migrated to Agent_Base; mirrors design-directions/impeccable)
+  ~/.claude/skills/ui-base  ┐ symlink → the source
+  ~/.codex/.../ui-base      ┘            (one source, both harnesses)
+
+LAYER 3 — PER-PROJECT TENANT DATA (lives in each consuming project)
+  oracle-streaming/.uihub/   ← Oracle's DNA, board, variations, blessed components
+  &lt;any project&gt;/.uihub/      ← its own tenant data</pre>
+<p><b>Engine is global + agent-neutral. Taste DNA is per-project.</b> Same split as Superpowers (global package + project data) and Claude (<code>~/.claude</code> + <code>.claude/</code>).</p>
+
+<h2>The loop (the spine)</h2>
+<pre>you: "build me 4 variations of the goal bar"
+  → agents write 4 standalone .html into the tenant's variations dir
+  → each auto-scored 0-10 BEFORE you look (slop never reaches you)
+  → React viewer shows them ranked, TOP badge on the winner
+  → you react in voice: "2nd one but warmer, kill the pill"
+  → agent iterates → viewer shows v1→v2 side-by-side with score deltas
+  → you: "bless it"
+  → blessed HTML = source of truth; agent ports to React pixel-for-pixel, screenshot-diffs to verify</pre>
+
+<h2>Core vs Batteries (the future-proofing)</h2>
+<table>
+  <tr><th>CORE — never rewritten</th><th>BATTERIES — hot-swap, 10x later</th></tr>
+  <tr><td>The loop (forge→render→score→react→iterate→graduate)</td><td><b>Judge</b> — Codex-vision today → cheap fast vision → your fine-tune</td></tr>
+  <tr><td>The React viewer shell (renders any HTML by id, iframe)</td><td><b>Libraries</b> — shadcn / radix / 21st.dev / MCP registries</td></tr>
+  <tr><td>The verdict contract (the human↔agent↔judge handshake)</td><td><b>Frameworks</b> — game-theory, emotional-arc (injected into forge prompts)</td></tr>
+  <tr><td>Folder convention + manifest; slot registry; graduation handoff</td><td><b>Gate</b> — grep rules → Lighthouse a11y → pixel-diff</td></tr>
+</table>
+<p>The loop calls interfaces (<code>Judge</code>, <code>LibraryProvider</code>, <code>FrameworkProvider</code>, <code>Gate</code>, <code>AgentBridge</code>), never names a model. Future drops swap implementations behind a fixed seam.</p>
+
+<h2>The moat</h2>
+<p>Every graduation emits a labeled <code>(html, score, blessed)</code> triple. A competitor clones the loop in a week — they cannot clone 3 months of <i>your</i> chat-rail approvals. After 50 graduations the rubric is a regression suite; after 500, a fine-tune dataset. The <b>calibration anchor</b> (Oracle chat rail = <b>9.24</b>) makes taste verifiable + portable: it proves the machine still agrees with the human, and catches model drift. The loop is the engine; the proprietary per-domain taste corpus is the fuel.</p>
+
+<h2>HARVEST MANIFEST — reuse, do NOT rebuild</h2>
+<p class="sub">Clean-slate architecture, but every good idea/code already built gets pulled in. This is the canonical list of what we take and from where. (Their UIs may be rough — we want the <i>ideas + code</i>, re-composed.)</p>
+<table>
+  <tr><th>Source (existing)</th><th>What we harvest</th><th>Into</th><th>State</th></tr>
+  <tr>
+    <td><code>.claude/skills/oracle-ui/</code><br><span class="meta">dna.md + check.mjs</span></td>
+    <td><b>The taste DNA</b> (warm off-whites, one-ink rgba ladder, fractional weights 650/750/850/900, bare-text-not-pills, tabular-nums) + the working <b>grep gate</b> (emits <code>__ORACLE_UI_GATE_JSON__</code>)</td>
+    <td><code>tenants/oracle/dna.md</code><br><code>batteries/gates/dna-grep.mjs</code></td>
+    <td><span class="tag have">✅ migrated</span></td>
+  </tr>
+  <tr>
+    <td><b>This session's Codex-vision scorer</b><br><span class="meta">rubric/shoot/judge.mjs</span></td>
+    <td><b>The visual judge (Stage 3 MVP)</b> — Playwright shoots panels → Codex vision scores 0-10 on warmth/playful/clarity/craft/coherence against dna.md. <b>Calibrated: chat rail = 9.24, discriminates others 4.9-6.4.</b></td>
+    <td><code>pipeline/</code> + <code>batteries/judges/</code></td>
+    <td><span class="tag have">✅ migrated, PROVEN</span></td>
+  </tr>
+  <tr>
+    <td><code>skills/design-directions/</code></td>
+    <td><b>The forge half</b> — fan out N parallel builders → each emits a self-contained HTML direction → side-by-side index → human picks. Convention: <code>BRIEF</code> + <code>direction-{a,b}.html</code>. ~80% of the forge loop already a skill.</td>
+    <td><code>commands/forge-variations</code></td>
+    <td><span class="tag harvest">harvest pattern</span></td>
+  </tr>
+  <tr>
+    <td><code>SISO_Library/design-system/</code><br><span class="meta">own repo, :3005 viewer</span></td>
+    <td><b>The viewer mechanics</b> — iframe-sandbox preview, <code>ratings.db</code> (ELO + pairwise swipes), and the <b><code>/pick</code> route with postMessage callback</b> (the agent→human "have a look at these 4" handoff, already designed). 2,223 components w/ <code>registry-item.json</code>.</td>
+    <td><code>app/</code> (viewer) + <code>batteries/libraries/</code></td>
+    <td><span class="tag harvest">harvest mechanics</span></td>
+  </tr>
+  <tr>
+    <td><code>oracle-streaming/.uihub/</code><br><span class="meta">hub-server.mjs + board-state.json</span></td>
+    <td><b>The board + state API</b> — zero-dep Node server, <code>board-state.json</code> v2.1 schema (components/pages/variations/slots/flows), <code>_shots/</code> + <code>critiques/</code>. Becomes the <b>map/inventory side</b> + Oracle's tenant data store.</td>
+    <td>stays as Oracle tenant data; schema informs <code>framework/</code></td>
+    <td><span class="tag have">✅ in place</span></td>
+  </tr>
+  <tr>
+    <td><code>skills/impeccable/</code><br><span class="meta">reference/craft.md</span></td>
+    <td><b>The craft rules + AI-Slop Test</b> — 7-step build order (structure→layout→type→color→states→motion→responsive), the "would they know AI made it?" test, anti-slop ban-list.</td>
+    <td>forge prompt context + <code>batteries/gates</code></td>
+    <td><span class="tag harvest">harvest rules</span></td>
+  </tr>
+  <tr>
+    <td><code>skills/verifiable-frontend/</code> + <code>verify-surface/</code></td>
+    <td><b>The graduation verifier</b> — <code>data-verify-*</code> DOM contract, <code>window.__verify</code> API, PASS/FAIL/BLOCKED taxonomy, CDP exit codes. Closes the blessed-HTML→React loop via screenshot/contract diff.</td>
+    <td><code>commands/graduate</code></td>
+    <td><span class="tag harvest">harvest contract</span></td>
+  </tr>
+  <tr>
+    <td><code>SISO_Agent_Base/.siso/evals/</code> + <code>INTAKE-FUNNEL</code> grade.yaml</td>
+    <td><b>The scorecard storage schema</b> — <code>recordAgentScorecard</code> shape + 5-dim×20pt <code>grade.yaml</code> w/ challenger-vs-best delta thresholds. Where the visual scores get stored + tracked over time.</td>
+    <td><code>framework/</code> (verdict + ledger schema)</td>
+    <td><span class="tag harvest">harvest schema</span></td>
+  </tr>
+  <tr>
+    <td><code>PLAYBOOK-SYSTEM.html</code> (Agent_Base)</td>
+    <td><b>The pack anatomy</b> — <code>SKILL.md</code> + <code>framework/</code> + <code>tools/</code> + <code>routing.json</code> + <code>ledger/runs.jsonl</code> + <code>BEST-PRINCIPLES.html</code>. The shape this package follows so it slots onto the shelf later.</td>
+    <td>the whole repo's shape</td>
+    <td><span class="tag harvest">follow shape</span></td>
+  </tr>
+  <tr>
+    <td><b>This session's prior-art sweep</b><br><span class="meta">registry/repos.json (25 repos)</span></td>
+    <td><b>The R&D pipeline</b> — 25 cloneable repos (impeccable/taste-skill/deepeval/Q-Align/shadcn-registry/agent-inbox/...) annotated with what-to-steal per pipeline stage. <code>clone.sh</code> vendors them for study.</td>
+    <td><code>registry/</code></td>
+    <td><span class="tag have">✅ migrated</span></td>
+  </tr>
+</table>
+
+<h2>What's left to build (clean slate, my architecture)</h2>
+<ol>
+  <li><span class="tag build">BUILD</span> <b>The React viewer app</b> (<code>app/</code>) — harvest <code>design-system</code>'s iframe-preview + <code>/pick</code> callback; the grid / deep-look / iteration-diff / graduation screens.</li>
+  <li><span class="tag build">BUILD</span> <b>The framework contracts</b> (<code>framework/</code>) — primitives (Variation/Set/Review/Component/Slot/Session/Battery), the verdict contract, the folder convention + manifest, the 5 plug-point interfaces.</li>
+  <li><span class="tag build">BUILD</span> <b>The commands</b> (<code>commands/</code>) — <code>/forge-variations /show-me /iterate /graduate /score-panel /calibrate /add-library /domain-inject</code>, composing the harvested skills.</li>
+  <li><span class="tag build">BUILD</span> <b>SKILL.md</b> — the policy + router that makes it a drop-in agent package.</li>
+  <li><span class="tag build">BUILD</span> <b>Tenant config</b> — what a project supplies to adopt (DNA, rubric, anchor, libraries, frameworks). Oracle = the worked example.</li>
+</ol>
+
+<h2>Glossary of dispersed names (all → this)</h2>
+<p class="meta">These all refer to pieces of SISO UI Base. Consolidated here so nothing is "lost in many places":</p>
+<ul class="meta">
+  <li><code>.uihub</code> (oracle) — Oracle's tenant data + the map/inventory hub. <b>Tenant zero, not the engine.</b></li>
+  <li><code>oracle-streaming/siso-ui-base/</code> — the <b>old</b> location of the registry/pipeline; superseded by this repo. Leave a breadcrumb.</li>
+  <li><code>SISO_Library/design-system</code> — a <b>battery</b> (component library + viewer mechanics), consumed, not the base.</li>
+  <li><code>oracle-ui</code> skill — the <b>taste DNA battery</b> (tenant zero's dna.md + gate).</li>
+  <li><code>design-directions</code>, <code>impeccable</code>, <code>verifiable-frontend</code> — sibling skills <b>composed</b> by the loop.</li>
+</ul>
+
+<p class="meta" style="margin-top:24px">Prior-art detail: <code>registry/repos.json</code> + <code>docs/CATALOG.html</code> · pipeline MVP: <code>pipeline/{rubric,shoot,judge}.mjs</code> · Oracle DNA: <code>tenants/oracle/dna.md</code></p>
+</body>
+</html>

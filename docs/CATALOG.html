@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SISO UI Base — Repo Catalog</title>
+<style>
+  :root{--pink:#ff0069;--gold:#f5c842;--ink:#0f172a;--soft:#756670;--line:rgba(15,23,42,.10);--warm:#fffef9}
+  *{box-sizing:border-box}
+  body{font:14px/1.55 -apple-system,system-ui,sans-serif;color:var(--ink);background:var(--warm);margin:0;padding:32px;max-width:1180px;margin:0 auto}
+  h1{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--soft);margin:0 0 8px}
+  h2{font-size:16px;margin:30px 0 8px;display:flex;align-items:center;gap:8px}
+  .count{background:var(--ink);color:#fff;border-radius:999px;font-size:11px;padding:1px 8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .top a{font-weight:800;color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .star{color:var(--gold);font-weight:800;white-space:nowrap;font-size:13px}
+  .flags{margin:4px 0 6px;display:flex;flex-wrap:wrap;gap:4px}
+  .f{border-radius:999px;font-size:10.5px;font-weight:700;padding:1px 8px}
+  .f.key{background:#fff3cd;color:#7a5b00}.f.now{background:var(--pink);color:#fff}
+  .f.lat{background:#eef;color:#3b3b88}.f.rsr{background:#f3e8ff;color:#6b21a8}
+  .what{margin:4px 0;font-size:13px}
+  .mech,.steal{margin:5px 0;font-size:12px;color:#334}
+  .steal b{color:var(--pink)}.mech b{color:var(--soft)}
+</style></head><body>
+<h1>SISO UI Base — Repo Catalog</h1>
+<p class="sub">25 prior-art repos for the domain-tuned forge→rank→vote loop. Generated from <code>registry/repos.json</code> · 2026-06-01 · clone all via <code>./clone.sh</code></p>
+
+  <h2>A-taste-gate — Encode design taste as a gate (rules/skills/critique) — impeccable's category <span class="count">9</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><a href="https://github.com/pbakaus/impeccable" target="_blank">pbakaus/impeccable</a><span class="star">~32k★</span></div>
+      <div class="flags"><span class="f key">★ keystone</span> <span class="f key">skill installed</span></div>
+      <p class="what">The design language that makes an AI coding agent better at design. 7 domain ref files + 23 /impeccable commands + `npx impeccable detect` CLI.</p>
+      <p class="mech"><b>How:</b> 27 deterministic anti-pattern rules + 12-rule LLM critique catching 24 classes of AI slop (gradient text, glassmorphism, Inter overuse, pure black, cramped padding). 10+ harnesses incl Claude Code.</p>
+      <p class="steal"><b>Steal:</b> Anti-pattern detector as a PRE-VOTE gate — only screenshots passing the rules surface to humans. Kill slop at the forge, not the review.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/leonxlnx/taste-skill" target="_blank">leonxlnx/taste-skill</a><span class="star">~30.3k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Portable SKILL.md files giving AI agents design taste across React/Vue/Svelte.</p>
+      <p class="mech"><b>How:</b> Instruction files loaded by Claude Code/Cursor/Codex. Three tunable dials VARIANCE/MOTION/DENSITY (1-10), pre-flight checklist, hard bans, redesign-audit protocol.</p>
+      <p class="steal"><b>Steal:</b> The DIAL SYSTEM — expose VARIANCE/MOTION/DENSITY as numeric knobs in the forge-&gt;vote loop so voters tune the taste budget, not just approve/reject.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/scanaislop/aislop" target="_blank">scanaislop/aislop</a><span class="star">~277★</span></div>
+      <div class="flags"></div>
+      <p class="what">Engineering quality gate catching what AI agents leave behind — narrative comments, swallowed exceptions, as-any casts, dead code.</p>
+      <p class="mech"><b>How:</b> Deterministic, no runtime LLM. Six parallel engines (Formatting/Linting/Quality/AI-Slop/Security/Architecture) via Regex+AST+Biome/oxlint/knip/ruff. Scores 0-100, auto-fixes mechanical, hands rest to an agent.</p>
+      <p class="steal"><b>Steal:</b> The 0-100 SCORED GATE with per-engine breakdown — single numeric score the vote reads; vote when &lt; threshold, ship when &gt;= threshold.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/stevembarclay/pencilplaybook" target="_blank">stevembarclay/pencilplaybook</a><span class="star">~26★</span></div>
+      <div class="flags"></div>
+      <p class="what">Taste skill embedding perceptual design rules as lookup tables Claude consults before every decision.</p>
+      <p class="mech"><b>How:</b> Rules from perceptual psychology with explicit numeric thresholds: disabled opacity=40% (not 50%), hover needs &gt;=8% lightness delta, dark-bg text=#E2E8F0 not #FFF (halation), display type 56px+ gets -0.03em tracking.</p>
+      <p class="steal"><b>Steal:</b> MEASURABLE THRESHOLDS — turn soft aesthetic opinions into CI-ready deterministic assertions. Run each threshold as a gate.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/Owl-Listener/designpowers" target="_blank">Owl-Listener/designpowers</a><span class="star">~184★</span></div>
+      <div class="flags"></div>
+      <p class="what">10 specialist design agents running a full inclusive design process (Discover-&gt;Strategise-&gt;Design-&gt;Build-&gt;Taste Check-&gt;Review-&gt;Fix-&gt;Ship).</p>
+      <p class="mech"><b>How:</b> 36 SKILL.md files, two parallel review agents post-build (WCAG/COGA evaluator + Nielsen heuristics evaluator). Auto mode halts on critical a11y failures.</p>
+      <p class="steal"><b>Steal:</b> TWO-REVIEWER PARALLELISM — one rules-based (WCAG/thresholds), one LLM judge (aesthetic heuristics), both must pass.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/frhscopex/design-skill-os" target="_blank">frhscopex/design-skill-os</a><span class="star">~33★</span></div>
+      <div class="flags"></div>
+      <p class="what">Installable SKILL.md injecting design wisdom from 10+ design books + 161+ industry rules into Claude/Cursor/Windsurf.</p>
+      <p class="mech"><b>How:</b> SKILL.md reasoning layer + Red Team audit (adversarial WCAG AA + strip lazy AI trends). Rules segmented by vertical (SaaS/Fintech/Luxury/Healthcare).</p>
+      <p class="steal"><b>Steal:</b> VERTICAL SEGMENTATION — load the relevant vertical rule set at generation time, not a single universal taste. Ours = performer-cockpit.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/S0ulFood/design-cognition-skill" target="_blank">S0ulFood/design-cognition-skill</a><span class="star">~23★</span></div>
+      <div class="flags"></div>
+      <p class="what">Four-role design thinking framework: Strategist / Researcher / Executor / Critic.</p>
+      <p class="mech"><b>How:</b> Roles activate contextually, share DESIGN-COGNITION.md with six epistemic operations. Critic evaluates artifacts + cross-checks other roles; must find structural failures not style nits.</p>
+      <p class="steal"><b>Steal:</b> The CRITIC ROLE as an explicit adversarial pipeline stage after every Executor output.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/bitjaru/styleseed" target="_blank">bitjaru/styleseed</a><span class="star">~383★</span></div>
+      <div class="flags"></div>
+      <p class="what">Design system for Claude Code + Cursor: 69 explicit rules, 48 shadcn components, brand skins (Toss/Stripe/Linear/Vercel/Notion), Tailwind v4.</p>
+      <p class="mech"><b>How:</b> DESIGN-LANGUAGE.md encodes judgment (shadows at 4% opacity, one accent color, refined black #2A2A2A not #000). Rules brand-agnostic; swappable theme.css skins add identity.</p>
+      <p class="steal"><b>Steal:</b> The ENGINE/SKIN SPLIT — brand-agnostic rules engine + hot-swappable skin layer. Forge outputs engine; clients vote on skins. Reusable across all 40 models.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/haasonsaas/design-critique-mcp" target="_blank">haasonsaas/design-critique-mcp</a><span class="star">~5★</span></div>
+      <div class="flags"></div>
+      <p class="what">MCP server analyzing design screenshots — composition, color harmony, typography, WCAG — returns 0-100 + recommendations.</p>
+      <p class="mech"><b>How:</b> Screenshot -&gt; analyzers (sharp / chroma-js / Tesseract.js) -&gt; structured JSON critique. Tools: critique_design, analyze_color_scheme/layout/typography/accessibility. 2-5s/image.</p>
+      <p class="steal"><b>Steal:</b> SCREENSHOT-IN, STRUCTURED-JSON-OUT as an MCP — screenshot every variant, gate on the 0-100 before surfacing to a human.</p>
+    </div></div>
+
+  <h2>B-visual-judge — Auto-score a UI screenshot like a designer would — the ranker layer <span class="count">8</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><a href="https://github.com/confident-ai/deepeval" target="_blank">confident-ai/deepeval</a><span class="star">~15.8k★</span></div>
+      <div class="flags"><span class="f now">weekend MVP</span></div>
+      <p class="what">LLM eval framework (pytest-style) with a Multimodal G-Eval metric for image inputs.</p>
+      <p class="mech"><b>How:</b> Multimodal G-Eval: define criteria in natural language; judge LLM (GPT-4o/Claude) gets screenshot + criteria + CoT steps -&gt; 0-1 float. Fully configurable rubric.</p>
+      <p class="steal"><b>Steal:</b> Wrap our Playwright screenshot harness; define a GEval criterion 'warmth/playfulness/clarity of cam-model cockpit' and run in CI per variation batch. THE weekend-viable starting point — no training data.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/promptfoo/promptfoo" target="_blank">promptfoo/promptfoo</a><span class="star">~21.8k★</span></div>
+      <div class="flags"></div>
+      <p class="what">CLI + CI eval harness comparing LLM outputs; supports vision providers + browser CDP screenshots.</p>
+      <p class="mech"><b>How:</b> llm-rubric assertion: write a natural-language rubric, judge model scores; any vision model as judge; matrix comparison across prompt variants.</p>
+      <p class="steal"><b>Steal:</b> Browser provider captures a screenshot per variant, llm-rubric per aesthetic dimension -&gt; RANKED MATRIX across all variants in one CLI call.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/Q-Future/Q-Align" target="_blank">Q-Future/Q-Align</a><span class="star">~598★</span></div>
+      <div class="flags"><span class="f rsr">long-term ranker</span></div>
+      <p class="what">ICML 2024 all-in-one visual quality model (IQA+IAA+VQA); fine-tunes an LMM with discrete text levels.</p>
+      <p class="mech"><b>How:</b> LMM predicts discrete level (bad/poor/fair/good/excellent); inference extracts weighted token log-probs -&gt; continuous float. SOTA on 12 benchmarks.</p>
+      <p class="steal"><b>Steal:</b> DISCRETE-LEVEL FINE-TUNING — fine-tune on ~50 hand-rated cockpit screenshots ('performer warmth: poor/fair/good/excellent') -&gt; a ranker calibrated to SHAAN's taste. The long-term production scorer.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://uimodeling.github.io/uiclip/" target="_blank">uimodeling/UIClip</a><span class="star">—★</span></div>
+      <div class="flags"><span class="f rsr">research</span></div>
+      <p class="what">CLIP B/32 fine-tuned in 4 stages on 2.3M UI screenshots + 1,200 designer ratings (UIST 2024). Weights on HuggingFace.</p>
+      <p class="mech"><b>How:</b> Cosine similarity between UI screenshot embedding + text description embedding -&gt; continuous design-quality score. Trained contrastively on (original, jittered-defect) pairs.</p>
+      <p class="steal"><b>Steal:</b> The JITTER TRICK — generate hundreds of inferior cockpit variants cheaply (degrade color/contrast/spacing) as negative anchors; calibrate a ranker with few human labels.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/google-research-datasets/uicrit" target="_blank">google-research-datasets/uicrit</a><span class="star">~25★</span></div>
+      <div class="flags"></div>
+      <p class="what">Google/Berkeley dataset: 3,059 human critiques + 1-10 aesthetic/usability/overall scores for 1,000 mobile UI screenshots (UIST 2024).</p>
+      <p class="mech"><b>How:</b> Human annotators rate 1-10 on aesthetics/usability/overall; bounding boxes tie critiques to regions; fine-tuning LMMs gave +55% feedback-quality gain.</p>
+      <p class="steal"><b>Steal:</b> REGION-PINNED CRITIQUE — fine-tune so the scorer returns a number AND a region-pinned critique you can show Shaan ('this corner is the problem').</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/discus0434/aesthetic-predictor-v2-5" target="_blank">discus0434/aesthetic-predictor-v2-5</a><span class="star">~418★</span></div>
+      <div class="flags"></div>
+      <p class="what">SigLIP-based aesthetic scorer (1-10), broader domain coverage than LAION (illustrations, stylized art).</p>
+      <p class="mech"><b>How:</b> SigLIP image encoder -&gt; MLP head -&gt; float score; generalizes beyond photographic aesthetics.</p>
+      <p class="steal"><b>Steal:</b> FAST PRE-FILTER calibrated for STYLIZED content (our glossy-candy look) — drop disasters in &lt;10ms before the expensive VLM judge runs.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/idealo/image-quality-assessment" target="_blank">idealo/image-quality-assessment</a><span class="star">~2.2k★</span></div>
+      <div class="flags"><span class="f lat">archived</span></div>
+      <p class="what">TF implementation of Google NIMA — aesthetic (AVA) + technical (TID2013) quality models.</p>
+      <p class="mech"><b>How:</b> CNN predicts the FULL distribution of human ratings 1-10 (Earth Mover's Distance loss) -&gt; mean + std.</p>
+      <p class="steal"><b>Steal:</b> RATING-DISTRIBUTION output (mean + variance) — high variance = polarizing design, low variance = safe. Filter out high-risk designs before the human vote.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/GoogleChrome/lighthouse" target="_blank">GoogleChrome/lighthouse</a><span class="star">~30.3k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Automated web audit (Chrome team) — 0-100 across Performance/Accessibility/Best-Practices/SEO.</p>
+      <p class="mech"><b>How:</b> Weighted aggregate of axe-core a11y violations + perf metrics + best-practice checks -&gt; 0-100/category. Accessibility score is deterministic rule-based.</p>
+      <p class="steal"><b>Steal:</b> Run Lighthouse ACCESSIBILITY 0-100 as a HARD GATE before any aesthetic score — low contrast / broken ARIA fails the warmth test by definition. Free, fast, deterministic.</p>
+    </div></div>
+
+  <h2>C-registry — Machine-readable component/token contracts — distribution layer <span class="count">2</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><a href="https://github.com/shadcn-ui/ui" target="_blank">shadcn-ui/ui</a><span class="star">~82k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Copy-paste component library + `shadcn add` CLI that installs components from any registry URL.</p>
+      <p class="mech"><b>How:</b> registry.json schema (registry:component/block/ui) + `shadcn build`. One JSON per component: type, files, dependencies, install target.</p>
+      <p class="steal"><b>Steal:</b> registry-item JSON CONTRACT + static /api/r/&lt;name&gt;.json endpoints — agents fetch, humans browse, `shadcn add &lt;url&gt;` just works for anything we promote.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/google-labs-code/design.md" target="_blank">google-labs-code/design.md</a><span class="star">~1.5k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Format spec for a YAML-frontmatter + Markdown DESIGN.md encoding a full design system for AI agents.</p>
+      <p class="mech"><b>How:</b> YAML frontmatter = machine-readable tokens; Markdown body = human rationale. One file at repo root; every agent reads it.</p>
+      <p class="steal"><b>Steal:</b> DESIGN.md PER SLOT — attach a tiny DESIGN.md constraint to each page slot so the forge knows the slot's visual language before first render.</p>
+    </div></div>
+
+  <h2>D-flow-dashboard — Flow-map + inventory + no-framework local dashboard patterns <span class="count">2</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><a href="https://github.com/moroshko/react-scanner" target="_blank">moroshko/react-scanner</a><span class="star">~650★</span></div>
+      <div class="flags"></div>
+      <p class="what">CLI that walks a codebase and emits every React component + props usage as JSON.</p>
+      <p class="mech"><b>How:</b> Static AST walk -&gt; JSON of components + prop usage counts.</p>
+      <p class="steal"><b>Steal:</b> Feed JSON into each slot's detail pane -&gt; LIVE 'used in N places' counts from the actual cockpit code. Inventory becomes a living audit.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/antvis/X6" target="_blank">antvis/X6</a><span class="star">~5.5k★</span></div>
+      <div class="flags"><span class="f lat">deferred</span></div>
+      <p class="what">Vanilla-JS SVG+HTML diagramming library — custom nodes, ports, events, JSON graph serialization.</p>
+      <p class="mech"><b>How:</b> Node + named ports + edges; click handlers per port; serializes to JSON. No React.</p>
+      <p class="steal"><b>Steal:</b> PORT MODEL = SLOT MODEL — click a port -&gt; render slot detail. Only adopt if the Map needs drag-to-reconnect editing; otherwise hand-rolled HTML stays.</p>
+    </div></div>
+
+  <h2>E-forge-mcp — AI generation + MCP surfaces + human-in-the-loop inbox <span class="count">4</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><a href="https://github.com/21st-dev/magic-mcp" target="_blank">21st-dev/magic-mcp</a><span class="star">~5k★</span></div>
+      <div class="flags"></div>
+      <p class="what">MCP server generating React components from a /ui natural-language prompt, pulling from 21st.dev's library.</p>
+      <p class="mech"><b>How:</b> /ui &lt;description&gt; tool call -&gt; generated component (registry-item shape) + file diff. Community-published components.</p>
+      <p class="steal"><b>Steal:</b> The /ui &lt;description&gt; TOOL SHAPE — agents request a component by description, get registry-item JSON + diff. Query the curated library first, adapt the closest match.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/langchain-ai/agent-inbox" target="_blank">langchain-ai/agent-inbox</a><span class="star">~2k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Inbox UX for human-in-the-loop agents — renders rich interrupt descriptions, collects structured human responses.</p>
+      <p class="mech"><b>How:</b> Every agent interrupt is a typed payload; inbox renders uniformly; collects approve/reject/revise.</p>
+      <p class="steal"><b>Steal:</b> INTERRUPT-AS-INBOX-ITEM — every forge run emits a typed payload (screenshot URL + diff + meta). Validates our Needs-You design exactly.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/las-team/lastest" target="_blank">las-team/lastest</a><span class="star">~300★</span></div>
+      <div class="flags"></div>
+      <p class="what">Visual-regression platform (pixelmatch/SSIM/Butteraugli) + AI-proposed fixes + 50-tool MCP server.</p>
+      <p class="mech"><b>How:</b> Perceptual diff engines + MCP tools to run tests, approve baselines, heal tests autonomously.</p>
+      <p class="steal"><b>Steal:</b> MCP APPROVE/REJECT PRIMITIVES (approve_baseline / reject_variation / request_revision) — Claude+Codex vote in CI through the same interface as humans.</p>
+    </div>
+    <div class="card">
+      <div class="top"><a href="https://github.com/abi/screenshot-to-code" target="_blank">abi/screenshot-to-code</a><span class="star">~72k★</span></div>
+      <div class="flags"></div>
+      <p class="what">Drop a screenshot -&gt; clean HTML/Tailwind/React/Vue. GPT-4V / Claude Opus / video.</p>
+      <p class="mech"><b>How:</b> Screenshot -&gt; structured spec -&gt; code generation -&gt; re-render loop.</p>
+      <p class="steal"><b>Steal:</b> SCREENSHOT -&gt; SPEC -&gt; RE-RENDER loop — the 'forge screenshot -&gt; extract intent -&gt; regenerate' pattern for component variation forging.</p>
+    </div></div>
+<p class="sub" style="margin-top:26px">Architecture + why-we-win: <a href="ARCHITECTURE.html">ARCHITECTURE.html</a></p>
+</body></html>
