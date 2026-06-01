@@ -57,7 +57,7 @@ async function buildManifest() {
     }
     variations.sort((a, b) => (b.scores?.overall || 0) - (a.scores?.overall || 0) || b.mtime - a.mtime)
     return { id: setId, name: meta.name || setId, prompt: meta.prompt || '', slotId: meta.slotId || null,
-      blessed: state.blessed[setId] || null, variations }
+      briefs: meta.briefs || [], blessed: state.blessed[setId] || null, variations }
   }
   for (const d of dirs) {
     const dir = join(VARS, d.name)
@@ -93,6 +93,14 @@ const server = createServer(async (req, res) => {
     const rel = path.slice('/api/html/'.length)
     const full = resolve(VARS, rel)
     if (!full.startsWith(VARS) || !existsSync(full)) return send(res, 404, 'not found', 'text/plain')
+    return send(res, 200, await readFile(full), MIME['.html'])
+  }
+
+  // brief HTML (the model-brain / spec docs attached to a set)
+  if (path.startsWith('/api/brief/')) {
+    const rel = path.slice('/api/brief/'.length)
+    const full = resolve(TENANT, rel)
+    if (!full.startsWith(TENANT) || !existsSync(full)) return send(res, 404, 'not found', 'text/plain')
     return send(res, 200, await readFile(full), MIME['.html'])
   }
 

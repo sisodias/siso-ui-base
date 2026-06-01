@@ -40,6 +40,7 @@
   /* set header */
   .sethead{display:flex;align-items:baseline;gap:10px;margin:26px 0 10px}
   .sethead h2{font-size:17px;margin:0}.sethead .pmt{color:var(--soft);font-size:13px}
+  .sethead .brief{font-size:12px;font-weight:750;color:var(--pink);text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 10px;text-transform:capitalize}
   /* deep look */
   .deep{display:grid;grid-template-columns:1fr 300px;gap:16px}
   .stage{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;height:72vh}
@@ -106,7 +107,9 @@ function Card({ v, top, onOpen }) {
 function Grid({ manifest, onOpen }) {
   if (!manifest || !manifest.sets.length) return html`<div class="empty">No variations yet.<br/>Agents drop self-contained <code>.html</code> into <code>${manifest?manifest.varsDir:'the tenant variations dir'}</code> (one subfolder per set).<br/>This view auto-refreshes when they appear.</div>`
   return manifest.sets.map(set => html`<div key=${set.id}>
-    <div class="sethead"><h2>${set.name}</h2>${set.prompt?html`<span class="pmt">"${set.prompt}"</span>`:null}</div>
+    <div class="sethead"><h2>${set.name}</h2>${set.prompt?html`<span class="pmt">"${set.prompt}"</span>`:null}
+      ${(set.briefs||[]).map(b=>html`<a key=${b} class="brief" href=${'/api/brief/'+b} target="_blank">📋 ${b.split('/').pop().replace('.html','').replace(/-/g,' ')}</a>`)}
+    </div>
     <div class="grid">${set.variations.map((v,i)=>html`<${Card} key=${v.id} v=${v} top=${i===0 && v.scores} onOpen=${onOpen}/>`)}</div>
   </div>`)
 }
