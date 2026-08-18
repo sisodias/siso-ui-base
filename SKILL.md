@@ -10,6 +10,31 @@ The drop-in, **agent-neutral** (Claude or Codex) loop for human-in-the-loop UI b
 **The loop:** forge → show → react → iterate → graduate.
 The human stays on **taste**; the agent does **production**. HTML is the agent's clay (fast, isolated, no build); React is where blessed designs land.
 
+## Start here: one command
+
+```bash
+node brief.mjs "pricing section"          # everything you need, assembled
+node brief.mjs hero --tenant oracle --json
+```
+
+This is the front door. It joins all four layers in the order the principles
+mandate and hands back one brief:
+
+| | |
+|---|---|
+| **AUTHORITY** | the tenant `dna.md` — everything else defers to it |
+| **COMPONENTS** | real reference implementations + local preview paths |
+| **PRINCIPLES** | the sections that apply to *this* component type |
+| **PALETTE** | only when the tenant has no DNA yet |
+| **SELF-AUDIT** | the DNA's own checklist, to verify against at the end |
+
+**Precedence is absolute: where the principles and the DNA disagree, the DNA
+wins** — say so rather than silently following either. The principles state this
+rule themselves.
+
+The individual tools below still exist for when you need one directly, but
+`brief.mjs` is what an agent should reach for first.
+
 ## How to use it (the spine)
 
 1. **Forge** — when asked for variations of a component, write N self-contained `.html` files into the tenant's variations dir:

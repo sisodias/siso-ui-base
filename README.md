@@ -8,6 +8,16 @@
 
 ---
 
+## One command
+
+```bash
+node brief.mjs "pricing section"
+```
+
+Joins every layer — tenant DNA, real components with previews, the design
+principles that apply, and the DNA self-audit — into a single brief. Agents run
+this instead of learning four separate tools.
+
 ## 60-second start
 
 ```bash
