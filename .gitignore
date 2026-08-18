@@ -21,3 +21,4 @@ registry/21st/.env.21st
 registry/21st/api-metadata.json
 registry/21st/extras/
 registry/21st/non-component-urls.json
+registry/21st/classification.json
