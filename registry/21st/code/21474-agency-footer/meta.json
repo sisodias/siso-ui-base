@@ -1,0 +1,15 @@
+{
+ "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+ "name": "footer-01",
+ "type": "registry:component",
+ "title": "Footer 01",
+ "description": "A footer-01 component.",
+ "dependencies": [],
+ "registryDependencies": [
+  "shadcn/separator"
+ ],
+ "files": [
+  "src/components/ui/footer-01.tsx",
+  "src/components/ui/footer-01-utils/logo.tsx"
+ ]
+}

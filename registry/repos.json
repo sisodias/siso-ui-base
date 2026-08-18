@@ -344,8 +344,8 @@
     },
     {
       "id": "siso-design-system-viewer",
-      "name": "(internal) SISO_Library/design-system/viewer",
-      "url": "local:///Users/shaansisodia/SISO_Workspace/SISO_Library/design-system/viewer",
+      "name": "(internal) SISO_Knowledge/design-system/viewer",
+      "url": "local:///Users/shaansisodia/SISO_Workspace/SISO_Knowledge/design-system/viewer",
       "stars": null,
       "family": "F-viewer",
       "internal": true,

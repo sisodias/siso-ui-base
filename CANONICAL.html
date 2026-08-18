@@ -41,7 +41,7 @@
 
 <h2>The home (settled)</h2>
 <div class="home">
-  <b>Own git repo at <code>~/SISO_Workspace/siso-ui-base/</code></b> — a peer of <code>SISO_Agency/</code> and <code>SISO_Library/</code>, not buried in either.
+  <b>Own git repo at <code>~/SISO_Workspace/siso-ui-base/</code></b> — a peer of <code>SISO_Agency/</code> and <code>SISO_Knowledge/</code>, not buried in either.
 </div>
 <p><b>Why here, and not the alternatives:</b></p>
 <ul>
@@ -110,7 +110,7 @@ LAYER 3 — PER-PROJECT TENANT DATA (lives in each consuming project)
     <td><span class="tag harvest">harvest pattern</span></td>
   </tr>
   <tr>
-    <td><code>SISO_Library/design-system/</code><br><span class="meta">own repo, :3005 viewer</span></td>
+    <td><code>SISO_Knowledge/design-system/</code><br><span class="meta">own repo, :3005 viewer</span></td>
     <td><b>The viewer mechanics</b> — iframe-sandbox preview, <code>ratings.db</code> (ELO + pairwise swipes), and the <b><code>/pick</code> route with postMessage callback</b> (the agent→human "have a look at these 4" handoff, already designed). 2,223 components w/ <code>registry-item.json</code>.</td>
     <td><code>app/</code> (viewer) + <code>batteries/libraries/</code></td>
     <td><span class="tag harvest">harvest mechanics</span></td>
@@ -180,7 +180,7 @@ LAYER 3 — PER-PROJECT TENANT DATA (lives in each consuming project)
 <ul class="meta">
   <li><code>.uihub</code> (oracle) — Oracle's tenant data + the map/inventory hub. <b>Tenant zero, not the engine.</b></li>
   <li><code>oracle-streaming/siso-ui-base/</code> — the <b>old</b> location of the registry/pipeline; superseded by this repo. Leave a breadcrumb.</li>
-  <li><code>SISO_Library/design-system</code> — a <b>battery</b> (component library + viewer mechanics), consumed, not the base.</li>
+  <li><code>SISO_Knowledge/design-system</code> — a <b>battery</b> (component library + viewer mechanics), consumed, not the base.</li>
   <li><code>oracle-ui</code> skill — the <b>taste DNA battery</b> (tenant zero's dna.md + gate).</li>
   <li><code>design-directions</code>, <code>impeccable</code>, <code>verifiable-frontend</code> — sibling skills <b>composed</b> by the loop.</li>
 </ul>
