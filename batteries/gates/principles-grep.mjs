@@ -48,12 +48,17 @@ const RULES = [
     id: 'badge-full-width',
     principle: 'Badges are never full width [ui-principles.md]',
     why: 'A badge hugs its label. If it spans a row it is an alert or banner, not a badge.',
-    test: line => {
-      if (!/badge|chip|pill|tag\b/i.test(line)) return null
-      if (/width:\s*100%|display:\s*block|flex:\s*1\b|w-full/.test(line)) {
-        return 'badge-like element set to full width — use an alert/banner instead'
-      }
-      return null
+    // Match the SELECTOR, not the whole line. Matching line text flagged
+    // `.newsletter input { flex: 1; border-radius: var(--radius-pill) }` in
+    // real client CSS — a full-width input that merely mentions "pill" in a
+    // token name. `flex: 1` is also dropped: it is how a legitimate input
+    // fills a row, and it says nothing about badges.
+    test: (line, ctx) => {
+      const sel = (ctx.selector || '').toLowerCase()
+      if (!/\b(badge|chip|tag)\b/.test(sel)) return null
+      if (/\b(input|textarea|select|button|field)\b/.test(sel)) return null
+      const m = line.match(/width:\s*100%|display:\s*block\b|w-full/)
+      return m ? `badge selector "${ctx.selector}" set to ${m[0]} — use an alert/banner instead` : null
     },
   },
   {
