@@ -1,0 +1,72 @@
+hero|editorial hero section with large image
+hero|premium product hero ecommerce bold headline
+hero|hero section with background image and cta
+hero|minimal hero centered headline
+hero|split hero image left text right
+hero|animated gradient hero section
+footer|large site footer with link columns
+footer|editorial footer with big brand name
+footer|minimal footer with newsletter signup
+product|product card grid ecommerce price
+product|product detail page gallery thumbnails
+product|shopping cart drawer slide over
+nav|sticky navigation header with dropdown menu
+nav|ecommerce navbar with cart icon and search
+nav|mobile menu drawer hamburger
+feature|bento grid feature section with images
+feature|feature section alternating image and text
+feature|benefits grid with icons three columns
+feature|scrolling marquee logos band
+testimonial|testimonial carousel with avatars
+testimonial|review cards grid social proof
+cta|call to action section with background image
+cta|newsletter signup section email capture
+faq|faq accordion section
+pricing|pricing table cards comparison
+gallery|image gallery masonry grid
+gallery|carousel slider with images
+gallery|before after image comparison slider
+about|team members grid with photos
+about|company story timeline section
+stats|statistics counter section numbers
+badge|trust badges certification row
+form|contact form with map
+checkout|checkout form multi step
+banner|announcement bar top of page
+card|glassmorphism card hover effect
+card|3d tilt card interactive
+scroll|scroll reveal animation section
+scroll|parallax image section
+text|animated text reveal heading
+text|large typography display section
+video|video background section hero
+brand|luxury premium brand landing page section
+brand|supplement wellness health product page
+brand|beverage drink product showcase
+brand|skincare cosmetics product section
+brand|fitness sports nutrition landing
+editorial|magazine editorial layout section
+editorial|full bleed image with overlay text
+editorial|asymmetric grid layout section
+motion|hover reveal image effect
+motion|infinite horizontal scroll gallery
+motion|sticky scroll stacking cards
+motion|text mask image scroll effect
+color|colorful vibrant gradient section
+color|dark mode section high contrast
+ingredient|ingredients list section with icons
+science|how it works steps process section
+science|comparison table us vs them
+loyalty|subscription plan selector cards
+loyalty|bundle builder product picker
+ui|breadcrumb and filter sidebar shop
+ui|quantity selector add to cart button
+ui|rating stars review summary
+ui|size variant color swatch selector
+ui|sticky add to cart bar mobile
+ui|empty state illustration
+ui|loading skeleton shimmer
+ui|toast notification snackbar
+ui|modal dialog overlay
+ui|tabs section switcher
+ui|badge pill label chip

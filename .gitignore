@@ -4,3 +4,8 @@ pipeline/_shots/
 pipeline/_verdicts/
 pipeline/scores.json
 .DS_Store
+
+# 21st board: cached previews (244MB) and local shortlist — regenerate, don't commit
+registry/21st/previews/
+registry/21st/picks.json
+registry/21st/ranked.json

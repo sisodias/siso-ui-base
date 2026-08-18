@@ -1,0 +1,54 @@
+{
+  "project": "myGUMM commerce (Medusa v2 + Next 15 storefront)",
+  "measured": {
+    "tailwind": "3.4.19  — most 21st components target v4; v4-only syntax needs porting",
+    "shadcn": "NOT installed — no src/components/ui, no cn() helper. Every shadcn-based component needs the primitive vendored first.",
+    "motion": "framer-motion 11.18.2 + motion 11.18.2 present — motion/react imports work",
+    "radix": "only react-accordion — other Radix primitives need installing",
+    "ui-kit": "@headlessui/react 2.2.0 is the incumbent kit",
+    "note": "storefront modules only have home/{hero,featured-products} — everything else is Medusa starter default"
+  },
+  "need": {
+    "footer":      1.00,
+    "hero":        1.00,
+    "product":     0.85,
+    "feature":     0.80,
+    "gallery":     0.70,
+    "nav":         0.55,
+    "faq":         0.45,
+    "marquee":     0.40,
+    "stats":       0.35,
+    "team":        0.35,
+    "cta":         0.30,
+    "newsletter":  0.30,
+    "testimonial": 0.10,
+    "pricing":     0.05,
+    "other":       0.20
+  },
+  "completeness": {
+    "footer":  ["column|multi-column|sitemap|link", "social", "legal|policy|copyright", "brand|logo|wordmark"],
+    "hero":    ["image|visual|photo|landscape", "headline|title|heading", "cta|button|call to action"],
+    "product": ["price|pricing", "image|thumbnail|gallery", "cart|buy|add to"],
+    "feature": ["grid|column|bento", "image|icon|visual"],
+    "gallery": ["image|photo", "slider|carousel|grid|lightbox"],
+    "nav":     ["menu|link|navigation", "mobile|responsive|drawer"]
+  },
+  "penalties": [
+    ["tailwind v4|tailwind 4|@theme",            0.35, "needs Tailwind v4, repo is 3.4"],
+    ["shadcn|registry|npx shadcn",               0.20, "shadcn not installed here"],
+    ["three\\.?js|webgl|shader|r3f|fluted.glass",0.45, "heavy 3D/WebGL dep"],
+    ["gsap",                                     0.30, "GSAP not in repo"],
+    ["8-bit|retro|pixel|brutalis|neubrutal",     0.50, "style clashes with premium wellness brand"],
+    ["dark (only|theme required)",               0.15, "needs both modes"],
+    ["app store|google play|mobile app",         0.35, "no mobile app exists"],
+    ["docs|status page|developer|saas|dashboard",0.30, "wrong vertical — this is DTC retail"],
+    ["crypto|web3|nft|token",                    0.60, "wrong vertical"]
+  ],
+  "bonuses": [
+    ["editorial|magazine|premium|luxury",        0.10],
+    ["ecommerce|e-commerce|shop|store|retail",   0.12],
+    ["responsive|mobile",                        0.06],
+    ["framer|motion",                            0.05],
+    ["headless ?ui",                             0.08]
+  ]
+}

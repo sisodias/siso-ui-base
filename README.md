@@ -62,3 +62,9 @@ Point `UIBASE_TENANT` at that project's tenant dir (e.g. `<project>/.uihub`), dr
 Thin stable **core** (the loop, the viewer, the contracts, filesystem-as-state) + hot-swappable **batteries** (judge model, libraries, frameworks, gates). Future drops — cheaper vision models, MCP registries, your own fine-tune — snap into named seams without a rewrite. The **moat**: every graduation emits a labeled `(html, score, blessed)` triple → a proprietary per-domain taste corpus nobody can clone; the calibration anchor makes taste verifiable and drift-detectable.
 
 Full detail: open `CANONICAL.html`. Walkthrough: open `docs/WALKTHROUGH.html`.
+
+## registry/21st — component catalog
+
+A cached, browsable board of 587 21st.dev components for design reference across
+projects. `node registry/21st/serve.mjs` → http://127.0.0.1:8811/.
+See [registry/21st/README.md](registry/21st/README.md).

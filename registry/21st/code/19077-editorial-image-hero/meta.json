@@ -1,0 +1,25 @@
+{
+ "id": 19077,
+ "componentId": 9668,
+ "authorUserId": "user_felipemenezes098",
+ "name": "Editorial Image Hero",
+ "demoName": "Default",
+ "description": "A hero section with a full-width landscape image above and a top-aligned tagline paired with a right-aligned serif headline, description, and call-to-action buttons below.",
+ "previewUrl": "https://cdn.21st.dev/user_felipemenezes098/hero-07/default/preview.1786536537473.webp",
+ "installCommand": "npx shadcn@latest add \"https://21st.dev/r/felipemenezes098/hero-07?api_key=$API_KEY_21ST\"",
+ "registryDependencies": {
+  "filesWithRegistry": {
+   "/components/ui/button.tsx": {
+    "code": "import * as React from \"react\"\nimport { Slot } from \"@radix-ui/react-slot\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive:\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n        outline:\n          \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  },\n)\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\"\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    )\n  },\n)\nButton.displayName = \"Button\"\n\nexport { Button, buttonVariants }\n",
+    "registry": "ui"
+   }
+  },
+  "npmDependencies": {
+   "@radix-ui/react-slot": "latest",
+   "class-variance-authority": "latest"
+  }
+ },
+ "isPublic": true,
+ "registryTeamId": null,
+ "registryUserId": null
+}
