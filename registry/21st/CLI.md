@@ -69,9 +69,10 @@ Public, `robots.txt` explicitly allows ClaudeBot, no key needed. It lists
   That import is not reproducible without a key.
 
 Per the docs: *"Retrieve a component's code — free on paid plans; metered on the free tier."*
-**Builder with AI off is $6/month billed yearly ($8 quarterly) and unlocks unlimited
-component copy and install.** At 2/day the remaining ~1,563 components take 781 days;
-on Builder it is one scripted pass.
+Builder with AI off is $6/month billed yearly and unlocks unlimited copy/install.
+
+**But you do not need it.** The metered `get` is not the only way to the code —
+see "Harvesting without quota" below.
 
 Free regardless of tier: `21st search`, `21st logo`, `21st theme`, listing generation drafts.
 
@@ -85,3 +86,34 @@ https://cdn.21st.dev/cdn-cgi/image/fit=scale-down,width=640,quality=75,format=au
 
 Measured: 14,704 bytes → 4,423 bytes (3.3× smaller). Caching all 5,644 previews
 at 640px lands near 1.5 GB instead of ~8 GB at full size.
+
+## Harvesting without quota — the actual route
+
+`21st get` and `/r/<slug>.json` are gated. The **CDN is not.** Every component
+page embeds a Next.js flight payload containing:
+
+- `bundle_html_url` → `cdn.21st.dev/.../bundle.<ts>.html` — the **compiled
+  component**. Minified, but complete: every Tailwind class string and all
+  component logic survive. Plenty to read for inspiration or reconstruct from.
+- `demo_code` → `cdn.21st.dev/.../code.demo.<ts>.tsx` — the demo's real TSX.
+- `preview_url` → the preview image.
+
+All three return **HTTP 200 unauthenticated**. Only the payload's own `"code"`
+field is gated (it comes back as `""`).
+
+Verified 2026-08-19 on a random sample of 10 components: **10/10 bundles
+recovered**, median 311 KB, 7-69 `className` strings each.
+
+`harvest.mjs` implements this:
+
+```sh
+node harvest.mjs --limit 50      # try a slice
+node harvest.mjs --all           # full sweep
+node harvest.mjs --all --no-previews
+```
+
+Idempotent — skips what is already on disk, so it resumes after an interruption.
+
+Measured on the first 22 components: **0.5 s each** at concurrency 6, **354 KB
+each** on disk. The full 5,644-component catalog projects to roughly
+**48 minutes and 2.0 GB**, costing nothing and spending no `get` quota.

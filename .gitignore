@@ -12,3 +12,6 @@ registry/21st/ranked.json
 
 # Prior-art repos cloned for study (197MB) — reproduce with ./clone.sh
 vendor/
+
+# harvested corpus — regenerate with: node registry/21st/harvest.mjs --all
+registry/21st/harvest/
