@@ -10,6 +10,39 @@ The drop-in, **agent-neutral** (Claude or Codex) loop for human-in-the-loop UI b
 **The loop:** forge → show → react → iterate → graduate.
 The human stays on **taste**; the agent does **production**. HTML is the agent's clay (fast, isolated, no build); React is where blessed designs land.
 
+## How the pieces fit (read this once)
+
+Five layers, each answering a different question, joined by the loop:
+
+```
+  registry/21st       WHAT EXISTS      7,949 components + previews
+  registry/principles WHY IT WORKS     334 sections — universal rules
+  registry/skills     WHERE TO START   49 palettes (only when there is no DNA)
+  tenants/<x>/dna.md  WHAT IS RIGHT    this project's taste — THE AUTHORITY
+  ─────────────────────────────────────────────────────────────────────
+  brief.mjs           assembles all four into one brief
+  /forge-variations   builds from that brief
+  gates + judge       check the result against DNA *and* principles
+  human               blesses; /graduate ports it to React
+```
+
+**Precedence, everywhere:** the DNA wins. Principles decide only what the DNA
+leaves unsaid. Palettes are a starting point for a project that has no DNA yet,
+never an override for one that does. If a principle and the DNA disagree, say so
+— do not silently follow either.
+
+The full loop, in commands:
+
+```bash
+node brief.mjs "pricing section"                    # 1. gather context
+/forge-variations pricing-section 4                 # 2. build from it
+node batteries/gates/dna-grep.mjs <files>           # 3a. tenant taste
+node batteries/gates/principles-grep.mjs <files>    # 3b. universal rules
+/score-panel pricing-section                        # 4. vision judge ranks
+/show-me                                            # 5. human reacts/blesses
+/graduate                                           # 6. blessed HTML -> React
+```
+
 ## Start here: one command
 
 ```bash
