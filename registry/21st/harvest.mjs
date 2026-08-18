@@ -119,6 +119,13 @@ async function harvestOne(url) {
   if (await exists(join(dir, 'meta.json'))) return { id, skipped: true }
 
   const html = await fetchText(url)
+
+  // 21st serves deleted components as HTTP 200 with a noindex soft-404 body,
+  // so the status code alone is not enough to tell live from dead.
+  if (html.includes('NEXT_HTTP_ERROR_FALLBACK;404') || html.includes('content="noindex"')) {
+    return { id, dead: true }
+  }
+
   await mkdir(dir, { recursive: true })
 
   const m = meta(html, url)
@@ -158,23 +165,25 @@ async function main() {
   const urls = all.slice(0, LIMIT === Infinity ? all.length : LIMIT)
   console.log(`sitemap: ${all.length} components · harvesting ${urls.length} · concurrency ${CONC}`)
 
-  let done = 0, skipped = 0, failed = 0
+  let done = 0, skipped = 0, failed = 0, dead = 0
   const queue = [...urls]
   await Promise.all(Array.from({ length: CONC }, async () => {
     while (queue.length) {
       const u = queue.shift()
       try {
         const r = await harvestOne(u)
-        if (r.skipped) skipped++; else done++
+        if (r.skipped) skipped++
+        else if (r.dead) dead++
+        else done++
       } catch (e) {
         failed++
         console.error(`  fail ${u.split('/').pop()}: ${String(e).slice(0, 70)}`)
       }
-      const n = done + skipped + failed
-      if (n % 25 === 0) console.log(`  ${n}/${urls.length}  new ${done} · skip ${skipped} · fail ${failed}`)
+      const n = done + skipped + failed + dead
+      if (n % 25 === 0) console.log(`  ${n}/${urls.length}  new ${done} · skip ${skipped} · dead ${dead} · fail ${failed}`)
     }
   }))
-  console.log(`\ndone: ${done} new, ${skipped} already had, ${failed} failed → ${OUT}`)
+  console.log(`\ndone: ${done} new, ${skipped} already had, ${dead} dead (soft-404), ${failed} failed → ${OUT}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) main()

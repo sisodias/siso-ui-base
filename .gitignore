@@ -15,3 +15,4 @@ vendor/
 
 # harvested corpus — regenerate with: node registry/21st/harvest.mjs --all
 registry/21st/harvest/
+registry/21st/bundles.tar.zst

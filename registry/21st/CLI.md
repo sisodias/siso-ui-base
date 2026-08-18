@@ -117,3 +117,66 @@ Idempotent — skips what is already on disk, so it resumes after an interruptio
 Measured on the first 22 components: **0.5 s each** at concurrency 6, **354 KB
 each** on disk. The full 5,644-component catalog projects to roughly
 **48 minutes and 2.0 GB**, costing nothing and spending no `get` quota.
+
+## Is the sitemap actually complete?
+
+Checked against an independent source — the April bulk import, built through a
+different endpoint months earlier:
+
+| Check | Result |
+|---|---|
+| Sitemap truncated / paginated | No — one file, closes cleanly, no `<sitemapindex>` |
+| Other sitemap paths (8 probed) | All 404 |
+| April corpus (3,494) found in sitemap | **3,372 — 96.5%** |
+| Of the 122 unmatched, sampled live | 8/10 dead, 2/10 live |
+| In old CLI sweep but not sitemap (6) | All soft-404s — deleted components |
+
+Extrapolating the residue: roughly **24** genuinely missing. True catalogue
+**~5,670**. For the count to be in the millions, the April import would have had
+to miss 99.8% of the site using a different endpoint — instead it lands 96.5%
+inside today's sitemap.
+
+**Gotcha:** 21st serves deleted components as **HTTP 200 with a `noindex`
+soft-404 body**, not a real 404. Never trust the status code — check for
+`NEXT_HTTP_ERROR_FALLBACK;404`. `harvest.mjs` does, and counts them as `dead`.
+
+## Storage
+
+Measured on real harvested components, projected to 5,644:
+
+| Artifact | Per component | Full catalogue |
+|---|---|---|
+| Preview thumbnail (webp 640px) | 31 KB | **0.17 GB** |
+| Metadata + demo source | 1 KB | 0.01 GB |
+| Compiled bundle, loose | 280 KB | 1.58 GB |
+| **Bundles, zstd archive** | 24 KB | **0.14 GB** |
+
+Bundles are 222-260 KB regardless of component complexity — each embeds the same
+React runtime — so they are ~90% redundant across the corpus. `archive-bundles.sh`
+exploits that with `tar | zstd -19 --long=27`: measured **8.2 MB -> 652 KB (12.6x)**
+on 26 components. Round-trip verified lossless by md5.
+
+**Whole catalogue: ~0.32 GB.** Thumbnails and metadata stay loose so the board
+renders instantly; bundles live in the archive, extracted on adoption:
+
+```sh
+zstd -dc bundles.tar.zst | tar -xf - harvest/<author>__<slug>/bundle.html
+```
+
+## Layout — flat on disk, faceted in the index
+
+`harvest/<author>__<slug>/` — flat and collision-proof. **Not** folders-by-type:
+9% of components carry more than one category, so a tree forces a false choice.
+
+Facets (from design-system's classification of 3,148 components):
+
+| Axis | Distinct | Top values |
+|---|---|---|
+| `category` | 14 | input 816 · data-display 582 · media 549 · card 416 · hero 223 |
+| `visualStyle` | 23 | minimalist 1566 · flat 1180 · gradient 703 · glass 236 |
+| `bestForIndustries` | 12 | saas 2821 · e-commerce 1917 · media 1433 · fintech 1041 |
+| `complexity` | 3 | composite 1992 · atomic 1113 · system 44 |
+
+So "show me minimalist e-commerce heroes with no WebGL" is a query over the
+manifest, not a directory walk — and it is the same shape `score.mjs` already
+consumes for per-project ranking.
