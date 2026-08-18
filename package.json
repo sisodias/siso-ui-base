@@ -1,0 +1,25 @@
+{
+  "name": "siso-ui-base",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Build UI with an agent fleet + a human in the loop. Corpus, principles, palettes and tenant DNA behind one brief.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "brief": "node brief.mjs",
+    "box": "node app/serve.mjs",
+    "board": "node registry/21st/serve.mjs",
+    "gate:dna": "node batteries/gates/dna-grep.mjs",
+    "gate:principles": "node batteries/gates/principles-grep.mjs",
+    "verify": "node registry/21st/verify-harvest.mjs",
+    "shoot": "node pipeline/shoot.mjs",
+    "judge": "node pipeline/judge.mjs",
+    "doctor": "node doctor.mjs"
+  },
+  "//": "The core — UI Box, brief, corpus, principles, gates — is genuinely zero-dependency (Node built-ins only). Playwright is needed ONLY by pipeline/shoot.mjs to screenshot variations for the visual judge, so it is optional: everything else runs without it. Install it when you want scoring: npm install",
+  "optionalDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

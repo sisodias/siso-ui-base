@@ -8,6 +8,16 @@
 
 ---
 
+## Health check
+
+```bash
+node doctor.mjs     # every layer, what is missing, how to fix it
+```
+
+The core is zero-dependency (Node built-ins only). **Playwright is optional** and
+needed solely by `pipeline/shoot.mjs` for the visual judge — `npm install` when
+you want scoring.
+
 ## One command
 
 ```bash

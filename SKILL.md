@@ -43,6 +43,19 @@ node batteries/gates/principles-grep.mjs <files>    # 3b. universal rules
 /graduate                                           # 6. blessed HTML -> React
 ```
 
+## Check it works first
+
+```bash
+node doctor.mjs
+```
+
+Reports every layer, what data is present, and what is degraded — with the
+command to fix each. Exit 1 if something required is broken.
+
+Known degradation: **`/score-panel` needs Playwright** (`npm install`). Without
+it the brief -> forge -> gate path still works; only the visual judge is
+unavailable.
+
 ## Start here: one command
 
 ```bash
