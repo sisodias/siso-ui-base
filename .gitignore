@@ -19,3 +19,5 @@ registry/21st/bundles.tar.zst
 registry/21st/harvest-full.log
 registry/21st/.env.21st
 registry/21st/api-metadata.json
+registry/21st/extras/
+registry/21st/non-component-urls.json

@@ -13,7 +13,7 @@ import { readdir, readFile, stat } from 'node:fs/promises'
 const JSON_OUT = process.argv.includes('--json')
 const dirs = (await readdir('harvest')).filter(d => d.includes('__'))
 
-const r = { total: dirs.length, valid: 0, inFlight: 0, badJson: 0, missingFields: 0, noBundle: 0, tinyBundle: 0, noPreview: 0, withUsage: 0, badJsonPaths: [], missingFieldPaths: [] }
+const r = { total: dirs.length, valid: 0, inFlight: 0, badJson: 0, missingFields: 0, noBundle: 0, tinyBundle: 0, stubUpstream: 0, noPreview: 0, withUsage: 0, badJsonPaths: [], missingFieldPaths: [] }
 
 for (const d of dirs) {
   const p = `harvest/${d}/meta.json`
@@ -26,7 +26,14 @@ for (const d of dirs) {
   if (!m.url || !m.author || !m.slug || !m.id) { r.missingFields++; r.missingFieldPaths.push(p); continue }
   if (typeof m.usage_count === 'number') r.withUsage++
 
-  try { if ((await stat(`harvest/${d}/bundle.html`)).size < 500) r.tinyBundle++ } catch { r.noBundle++ }
+  // A sub-500-byte bundle is not necessarily a truncated download: some
+  // published components genuinely are stubs (e2e test artifacts from
+  // *_localhost accounts). Verified byte-identical against the CDN, so this
+  // is upstream junk, not a harvest defect. Counted separately.
+  try {
+    const size = (await stat(`harvest/${d}/bundle.html`)).size
+    if (size < 500) (/(_localhost|e2e-\d{8,})/.test(d) ? r.stubUpstream++ : r.tinyBundle++)
+  } catch { r.noBundle++ }
   try { await stat(`harvest/${d}/preview.webp`) } catch { r.noPreview++ }
   r.valid++
 }
@@ -43,6 +50,7 @@ if (JSON_OUT) {
   console.log(`  with usage_count ${r.withUsage}`)
   console.log(`  no bundle      ${r.noBundle}   (component ships none)`)
   console.log(`  no preview     ${r.noPreview}   (component ships none)`)
+  console.log(`  stub upstream  ${r.stubUpstream}   (published stub, verified vs CDN — not our defect)`)
   console.log(`  FAIL bad-json  ${r.badJson}`)
   console.log(`  FAIL missing-fields ${r.missingFields}`)
   console.log(`  FAIL tiny-bundle ${r.tinyBundle}`)
