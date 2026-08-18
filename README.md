@@ -63,6 +63,33 @@ Thin stable **core** (the loop, the viewer, the contracts, filesystem-as-state) 
 
 Full detail: open `CANONICAL.html`. Walkthrough: open `docs/WALKTHROUGH.html`.
 
+## opendesign/ — interop with OpenDesign
+
+[OpenDesign](https://github.com/nexu-io/open-design) is a local-first desktop app
+that drives your existing coding agents as a design engine. Its 143 bundled
+design systems are **prose only** — a `DESIGN.md` and a manifest, no components.
+That is the exact complement of this repo, which has components and previews but
+keeps its taste rules per-tenant.
+
+`opendesign/sync.mjs` keeps the two as one asset:
+
+```bash
+node opendesign/sync.mjs status              # tenants vs exported packages
+node opendesign/sync.mjs export oracle       # tenant dna.md -> design-system pkg
+node opendesign/sync.mjs import <pkg-dir>    # a design system -> a new tenant
+```
+
+The hub owns the source. A tenant's `dna.md` IS the design system — export copies
+it verbatim, so edit the tenant, never the generated `DESIGN.md`. Set the
+marketplace identity from the tenant with an optional front-matter comment:
+
+```html
+<!-- opendesign: title="SISO Oracle" description="One good sentence." -->
+```
+
+`opendesign/plugins/siso-ui-base/` packages the component corpus itself as an
+OpenDesign skill, so an agent there can query all 7,949 components.
+
 ## registry/21st — component catalog
 
 A cached, browsable board of 587 21st.dev components for design reference across

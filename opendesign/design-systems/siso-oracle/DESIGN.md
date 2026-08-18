@@ -1,3 +1,5 @@
+<!-- Generated from tenants/oracle/dna.md by opendesign/sync.mjs. Edit the tenant DNA, not this file. -->
+
 <!-- opendesign: title="SISO Oracle" description="Dense, warm-neutral product UI with a restrained pink accent. Every value is deliberate and non-round — distilled from a production chat rail, not invented for a swatch page." -->
 
 # Oracle cockpit DNA — the exact values, with the *why*

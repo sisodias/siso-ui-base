@@ -37,6 +37,41 @@ The human stays on **taste**; the agent does **production**. HTML is the agent's
 
 A tenant dir holds: `dna.md` (the design rules / rubric source), `variations/` (where agents write), and is the home for the generated `review-state.json` / `winner.json` / `feedback-latest.json`. Oracle Streaming = the worked example tenant (`tenants/oracle/`). To adopt in a new project: point `UIBASE_TENANT` at that project's tenant dir (e.g. `<project>/.uihub`), drop in a `dna.md`, go.
 
+## The component corpus (use it before forging from scratch)
+
+`registry/21st/` holds **7,949 real components** — preview image, compiled bundle
+and demo source each — plus 1,514 themes/templates/shaders/gradients. 91.6% are
+classified against 21st's 75-tag taxonomy. Start a forge from evidence, not a
+blank file.
+
+**Never grep `harvest/` and never read the catalogue into context** — it is
+hundreds of thousands of tokens. Query it instead:
+
+```bash
+node registry/21st/find.mjs pricing-section --limit 6 --json
+node registry/21st/find.mjs card --tag testimonials
+node registry/21st/find.mjs "glassmorphism"        # free text beats the taxonomy
+```
+
+Look at the returned `preview` images, read `bundle.html` for the one you want,
+then **adapt it to the tenant DNA** — never paste. Full contract:
+`registry/21st/AGENT.md`.
+
+## OpenDesign interop (`opendesign/`)
+
+A tenant's `dna.md` and an OpenDesign `DESIGN.md` are the same asset in two
+formats. The hub owns the source:
+
+```bash
+node opendesign/sync.mjs status               # tenants vs exported packages
+node opendesign/sync.mjs export <tenant>      # dna.md -> design-system package
+node opendesign/sync.mjs import <pkg-dir>     # design system -> new tenant
+```
+
+Import lands a third-party design system as a tenant, ready for the normal
+forge -> score -> bless loop. Export publishes SISO taste outward. Edit the
+tenant DNA, never the generated `DESIGN.md`.
+
 ## Batteries (swappable, in `batteries/`)
 
 - **judge** — visual scorer (Codex-vision today; `pipeline/{rubric,shoot,judge}.mjs`). Swap the model behind the same rubric.

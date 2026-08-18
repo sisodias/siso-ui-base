@@ -1,0 +1,83 @@
+{
+  "$schema": "https://open-design.ai/schemas/plugin.v1.json",
+  "specVersion": "1.0.0",
+  "name": "siso-ui-base",
+  "title": "SISO UI Base",
+  "version": "0.1.0",
+  "description": "Search 7,949 real components by tag or free text, each with a preview image and compiled bundle on disk — build UI from evidence instead of from a blank file.",
+  "license": "Apache-2.0",
+  "tags": [
+    "create",
+    "prototype",
+    "components",
+    "reference",
+    "design"
+  ],
+  "compat": {
+    "agentSkills": [
+      {
+        "path": "./SKILL.md"
+      }
+    ]
+  },
+  "od": {
+    "kind": "skill",
+    "taskKind": "new-generation",
+    "mode": "prototype",
+    "scenario": "product",
+    "surface": "web",
+    "useCase": {
+      "query": {
+        "en": "Build {{artifactKind}} for {{brief}}. First query the local component corpus with find.mjs, look at the preview images of the top candidates, then adapt the closest match to the active design system rather than writing from scratch."
+      }
+    },
+    "inputs": [
+      {
+        "name": "artifactKind",
+        "label": "Artifact kind",
+        "type": "select",
+        "options": [
+          "a landing page",
+          "a dashboard",
+          "an app screen",
+          "a component set"
+        ],
+        "default": "a landing page"
+      },
+      {
+        "name": "brief",
+        "label": "Brief",
+        "type": "text",
+        "placeholder": "What is it for?"
+      }
+    ],
+    "pipeline": {
+      "stages": [
+        {
+          "id": "discovery",
+          "atoms": [
+            "discovery-question-form"
+          ]
+        },
+        {
+          "id": "plan",
+          "atoms": [
+            "direction-picker",
+            "todo-write"
+          ]
+        },
+        {
+          "id": "generate",
+          "atoms": [
+            "file-write",
+            "live-artifact"
+          ]
+        }
+      ]
+    },
+    "capabilities": [
+      "prompt:inject",
+      "fs:write"
+    ]
+  }
+}

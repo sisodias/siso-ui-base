@@ -23,8 +23,17 @@
 
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Resolve paths against this file, not the caller's cwd, so the script works
+// from the repo root and from CI — not only from its own directory.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const R = p => join(HERE, p)
+
+
 const DRY = process.argv.includes('--dry-run')
-const cls = JSON.parse(await readFile('classification.json', 'utf8'))
+const cls = JSON.parse(await readFile(R('classification.json'), 'utf8'))
 
 // Aliases map real-world naming onto the official vocabulary. Kept explicit:
 // a wrong alias silently mislabels hundreds of components, which is the exact
@@ -112,9 +121,9 @@ const tagged = cls.componentToTags
 let scanned = 0, newlyTagged = 0, tagsAdded = 0
 const preview = []
 
-for (const d of (await readdir('harvest')).filter(x => x.includes('__'))) {
+for (const d of (await readdir(R('harvest'))).filter(x => x.includes('__'))) {
   let m
-  try { m = JSON.parse(await readFile(`harvest/${d}/meta.json`, 'utf8')) } catch { continue }
+  try { m = JSON.parse(await readFile(R(`harvest/${d}/meta.json`), 'utf8')) } catch { continue }
   scanned++
   const existing = tagged[m.url]
   if (existing && existing.length) continue
@@ -166,6 +175,6 @@ for (const list of Object.values(tagged)) {
 cls.componentToTags = tagged
 cls.tagCounts = Object.fromEntries(Object.entries(tagCounts).sort((a, b) => b[1] - a[1]))
 cls.stats = { ...cls.stats, taggedTotal: Object.keys(tagged).length, bySource }
-await writeFile('classification.json', JSON.stringify(cls, null, 2))
+await writeFile(R('classification.json'), JSON.stringify(cls, null, 2))
 console.log(`\ntagged total ${cls.stats.taggedTotal} · page ${bySource.page} · api ${bySource.api} · local ${bySource.local}`)
 console.log('-> classification.json')

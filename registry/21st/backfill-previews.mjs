@@ -19,6 +19,15 @@
 
 import { readdir, readFile, writeFile, stat } from 'node:fs/promises'
 
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Resolve paths against this file, not the caller's cwd, so the script works
+// from the repo root and from CI — not only from its own directory.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const R = p => join(HERE, p)
+
+
 const DRY = process.argv.includes('--dry-run')
 const CONC = Number(process.env.CONC || 6)
 const UA = { 'user-agent': 'Mozilla/5.0 (compatible; siso-ui-base harvester)' }
@@ -49,12 +58,12 @@ const ext = b =>
 
 // find components with no preview file
 const todo = []
-for (const d of (await readdir('harvest')).filter(x => x.includes('__'))) {
+for (const d of (await readdir(R('harvest'))).filter(x => x.includes('__'))) {
   let m
-  try { m = JSON.parse(await readFile(`harvest/${d}/meta.json`, 'utf8')) } catch { continue }
+  try { m = JSON.parse(await readFile(R(`harvest/${d}/meta.json`), 'utf8')) } catch { continue }
   let found = false
   for (const e of ['webp', 'png', 'jpg', 'gif', 'avif']) {
-    if (await has(`harvest/${d}/preview.${e}`)) { found = true; break }
+    if (await has(R(`harvest/${d}/preview.${e}`))) { found = true; break }
   }
   if (found) continue
   todo.push({ d, m })
@@ -82,12 +91,12 @@ await Promise.all(Array.from({ length: CONC }, async () => {
     if (!b) { b = await buf(`https://21st.dev/api/og/component/${m.author}/${m.slug}`); if (b) via = 'ogCard' }
 
     if (!b) { tally.failed++; continue }
-    await writeFile(`harvest/${d}/preview.${ext(b)}`, b)
-    const meta = JSON.parse(await readFile(`harvest/${d}/meta.json`, 'utf8'))
+    await writeFile(R(`harvest/${d}/preview.${ext(b)}`), b)
+    const meta = JSON.parse(await readFile(R(`harvest/${d}/meta.json`), 'utf8'))
     meta.preview = `preview.${ext(b)}`
     meta.previewVia = via
     meta.harvested = [...new Set([...(meta.harvested || []), 'preview'])]
-    await writeFile(`harvest/${d}/meta.json`, JSON.stringify(meta, null, 2))
+    await writeFile(R(`harvest/${d}/meta.json`), JSON.stringify(meta, null, 2))
     tally[via]++
   }
 }))

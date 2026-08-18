@@ -19,6 +19,15 @@
 
 import { readFile, writeFile, readdir } from 'node:fs/promises'
 
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Resolve paths against this file, not the caller's cwd, so the script works
+// from the repo root and from CI — not only from its own directory.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const R = p => join(HERE, p)
+
+
 const KEY = process.env.API_KEY_21ST
 if (!KEY) { console.error('API_KEY_21ST not set (source: .env.21st)'); process.exit(1) }
 
@@ -38,7 +47,7 @@ async function search(q, page) {
 }
 
 // queries.txt is `category|query` — send only the query half.
-const queries = [...new Set((await readFile('queries.txt', 'utf8'))
+const queries = [...new Set((await readFile(R('queries.txt'), 'utf8'))
   .split('\n').map(s => s.trim()).filter(s => s && !s.startsWith('#'))
   .map(s => (s.includes('|') ? s.slice(s.indexOf('|') + 1) : s).trim())
   .filter(Boolean))]
@@ -69,13 +78,13 @@ for (const q of queries) {
 }
 console.log(`\nunique components with API metadata: ${byUrl.size} (requests_remaining ${remaining})`)
 
-await writeFile('api-metadata.json', JSON.stringify(Object.fromEntries(byUrl), null, 2))
+await writeFile(R('api-metadata.json'), JSON.stringify(Object.fromEntries(byUrl), null, 2))
 
 // merge into harvested meta.json where present
 let merged = 0
-for (const d of await readdir('harvest')) {
+for (const d of await readdir(R('harvest'))) {
   if (!d.includes('__')) continue
-  const p = `harvest/${d}/meta.json`
+  const p = R(`harvest/${d}/meta.json`)
   try {
     const m = JSON.parse(await readFile(p, 'utf8'))
     const hit = byUrl.get(m.url)

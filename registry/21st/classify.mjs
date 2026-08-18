@@ -12,7 +12,7 @@
 // carries 114+ "miscategorised: searched as ui, actually other" flags. A tag
 // page is ground truth; a search query is a guess.
 //
-// Components are multi-tag: ~9% carry more than one, so this writes a FACETED
+// Components are multi-tag: 47.4% carry more than one, so this writes a FACETED
 // index (component -> [tags], tag -> [components]) rather than forcing each
 // component into one folder.
 //
@@ -22,6 +22,15 @@
 // Output: classification.json
 
 import { readdir, readFile, writeFile } from 'node:fs/promises'
+
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Resolve paths against this file, not the caller's cwd, so the script works
+// from the repo root and from CI — not only from its own directory.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const R = p => join(HERE, p)
+
 
 const UA = { 'user-agent': 'Mozilla/5.0 (compatible; siso-ui-base harvester)' }
 const CONC = Number(process.env.CONC || 6)
@@ -72,9 +81,9 @@ for (const [tag, urls] of Object.entries(tagToComponents)) {
 // join against what we actually harvested, and carry usage_count through so
 // the index can rank as well as filter
 const harvested = {}
-for (const d of (await readdir('harvest')).filter(x => x.includes('__'))) {
+for (const d of (await readdir(R('harvest'))).filter(x => x.includes('__'))) {
   try {
-    const m = JSON.parse(await readFile(`harvest/${d}/meta.json`, 'utf8'))
+    const m = JSON.parse(await readFile(R(`harvest/${d}/meta.json`), 'utf8'))
     harvested[m.url] = { id: m.id, name: m.name, description: m.description, usage_count: m.usage_count ?? null, preview: m.preview ?? 'preview.webp' }
   } catch {}
 }
@@ -98,7 +107,7 @@ const out = {
   componentToTags,
   tagToComponents,
 }
-await writeFile('classification.json', JSON.stringify(out, null, 2))
+await writeFile(R('classification.json'), JSON.stringify(out, null, 2))
 
 console.log(`\nharvested   ${out.stats.harvested}`)
 console.log(`tagged      ${out.stats.tagged}`)

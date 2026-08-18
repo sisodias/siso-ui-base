@@ -22,3 +22,5 @@ registry/21st/api-metadata.json
 registry/21st/extras/
 registry/21st/non-component-urls.json
 registry/21st/classification.json
+tenants/*/variations/
+tenants/*/review-state.json

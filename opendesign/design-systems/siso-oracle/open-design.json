@@ -1,0 +1,70 @@
+{
+  "$schema": "https://open-design.ai/schemas/plugin.v1.json",
+  "specVersion": "1.0.0",
+  "name": "design-system-siso-oracle",
+  "title": "SISO Oracle",
+  "version": "0.1.0",
+  "description": "Dense, warm-neutral product UI with a restrained pink accent. Every value is deliberate and non-round — distilled from a production chat rail, not invented for a swatch page.",
+  "license": "Apache-2.0",
+  "tags": [
+    "design-system",
+    "design",
+    "themed-unique"
+  ],
+  "od": {
+    "kind": "scenario",
+    "taskKind": "new-generation",
+    "mode": "design-system",
+    "scenario": "design",
+    "surface": "web",
+    "useCase": {
+      "query": {
+        "en": "Generate a {{artifactKind}} using the SISO Oracle design system. Stay faithful to its palette, typography, spacing and motion rules as documented in DESIGN.md."
+      }
+    },
+    "inputs": [
+      {
+        "name": "artifactKind",
+        "label": "Artifact kind",
+        "type": "select",
+        "options": [
+          "dashboard",
+          "app screen",
+          "landing page",
+          "data panel"
+        ],
+        "default": "dashboard"
+      },
+      {
+        "name": "brief",
+        "label": "Brief",
+        "type": "text",
+        "placeholder": "What should this screen do?"
+      }
+    ],
+    "context": {
+      "designSystem": {
+        "ref": "siso-oracle",
+        "primary": true
+      },
+      "assets": [
+        "./DESIGN.md"
+      ]
+    },
+    "pipeline": {
+      "stages": [
+        {
+          "id": "generate",
+          "atoms": [
+            "file-write",
+            "live-artifact"
+          ]
+        }
+      ]
+    },
+    "capabilities": [
+      "prompt:inject",
+      "fs:write"
+    ]
+  }
+}

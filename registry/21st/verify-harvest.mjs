@@ -9,14 +9,21 @@
 //   node verify-harvest.mjs --json   # machine-readable, for CI
 
 import { readdir, readFile, stat } from 'node:fs/promises'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Resolve against this file, not the caller's cwd — the gate must work from
+// the repo root and from CI, not only from its own directory.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const H = p => join(HERE, 'harvest', p)
 
 const JSON_OUT = process.argv.includes('--json')
-const dirs = (await readdir('harvest')).filter(d => d.includes('__'))
+const dirs = (await readdir(join(HERE, 'harvest'))).filter(d => d.includes('__'))
 
 const r = { total: dirs.length, valid: 0, inFlight: 0, badJson: 0, missingFields: 0, noBundle: 0, tinyBundle: 0, stubUpstream: 0, noPreview: 0, withUsage: 0, badJsonPaths: [], missingFieldPaths: [] }
 
 for (const d of dirs) {
-  const p = `harvest/${d}/meta.json`
+  const p = H(`${d}/meta.json`)
   let raw
   try { raw = await readFile(p, 'utf8') } catch { r.inFlight++; continue }
 
@@ -31,10 +38,10 @@ for (const d of dirs) {
   // *_localhost accounts). Verified byte-identical against the CDN, so this
   // is upstream junk, not a harvest defect. Counted separately.
   try {
-    const size = (await stat(`harvest/${d}/bundle.html`)).size
+    const size = (await stat(H(`${d}/bundle.html`))).size
     if (size < 500) (/(_localhost|e2e-\d{8,})/.test(d) ? r.stubUpstream++ : r.tinyBundle++)
   } catch { r.noBundle++ }
-  try { await stat(`harvest/${d}/preview.webp`) } catch { r.noPreview++ }
+  try { await stat(H(`${d}/preview.webp`)) } catch { r.noPreview++ }
   r.valid++
 }
 
