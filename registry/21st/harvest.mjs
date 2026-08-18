@@ -2,7 +2,8 @@
 // 21st.dev harvester — enumerate the whole catalog and cache it locally.
 //
 // Uses only free, unauthenticated endpoints:
-//   sitemap.xml            -> every component page (5,644 as of 2026-08-19)
+//   sitemap.xml + profiles -> every component page (7,538 union, 2026-08-19;
+//                             the sitemap alone misses ~1,894 of them)
 //   the component page     -> metadata + demoCode + CDN urls (Next flight payload)
 //   cdn .../bundle.N.html  -> the COMPILED component (minified but complete:
 //                             every Tailwind class string and all logic intact)
@@ -62,12 +63,27 @@ async function fetchBuf(url, tries = 3) {
   }
 }
 
-// --- sitemap -> every component page -------------------------------------
+// --- catalogue enumeration -----------------------------------------------
+// The sitemap is NOT complete: measured 2026-08-19, author profile pages list
+// 1,894 components it never mentions (86.7% of them live). So enumerate from
+// the UNION of both surfaces. urls-union.json is the cached result of
+// profile-sweep.mjs; re-run that to refresh.
 export async function componentUrls() {
   const xml = await fetchText('https://21st.dev/sitemap.xml')
-  return [...xml.matchAll(/<loc>(.*?)<\/loc>/g)]
+  const fromSitemap = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)]
     .map(m => m[1])
     .filter(u => u.includes('/components/') && u.split('/')[3]?.startsWith('@'))
+
+  let union = fromSitemap
+  try {
+    const cached = JSON.parse(await readFile(join(HERE, 'urls-union.json'), 'utf8'))
+    if (Array.isArray(cached.union) && cached.union.length >= fromSitemap.length) {
+      union = [...new Set([...cached.union, ...fromSitemap])]
+    }
+  } catch {
+    console.warn('  no urls-union.json — sitemap only (run: node profile-sweep.mjs)')
+  }
+  return union
 }
 
 // The page embeds a Next flight payload with escaped slashes; pull the CDN
@@ -163,7 +179,7 @@ async function main() {
   await mkdir(OUT, { recursive: true })
   const all = await componentUrls()
   const urls = all.slice(0, LIMIT === Infinity ? all.length : LIMIT)
-  console.log(`sitemap: ${all.length} components · harvesting ${urls.length} · concurrency ${CONC}`)
+  console.log(`catalogue: ${all.length} components (sitemap+profiles union) · harvesting ${urls.length} · concurrency ${CONC}`)
 
   let done = 0, skipped = 0, failed = 0, dead = 0
   const queue = [...urls]

@@ -12,9 +12,11 @@ const txt = (c) => `${c.name} ${c.description || ''}`.toLowerCase()
 // --- 1. TRUE TYPE: what the component actually IS, from its own words ---
 // Category came from the search query, so it lies. Descriptions don't.
 const TYPE = [
+  // Footer FIRST: a footer that also carries a newsletter is still a footer.
+  // Ordering this after 'newsletter' buried complete footers at need=0.30.
+  ['footer', /footer/],
   ['newsletter', /newsletter|subscribe|email (input|capture|signup)|mailing list/],
   ['testimonial', /testimonial|review|social proof/],
-  ['footer', /footer/],
   ['hero', /\bhero\b|landing (page )?(header|section)/],
   ['nav', /navbar|navigation (bar|menu|header)|header with|menu drawer|hamburger/],
   ['product', /product (card|grid|detail|page)|add to cart|shopping cart|checkout|price/],

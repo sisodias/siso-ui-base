@@ -26,7 +26,7 @@
     "other":       0.20
   },
   "completeness": {
-    "footer":  ["column|multi-column|sitemap|link", "social", "legal|policy|copyright", "brand|logo|wordmark"],
+    "footer":  ["column|multi-column|sitemap|link", "social", "legal|policy|copyright", "brand|logo|wordmark", "newsletter|subscribe|email"],
     "hero":    ["image|visual|photo|landscape", "headline|title|heading", "cta|button|call to action"],
     "product": ["price|pricing", "image|thumbnail|gallery", "cart|buy|add to"],
     "feature": ["grid|column|bento", "image|icon|visual"],
