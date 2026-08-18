@@ -63,6 +63,18 @@ Thin stable **core** (the loop, the viewer, the contracts, filesystem-as-state) 
 
 Full detail: open `CANONICAL.html`. Walkthrough: open `docs/WALKTHROUGH.html`.
 
+## registry/principles — the reasoning layer
+
+334 sections of universal design principles from
+[`bergside/typeui`](https://github.com/bergside/typeui) (MIT) — the *why* behind
+the rules, with formulas and a mandatory application order. Authored, unlike the
+template-generated style skills.
+
+```bash
+node registry/principles/ingest.mjs              # refresh from GitHub
+node registry/principles/ask.mjs "nested radius" # query one section
+```
+
 ## registry/skills — palette & type reference
 
 67 design skills from [`bergside/awesome-design-skills`](https://github.com/bergside/awesome-design-skills)

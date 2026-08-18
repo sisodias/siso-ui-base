@@ -57,6 +57,29 @@ Look at the returned `preview` images, read `bundle.html` for the one you want,
 then **adapt it to the tenant DNA** — never paste. Full contract:
 `registry/21st/AGENT.md`.
 
+## Design principles (`registry/principles/`)
+
+The **reasoning layer** — 334 sections across 271KB from `bergside/typeui`
+(MIT), covering hierarchy, spacing rhythm, typography, colour logic, depth,
+interaction, responsive thinking and accessibility.
+
+Unlike the style skills these are genuinely authored: they carry formulas, a
+mandatory application order, and the *why* behind each rule. They say what holds
+when the design system is silent.
+
+**Never read these files whole** — `ui-principles.md` alone is 96KB. Query the
+section you need:
+
+```bash
+node registry/principles/ask.mjs "nested radius"
+node registry/principles/ask.mjs contrast --file accessibility
+node registry/principles/ask.mjs --list          # all 334 section headings
+```
+
+Their own stated order: design-system tokens first, then spacing, then UI
+principles, then typography. Principles **enhance** a compliant design; they
+never override a tenant DNA token. On conflict, the DNA wins.
+
 ## Palette & type reference (`registry/skills/`)
 
 67 design skills from `bergside/awesome-design-skills` (MIT), each with a
