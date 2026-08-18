@@ -1,0 +1,2456 @@
+{
+  "source": "bergside/awesome-design-skills",
+  "license": "MIT",
+  "count": 67,
+  "note": "Template-generated design skills. Reference starting points, not authored taste.",
+  "skills": [
+    {
+      "name": "agentic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+      "visualStyle": [
+        "modern",
+        "bold"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, clear, friendly, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#FF5701",
+        "secondary": "#F6F6F1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Playfair Display",
+        "display": "Playfair Display",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "ant",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
+      "visualStyle": [
+        "data-dense",
+        "enterprise"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful, clear, friendly, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#1677ff",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Plus Jakarta Sans",
+        "display": "Plus Jakarta Sans",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "artistic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.",
+      "visualStyle": [
+        "high-contrast",
+        "artistic"
+      ],
+      "typographyScale": "12/14/16/18/24/30/36",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, professional, action-oriented",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Limelight",
+        "display": "Limelight",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "basic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
+      "visualStyle": [
+        "modern",
+        "editorial"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, professional",
+      "tokens": {
+        "primary": "#A855F7",
+        "secondary": "#0A1829",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#0A1829"
+      },
+      "fonts": {
+        "primary": "Nunito",
+        "display": "Oswald",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "bento",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.",
+      "visualStyle": [
+        "modern",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#FAD4C0",
+        "secondary": "#80A1C1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFF5E6",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "bold",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.",
+      "visualStyle": [
+        "bold"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "friendly, professional",
+      "tokens": {
+        "primary": "#0077BC",
+        "secondary": "#009866",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#111111",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Archivo Black",
+        "display": "Archivo Black",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "brutalism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.",
+      "visualStyle": [
+        "bold"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": null,
+      "tone": null,
+      "tokens": {
+        "primary": "#DD614C",
+        "secondary": "#DAA144",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Darker Grotesque",
+        "display": "Darker Grotesque",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "cafe",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "2/4/8/12/16/24/32/48",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#5D4432",
+        "secondary": "#E9E3DD",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#F9F7F5",
+        "text": "#3E2B1E"
+      },
+      "fonts": {
+        "primary": "Poppins",
+        "display": "Poppins",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "claude",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink.\"",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#141413",
+        "secondary": "#FAF9F6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Anthropic Sans",
+        "display": "Anthropic Sans",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "claymorphism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
+      "visualStyle": [
+        "modern",
+        "high-contrast",
+        "playful"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#FFFFFF",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#1C398E"
+      },
+      "fonts": {
+        "primary": "Montserrat",
+        "display": "Poppins",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "clean",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets",
+      "tone": "clear, friendly",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Roboto",
+        "display": "Poppins",
+        "mono": "Inconsolata"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "codex",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards.\"",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#000000",
+        "secondary": "#ffffff",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Open Sans",
+        "display": "Open Sans",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "colorful",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
+      "visualStyle": [
+        "high-contrast",
+        "playful",
+        "premium"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "contemporary",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "bold",
+        "playful"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "comfortable density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, friendly, professional",
+      "tokens": {
+        "primary": "#C800DF",
+        "secondary": "#E60076",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Jost",
+        "display": "Jost",
+        "mono": "Overpass Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "corporate",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.",
+      "visualStyle": [
+        "enterprise",
+        "premium"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, clear, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Open Sans",
+        "display": "Poppins",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "cosmic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
+      "visualStyle": [
+        "playful",
+        "premium"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Audiowide",
+        "display": "Audiowide",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "creative",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
+      "visualStyle": [
+        "playful"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Bangers",
+        "display": "Bangers",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "dithered",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
+      "visualStyle": [
+        "modern",
+        "minimal"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Open Sans",
+        "display": "Space Grotesk",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "doodle",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
+      "visualStyle": [
+        "playful"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": null,
+      "tone": null,
+      "tokens": {
+        "primary": "#49B6E5",
+        "secondary": "#263D5B",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Delius Swash Caps",
+        "display": "Delius Swash Caps",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "dramatic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#8B5CF6",
+        "secondary": "#F43F5E",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#09090B",
+        "text": "#FAFAFA"
+      },
+      "fonts": {
+        "primary": "Outfit",
+        "display": "Outfit",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "editorial",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
+      "visualStyle": [
+        "modern",
+        "editorial"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, clear, friendly, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#111111",
+        "secondary": "#f1f1f1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Gelasio",
+        "display": "Gelasio",
+        "mono": "Ubuntu Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "enterprise",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "cloud-platform aesthetic (Heroku/Vercel/GitHub inspired)",
+        "dark theme",
+        "subtle gradients",
+        "soft shadows",
+        "glass-like panels",
+        "rounded components"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, clear, friendly, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#0C5CAB",
+        "secondary": "#0a4a8a",
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "danger": "#ef4444",
+        "surface": "#09090b",
+        "text": "#fafafa"
+      },
+      "fonts": {
+        "primary": "IBM Plex Sans",
+        "display": "IBM Plex Sans",
+        "mono": "IBM Plex Sans"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "expressive",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
+      "visualStyle": [
+        "modern",
+        "playful"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#db2777",
+        "secondary": "#2563eb",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "IBM Plex Mono",
+        "display": "IBM Plex Mono",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "fantasy",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
+      "visualStyle": [
+        "bold",
+        "premium"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#0250CC",
+        "secondary": "#FDC800",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "New Rocker",
+        "display": "New Rocker",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "fiction",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes\"",
+      "visualStyle": [
+        "playful"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#222222",
+        "secondary": "#FFE9CE",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Cossette Texte",
+        "display": "Cossette Texte",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "flat",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
+      "visualStyle": [
+        "minimal",
+        "enterprise"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": null,
+      "tone": null,
+      "tokens": {
+        "primary": "#F2673C",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "friendly",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.",
+      "visualStyle": [
+        "bold",
+        "playful",
+        "premium"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "compact density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#F2D9DC",
+        "secondary": "#D9F2D8",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Noto Serif Display",
+        "display": "Noto Serif Display",
+        "mono": "Space Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "futuristic",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
+      "visualStyle": [
+        "modern"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Roboto",
+        "display": "Audiowide",
+        "mono": "Anonymous Pro"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "geometric",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.",
+      "visualStyle": [
+        "geometric",
+        "structured",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "glassmorphism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
+      "visualStyle": [
+        "clean",
+        "high-contrast",
+        "bold",
+        "enterprise",
+        "liquidglass effect",
+        "glassmorphism"
+      ],
+      "typographyScale": "mobile-first compact scale",
+      "spacing": "comfortable density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful, clear, friendly, professional",
+      "tokens": {
+        "primary": "#1856FF",
+        "secondary": "#3A344E",
+        "success": "#07CA6B",
+        "warning": "#E89558",
+        "danger": "#EA2143",
+        "surface": "#FFFFFF",
+        "text": "#141414"
+      },
+      "fonts": {
+        "primary": "Plus Jakarta Sans",
+        "display": "Plus Jakarta Sans",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "gradient",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
+      "visualStyle": [
+        "modern",
+        "playful"
+      ],
+      "typographyScale": "12/14/16/18/24/30/36",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, 44px+ touch targets",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#990FFA",
+        "secondary": "#E60076",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Montserrat",
+        "display": "Space Grotesk",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "immersive",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)\"",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#00592B",
+        "secondary": "#0023D1",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Oswald",
+        "display": "Oswald",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "impeccable",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.\"",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#CC8800",
+        "secondary": "#C55221",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Chakra Petch",
+        "display": "Chakra Petch",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "levels",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
+      "visualStyle": [
+        "modern",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#27272A",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "lingo",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
+      "visualStyle": [
+        "bold",
+        "playful"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#58cc02",
+        "secondary": "#ce82ff",
+        "success": "#58cc02",
+        "warning": "#ffc800",
+        "danger": "#ff4b4b",
+        "surface": "#FFFFFF",
+        "text": "#3c3c3c"
+      },
+      "fonts": {
+        "primary": "Nunito",
+        "display": "Nunito",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "material",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": null,
+      "tone": null,
+      "tokens": {
+        "primary": "#6442D6",
+        "secondary": "#C8B3FD",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Roboto",
+        "mono": "Fira Code"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "matrix",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements\"",
+      "visualStyle": [
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful, clear, friendly",
+      "tokens": {
+        "primary": "#2DB58A",
+        "secondary": "#0B0C14",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Space Mono",
+        "display": "Space Mono",
+        "mono": "Space Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "minimal",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
+      "visualStyle": [
+        "minimal",
+        "clean",
+        "bold"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#0C0C09",
+        "secondary": "#312C85",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#F4F4F1",
+        "text": "#0C0C09"
+      },
+      "fonts": {
+        "primary": "Open Sans",
+        "display": "Inter",
+        "mono": "Inconsolata"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "modern",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "clean",
+        "editorial"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#553F83",
+        "secondary": "#111111",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#553F83",
+        "text": "#ffffff"
+      },
+      "fonts": {
+        "primary": "IBM Plex Serif",
+        "display": "IBM Plex Serif",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "mono",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.",
+      "visualStyle": [
+        "minimal",
+        "clean",
+        "high-contrast",
+        "playful",
+        "matrix"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "compact density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels",
+      "tone": "concise, confident, helpful, clear, friendly",
+      "tokens": {
+        "primary": "#37F712",
+        "secondary": "#00A6F4",
+        "success": "#00A63D",
+        "warning": "#FE9900",
+        "danger": "#FF2157",
+        "surface": "#E7E5E4",
+        "text": "#78716B"
+      },
+      "fonts": {
+        "primary": "Space Mono",
+        "display": "Space Mono",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "neobrutalism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "13/15/17/21/27/35",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#FDC800",
+        "secondary": "#432DD7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FBFBF9",
+        "text": "#1C293C"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "neon",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
+      "visualStyle": [
+        "high-contrast"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#BBF351",
+        "secondary": "#00BCFF",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Roboto",
+        "display": "STIX Two Text",
+        "mono": "Source Code Pro"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "neumorphism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.",
+      "visualStyle": [
+        "minimal",
+        "clean",
+        "high-contrast",
+        "playful",
+        "matrix"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "compact density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels",
+      "tone": "concise, confident, helpful, clear, friendly",
+      "tokens": {
+        "primary": "#006666",
+        "secondary": "#F1F2F5",
+        "success": "#00A63D",
+        "warning": "#FE9900",
+        "danger": "#FF2157",
+        "surface": "#E7E5E4",
+        "text": "#1E2938"
+      },
+      "fonts": {
+        "primary": "Space Mono",
+        "display": "Space Mono",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "pacman",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
+      "visualStyle": [
+        "high-contrast",
+        "playful",
+        "dotted borders"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "professional",
+      "tokens": {
+        "primary": "#2A3FE5",
+        "secondary": "#F4B9B0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#000000",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Press Start 2P",
+        "display": "Press Start 2P",
+        "mono": "Space Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "paper",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#111111",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Roboto",
+        "display": "Montserrat",
+        "mono": "PT Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "perspective",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#00BD7D",
+        "secondary": "#00BD7D",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Poppins",
+        "display": "Oswald",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "power",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.",
+      "visualStyle": [
+        "modern",
+        "bold",
+        "big headings"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "8pt baseline grid",
+      "accessibility": "keyboard-first interactions, visible focus states, semantic HTML before ARIA, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#FAFAFA",
+        "secondary": "#FAFAFA",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#000000",
+        "text": "#ffffff"
+      },
+      "fonts": {
+        "primary": "Oswald",
+        "display": "Oswald",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "premium",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
+      "visualStyle": [
+        "modern"
+      ],
+      "typographyScale": "12/14/16/18/24/30/36",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "professional",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+      "visualStyle": [
+        "modern"
+      ],
+      "typographyScale": "mobile-first compact scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#FECE14",
+        "secondary": "#000000",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Poppins",
+        "display": "Poppins",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "pulse",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
+      "visualStyle": [
+        "bold",
+        "geometric",
+        "vibrant",
+        "thick-bordered"
+      ],
+      "typographyScale": "12/14/16/20/24/32/48",
+      "spacing": "4/8/12/16/24/32/48/64",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states. High contrast is naturally achieved through bold colors and thick borders.",
+      "tone": "punchy, dynamic, motivating, bold",
+      "tokens": {
+        "primary": "#EA580B",
+        "secondary": "#F59E0B",
+        "background": "#FFEDD5",
+        "surface": "#FDBA74",
+        "text": "#EA580C"
+      },
+      "fonts": {
+        "primary": "Limelight",
+        "display": "Limelight",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "refined",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
+      "visualStyle": [
+        "modern",
+        "minimal"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Playfair Display",
+        "display": "Playfair Display",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "retro",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
+      "visualStyle": [
+        "high-contrast",
+        "retro"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Macondo",
+        "display": "Macondo",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "riso",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section\"",
+      "visualStyle": [
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#F237A1",
+        "secondary": "#2C40A7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Space Grotesk",
+        "display": "Space Grotesk",
+        "mono": "Overpass Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "roku",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast",
+        "glass-like panels",
+        "soft shadows",
+        "rounded components"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#9333ea",
+        "secondary": "#a855f7",
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "danger": "#ef4444",
+        "surface": "#FFFFFF",
+        "text": "#09090b"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "sega",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks\"",
+      "visualStyle": [
+        "modern",
+        "playful"
+      ],
+      "typographyScale": "13/15/17/21/27/35",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#4502FF",
+        "secondary": "#FFDA14",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "VT323",
+        "display": "VT323",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "shadcn",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#000000",
+        "secondary": "#111111",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Geist",
+        "display": "Geist",
+        "mono": "Fira Code"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "sketch",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls.\"",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#1DAD97",
+        "secondary": "#F4EDE0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Delicious Handrawn",
+        "display": "Delicious Handrawn",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "skeumorphism",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.",
+      "visualStyle": [
+        "playful"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": null,
+      "tone": null,
+      "tokens": {
+        "primary": "#FA3C00",
+        "secondary": "#F08321",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Roboto",
+        "display": "Germania One",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "sleek",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.",
+      "visualStyle": [
+        "modern",
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Inter",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "spacious",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "12/14/16/18/24/30/36",
+      "spacing": "8pt baseline grid",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, semantic HTML before ARIA, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful, clear, friendly, professional, action-oriented, low-jargon",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Open Sans",
+        "display": "Montserrat",
+        "mono": "IBM Plex Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "square",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.",
+      "visualStyle": [
+        "minimal",
+        "clean"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Google Sans",
+        "display": "Google Sans",
+        "mono": "Anonymous Pro"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "stitch",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.",
+      "visualStyle": [
+        "clean",
+        "high-contrast",
+        "enterprise"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "comfortable density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "confident, helpful, friendly, professional",
+      "tokens": {
+        "primary": "#072C2C",
+        "secondary": "#FF5F03",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#EDEADE",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Ubuntu",
+        "display": "Oswald",
+        "mono": "Ubuntu Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "storytelling",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
+      "visualStyle": [
+        "playful"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#3B82F6",
+        "secondary": "#8B5CF6",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "display": "Abril Fatface",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "terracotta",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "\"A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent.\"",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "high-contrast",
+        "playful"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#C56A3C",
+        "secondary": "#F3E9D8",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#111827"
+      },
+      "fonts": {
+        "primary": "DM Serif Display",
+        "display": "DM Serif Display",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "tetris",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
+      "visualStyle": [
+        "high-contrast",
+        "playful",
+        "premium"
+      ],
+      "typographyScale": "desktop-first expressive scale",
+      "spacing": "compact density mode",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#1C202B",
+        "secondary": "#7107E7",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#DFE7FF",
+        "text": "#1C398E"
+      },
+      "fonts": {
+        "primary": "Bangers",
+        "display": "Bangers",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "vibrant",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
+      "visualStyle": [
+        "modern",
+        "clean",
+        "bold",
+        "playful"
+      ],
+      "typographyScale": "14/16/18/24/32/40",
+      "spacing": "2/4/8/12/16/24/32/48",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states, screen-reader tested labels, reduced-motion support, 44px+ touch targets, high-contrast support",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#7C61D4",
+        "secondary": "#EAAE87",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#FFFFFF",
+        "text": "#2F281D"
+      },
+      "fonts": {
+        "primary": "Noto Sans",
+        "display": "Fascinate",
+        "mono": "Fira Code"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    },
+    {
+      "name": "vintage",
+      "source": "bergside/awesome-design-skills",
+      "license": "MIT",
+      "upstream": "https://www.typeui.sh/design-skills",
+      "quality": "template-generated",
+      "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
+      "visualStyle": [
+        "clean",
+        "vintage",
+        "retro"
+      ],
+      "typographyScale": "12/14/16/20/24/32",
+      "spacing": "4/8/12/16/24/32",
+      "accessibility": "WCAG 2.2 AA, keyboard-first interactions, visible focus states",
+      "tone": "concise, confident, helpful",
+      "tokens": {
+        "primary": "#008080",
+        "secondary": "#C0C0C0",
+        "success": "#16A34A",
+        "warning": "#D97706",
+        "danger": "#DC2626",
+        "surface": "#C0C0C0",
+        "text": "#000000"
+      },
+      "fonts": {
+        "primary": "Silkscreen",
+        "display": "Silkscreen",
+        "mono": "JetBrains Mono"
+      },
+      "files": [
+        "SKILL.md",
+        "DESIGN.md",
+        "preview.png"
+      ],
+      "preview": "preview.png"
+    }
+  ]
+}

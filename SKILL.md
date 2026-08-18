@@ -57,6 +57,27 @@ Look at the returned `preview` images, read `bundle.html` for the one you want,
 then **adapt it to the tenant DNA** — never paste. Full contract:
 `registry/21st/AGENT.md`.
 
+## Palette & type reference (`registry/skills/`)
+
+67 design skills from `bergside/awesome-design-skills` (MIT), each with a
+rendered preview PNG. **Read this honestly:** they are template-generated — all
+67 share identical Mission/Workflow/QA prose and list all nine font weights, and
+`retro` ships default Tailwind blue. They are not authored taste.
+
+What IS real signal: **49 distinct palettes and 38 font pairings**, each shown
+applied in a preview image. Use it to pick a visual direction, then write the
+actual rules yourself.
+
+```bash
+node registry/skills/palette.mjs --near '#ff0069'   # nearest palettes to a hex
+node registry/skills/palette.mjs --style glass      # by style adjective
+node registry/skills/palette.mjs --font Inter       # by typeface
+node registry/skills/palette.mjs --json             # machine-readable
+```
+
+Every result carries a `preview` path — open the image before choosing. A tenant
+`dna.md` is the destination; these are the starting point, never the output.
+
 ## OpenDesign interop (`opendesign/`)
 
 A tenant's `dna.md` and an OpenDesign `DESIGN.md` are the same asset in two

@@ -63,6 +63,20 @@ Thin stable **core** (the loop, the viewer, the contracts, filesystem-as-state) 
 
 Full detail: open `CANONICAL.html`. Walkthrough: open `docs/WALKTHROUGH.html`.
 
+## registry/skills — palette & type reference
+
+67 design skills from [`bergside/awesome-design-skills`](https://github.com/bergside/awesome-design-skills)
+(MIT), each with a rendered preview. The prose is template-generated boilerplate;
+the **49 distinct palettes and 38 font pairings** are the real value.
+
+```bash
+node registry/skills/ingest.mjs                     # refresh from GitHub
+node registry/skills/palette.mjs --near '#ff0069'   # nearest palettes to a hex
+```
+
+Note typeui.sh itself sits behind a Vercel JS challenge and is not scrapable —
+but the skills are open source, so we take them from the repo instead.
+
 ## opendesign/ — interop with OpenDesign
 
 [OpenDesign](https://github.com/nexu-io/open-design) is a local-first desktop app
