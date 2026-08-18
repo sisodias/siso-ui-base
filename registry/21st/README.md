@@ -20,10 +20,11 @@ copying anything.
 
 | File | What it is |
 |---|---|
-| `catalog.json` | 587 components — id, name, description, author, category, preview, video, install command, url |
-| `previews/` | 587 cached preview images (243 MB), named `<id>.<ext>` |
+| `catalog.json` | 832 components — id, name, description, author, category, preview, video, install command, url |
+| `previews/` | 832 cached preview images (~340 MB), named `<id>.<ext>` |
 | `raw.jsonl` | Undeduped search output, one row per hit, with the query's category |
-| `queries.txt` | The 72 queries that produced the sweep — rerun or extend these |
+| `queries.txt` | The 72 queries that seed the sweep — rerun or extend these |
+| `sweep.mjs` | Bulk multi-axis sweep (query x sort x price) — the only way past the per-call cap |
 | `board.html` | The generated viewer |
 | `serve.mjs` | Zero-dependency local server |
 | `picks.json` | Your current shortlist (ids), written by the board |
@@ -99,3 +100,19 @@ node score.mjs profiles/<project>.json   # writes ranked.json
 ```
 
 Regenerate the board from `ranked.json` to see it applied.
+
+## Why sweep.mjs exists — the per-call cap
+
+`21st search` returns **~15 results per call no matter what `--limit` says**
+(measured: `--limit 20/50/100/200` -> 10/15/15/15). Raising the limit buys
+nothing. Coverage comes from **distinct slices**: the same query under a
+different `--sort` or price filter returns a *different* set of ids.
+
+`sweep.mjs` fans every axis — 72 queries x 4 sorts x 3 price tiers = 864 slices,
+6 concurrent, deduped against the existing catalog. That took the catalog from
+587 to **832** (+245), including a second perfect-scoring footer the
+single-pass sweep never surfaced.
+
+```sh
+node registry/21st/sweep.mjs      # extends catalog.json in place
+```
