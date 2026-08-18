@@ -69,7 +69,10 @@ async function one(kind, url) {
       const buf = await get(abs, true)
       // The .png URL often serves WebP — name the file by actual content.
       const ext = buf.slice(0, 4).toString() === 'RIFF' && buf.slice(8, 12).toString() === 'WEBP' ? 'webp'
-        : buf[0] === 0xFF && buf[1] === 0xD8 ? 'jpg' : 'png'
+        : buf[0] === 0xFF && buf[1] === 0xD8 ? 'jpg'
+        : buf.slice(0, 3).toString() === 'GIF' ? 'gif'
+        : buf.slice(4, 8).toString() === 'ftyp' && buf.slice(8, 12).toString().startsWith('avif') ? 'avif'
+        : 'png'
       await writeFile(join(dir, `preview.${ext}`), buf)
       meta.preview = `preview.${ext}`
       meta.harvested = ['preview']
