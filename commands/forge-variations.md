@@ -17,6 +17,10 @@ Forge N genuinely different HTML variations of <component> — IN THE REAL APP F
    corpus is 7,949 real components precisely so the variations start from
    evidence.
 
+   The brief also carries **PRECEDENT** — what this project already judged.
+   If a past variation was rejected for "AI-default pill stacking", do not ship
+   another pill stack. The blessed HTML is the bar to beat; read it first.
+
    Take *approaches* from the references, never markup. They are compiled
    bundles from a different design system; the DNA is what governs here.
 

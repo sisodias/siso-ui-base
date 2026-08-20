@@ -43,6 +43,22 @@ node batteries/gates/principles-grep.mjs <files>    # 3b. universal rules
 /graduate                                           # 6. blessed HTML -> React
 ```
 
+## Precedent — the part nobody else can clone
+
+Every judged variation leaves a score, a worst axis, and a written critique; the
+human blesses a winner. That labelled `(html, score, blessed)` corpus is the
+actual moat, and it was being written and never read.
+
+```bash
+node precedent.mjs              # everything judged, blessed first
+node precedent.mjs --lessons    # what the critiques keep saying
+```
+
+`brief.mjs` now includes it automatically, so a forge sees the blessed reference
+and the specific rejections before writing anything. A critique saying a past
+attempt lost to "AI-default pill stacking" is worth more than any generic
+principle — a human already ruled on it, for this product.
+
 ## Check it works first
 
 ```bash

@@ -111,6 +111,27 @@ for (const q of principleQueries) {
   } catch {}
 }
 
+// ---- 3b. PRECEDENT: what this project already judged.
+// The strongest signal available, and it was going unread. A critique saying a
+// past variation lost to "AI-default pill stacking" is worth more than any
+// generic principle, because a human already ruled on it for THIS product.
+let precedent = null
+const precRaw = await tryRun('precedent.mjs', ['--json'])
+if (precRaw) {
+  try {
+    const p = JSON.parse(precRaw)
+    const mine = p.records.filter(r => r.tenant === TENANT)
+    if (mine.length) {
+      precedent = {
+        judged: mine.length,
+        blessed: mine.filter(r => r.blessed).map(r => ({ id: `${r.setId}/${r.id}`, html: r.html, overall: r.overall })),
+        weakestAxes: p.lessons.weakestAxes.slice(0, 3),
+        rejections: p.lessons.rejections.slice(0, 4),
+      }
+    }
+  } catch {}
+}
+
 // ---- 4. PALETTE: only when there is no DNA. With a DNA the palette is already
 // decided, and offering alternatives would invite an agent to contradict it.
 let palette = null
@@ -142,6 +163,7 @@ const brief = {
   dna,
   components: components.slice(0, LIMIT),
   componentQuery,
+  precedent,
   principles: principles.slice(0, 6),
   palette,
   workflow: [
@@ -150,6 +172,7 @@ const brief = {
     '2. OPEN THE PREVIEW IMAGES of the candidate components. Do not choose from descriptions.',
     '3. Read the bundle of the one you pick — it is compiled but complete.',
     '4. Rebuild it against the DNA. Adapt, never paste.',
+    ...(precedent ? ['4b. Read the blessed HTML — it is the bar. Do not repeat a rejection listed below.'] : []),
     '5. Principles below decide what the DNA leaves unsaid. Where they disagree with the DNA, THE DNA WINS — say so rather than silently following either.',
     hasDna ? '6. Run the DNA self-audit before you finish.' : '6. Write the self-audit into the new DNA.',
   ],
@@ -173,6 +196,15 @@ console.log(`\nPRINCIPLES (${brief.principles.length}) — what the DNA leaves u
 for (const p of brief.principles) {
   console.log(`  ${p.heading}  [${p.file}]`)
   console.log(`     ${p.excerpt}…`)
+}
+
+if (precedent) {
+  console.log(`\nPRECEDENT — this project has already judged ${precedent.judged} variation(s)`)
+  for (const b of precedent.blessed) console.log(`  BLESSED ${b.overall}  ${b.html}`)
+  if (precedent.weakestAxes.length) {
+    console.log(`  keeps failing on: ${precedent.weakestAxes.map(([a, n]) => `${a} (${n}x)`).join(', ')}`)
+  }
+  for (const r of precedent.rejections) console.log(`  rejected ${r.id}: ${r.why}`)
 }
 
 if (palette?.length) {
