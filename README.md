@@ -8,6 +8,28 @@
 
 ---
 
+## Fresh clone
+
+The code and indexes are committed; the **bulk data is not** (2.3MB repo instead
+of ~3GB). Rebuild what you need:
+
+```bash
+node doctor.mjs                       # tells you exactly what is missing
+
+node registry/21st/harvest.mjs --all  # 8,225 components + previews (~20 min, ~3GB)
+node registry/21st/classify.mjs       # tag them against 21st's 75-tag taxonomy
+node registry/principles/ingest.mjs   # 334 principle sections (seconds)
+node registry/skills/ingest.mjs       # 67 palettes + previews (~1 min)
+npm install                           # optional — only for the visual judge
+```
+
+`registry/skills/index.json` and `registry/principles/index.json` ARE committed,
+so palette and principle queries work immediately on a fresh clone. Only the
+component corpus needs the harvest.
+
+Harvesting needs no credentials. `registry/21st/.env.21st` (gitignored) adds
+`usage_count` for ranking if you have a 21st API key — it is not required.
+
 ## Health check
 
 ```bash
