@@ -29,8 +29,20 @@ const query = args.filter((a, i) => !a.startsWith('--') && !['--file', '--limit'
 const idx = JSON.parse(await readFile(join(HERE, 'index.json'), 'utf8'))
 
 // Split a document into {heading, body} at every ## / ### boundary.
+//
+// catalog/ is gitignored (271KB of upstream docs), so a fresh clone has
+// index.json but no source files. Fail with the fix rather than an ENOENT
+// stack trace — a cloning agent should be told to run the ingest, not
+// handed a crash.
 async function sections(file) {
-  const md = await readFile(join(HERE, 'catalog', file), 'utf8')
+  let md
+  try {
+    md = await readFile(join(HERE, 'catalog', file), 'utf8')
+  } catch {
+    console.error(`principles catalog missing (registry/principles/catalog/${file})`)
+    console.error('run: node registry/principles/ingest.mjs')
+    process.exit(2)
+  }
   const out = []
   const lines = md.split('\n')
   let cur = null

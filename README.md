@@ -23,9 +23,10 @@ node registry/skills/ingest.mjs       # 67 palettes + previews (~1 min)
 npm install                           # optional — only for the visual judge
 ```
 
-`registry/skills/index.json` and `registry/principles/index.json` ARE committed,
-so palette and principle queries work immediately on a fresh clone. Only the
-component corpus needs the harvest.
+The index files are committed but their `catalog/` source dirs are not, so on a
+fresh clone `palette.mjs` answers immediately (it reads only the index) while
+`ask.mjs` needs its ingest first — it reads the section bodies from disk. Both
+ingests take under a minute; the component harvest is the slow one.
 
 Harvesting needs no credentials. `registry/21st/.env.21st` (gitignored) adds
 `usage_count` for ranking if you have a 21st API key — it is not required.

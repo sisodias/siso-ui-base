@@ -48,15 +48,22 @@ for (const [name, file] of [
 const data = [
   ['component corpus', 'registry/21st/harvest', 'node registry/21st/harvest.mjs --all'],
   ['classification', 'registry/21st/classification.json', 'node registry/21st/classify.mjs'],
-  ['principles', 'registry/principles/index.json', 'node registry/principles/ingest.mjs'],
-  ['palettes', 'registry/skills/index.json', 'node registry/skills/ingest.mjs'],
+  // Check the CATALOG dirs, not just the index. index.json is committed but the
+  // source files are gitignored, so a fresh clone has an index describing files
+  // that are not there — ask.mjs and palette previews both need the catalog.
+  ['principles', 'registry/principles/catalog', 'node registry/principles/ingest.mjs'],
+  ['palettes', 'registry/skills/catalog', 'node registry/skills/ingest.mjs'],
 ]
 for (const [name, path, fix] of data) {
   if (!await exists(path)) { add(name, 'MISSING', path, fix); continue }
   let detail = path
   try {
     const s = await stat(R(path))
-    if (s.isDirectory()) detail = `${(await readdir(R(path))).filter(d => d.includes('__')).length} entries`
+    if (s.isDirectory()) {
+      const entries = await readdir(R(path))
+      const n = entries.filter(d => d.includes('__')).length || entries.length
+      detail = `${n} entries`
+    }
     else {
       const j = JSON.parse(await readFile(R(path), 'utf8'))
       detail = j.count ? `${j.count} entries` : j.taxonomy ? `${j.taxonomy.length} tags, ${Object.keys(j.componentToTags || {}).length} classified` : `${Math.round(s.size / 1024)}KB`
