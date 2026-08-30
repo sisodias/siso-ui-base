@@ -1,0 +1,21 @@
+{
+  "completedAt": "2026-08-29T08:03:55.735Z",
+  "corpusTotal": 7949,
+  "requestPolicy": {
+    "intervalMs": 1100,
+    "workers": 1,
+    "maxAttempts": 4,
+    "timeoutMs": 30000
+  },
+  "n": 7949,
+  "retrieved": 5205,
+  "gated404": 1629,
+  "unavailable": 2744,
+  "retrievalRate": 0.6547993458296641,
+  "outcomeCounts": {
+    "gated-404": 1629,
+    "page-soft404": 185,
+    "parse-failure": 930,
+    "retrieved": 5205
+  }
+}

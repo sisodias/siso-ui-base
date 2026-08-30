@@ -1,0 +1,2586 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-29T08:16:00.777Z",
+  "corpusTotal": 7949,
+  "retrieved": 5205,
+  "selfContained": 4008,
+  "sourcesWithUiSiblingImports": 1197,
+  "sourcesWithAnyLocalImport": 3016,
+  "uniqueUiSiblingSpecifiers": 248,
+  "uiSiblingImportEdges": 2786,
+  "sourceByOutcome": {
+    "gated-404": 1629,
+    "page-soft404": 185,
+    "parse-failure": 930,
+    "retrieved": 5205
+  },
+  "packageUsage": {
+    "react": {
+      "files": 4440,
+      "imports": 4897
+    },
+    "lucide-react": {
+      "files": 1599,
+      "imports": 1630
+    },
+    "framer-motion": {
+      "files": 1152,
+      "imports": 1156
+    },
+    "motion": {
+      "files": 394,
+      "imports": 420
+    },
+    "class-variance-authority": {
+      "files": 281,
+      "imports": 283
+    },
+    "next": {
+      "files": 270,
+      "imports": 307
+    },
+    "clsx": {
+      "files": 193,
+      "imports": 194
+    },
+    "tailwind-merge": {
+      "files": 144,
+      "imports": 144
+    },
+    "gsap": {
+      "files": 116,
+      "imports": 184
+    },
+    "three": {
+      "files": 106,
+      "imports": 193
+    },
+    "@radix-ui/react-slot": {
+      "files": 75,
+      "imports": 75
+    },
+    "react-icons": {
+      "files": 56,
+      "imports": 80
+    },
+    "@react-three/fiber": {
+      "files": 51,
+      "imports": 56
+    },
+    "next-themes": {
+      "files": 50,
+      "imports": 51
+    },
+    "@heroui/react": {
+      "files": 47,
+      "imports": 51
+    },
+    "date-fns": {
+      "files": 44,
+      "imports": 45
+    },
+    "@ark-ui/react": {
+      "files": 43,
+      "imports": 56
+    },
+    "recharts": {
+      "files": 38,
+      "imports": 46
+    },
+    "radix-ui": {
+      "files": 38,
+      "imports": 38
+    },
+    "reshaped": {
+      "files": 36,
+      "imports": 144
+    },
+    "@base-ui/react": {
+      "files": 36,
+      "imports": 55
+    },
+    "react-dom": {
+      "files": 36,
+      "imports": 42
+    },
+    "@hugeicons/core-free-icons": {
+      "files": 33,
+      "imports": 34
+    },
+    "@hugeicons/react": {
+      "files": 33,
+      "imports": 33
+    },
+    "@react-three/drei": {
+      "files": 32,
+      "imports": 33
+    },
+    "@gsap/react": {
+      "files": 31,
+      "imports": 31
+    },
+    "@radix-ui/react-dialog": {
+      "files": 31,
+      "imports": 31
+    },
+    "@paper-design/shaders-react": {
+      "files": 31,
+      "imports": 31
+    },
+    "ogl": {
+      "files": 30,
+      "imports": 30
+    },
+    "styled-components": {
+      "files": 25,
+      "imports": 25
+    },
+    "@aliimam/icons": {
+      "files": 24,
+      "imports": 24
+    },
+    "react-aria-components": {
+      "files": 23,
+      "imports": 27
+    },
+    "@radix-ui/react-label": {
+      "files": 21,
+      "imports": 21
+    },
+    "reaviz": {
+      "files": 20,
+      "imports": 20
+    },
+    "@number-flow/react": {
+      "files": 19,
+      "imports": 19
+    },
+    "@base-ui-components/react": {
+      "files": 17,
+      "imports": 23
+    },
+    "react-native": {
+      "files": 16,
+      "imports": 16
+    },
+    "@radix-ui/react-tooltip": {
+      "files": 16,
+      "imports": 16
+    },
+    "cobe": {
+      "files": 16,
+      "imports": 16
+    },
+    "react-wrap-balancer": {
+      "files": 15,
+      "imports": 15
+    },
+    "lenis": {
+      "files": 14,
+      "imports": 15
+    },
+    "@radix-ui/react-avatar": {
+      "files": 14,
+      "imports": 14
+    },
+    "@radix-ui/react-accordion": {
+      "files": 13,
+      "imports": 13
+    },
+    "@aliimam/logos": {
+      "files": 13,
+      "imports": 13
+    },
+    "@radix-ui/react-select": {
+      "files": 12,
+      "imports": 12
+    },
+    "@radix-ui/react-separator": {
+      "files": 12,
+      "imports": 12
+    },
+    "react-day-picker": {
+      "files": 11,
+      "imports": 11
+    },
+    "sonner": {
+      "files": 10,
+      "imports": 10
+    },
+    "@subframe/core": {
+      "files": 9,
+      "imports": 14
+    },
+    "usehooks-ts": {
+      "files": 9,
+      "imports": 9
+    },
+    "@radix-ui/react-checkbox": {
+      "files": 9,
+      "imports": 9
+    },
+    "@remixicon/react": {
+      "files": 8,
+      "imports": 8
+    },
+    "@radix-ui/react-popover": {
+      "files": 8,
+      "imports": 8
+    },
+    "antd": {
+      "files": 7,
+      "imports": 10
+    },
+    "react-use-measure": {
+      "files": 7,
+      "imports": 7
+    },
+    "zod": {
+      "files": 7,
+      "imports": 7
+    },
+    "react-hook-form": {
+      "files": 7,
+      "imports": 7
+    },
+    "cmdk": {
+      "files": 7,
+      "imports": 7
+    },
+    "@radix-ui/react-dropdown-menu": {
+      "files": 7,
+      "imports": 7
+    },
+    "@phosphor-icons/react": {
+      "files": 7,
+      "imports": 7
+    },
+    "embla-carousel-react": {
+      "files": 7,
+      "imports": 7
+    },
+    "uuid": {
+      "files": 7,
+      "imports": 7
+    },
+    "canvas-confetti": {
+      "files": 6,
+      "imports": 8
+    },
+    "@radix-ui/react-radio-group": {
+      "files": 6,
+      "imports": 6
+    },
+    "react-countup": {
+      "files": 6,
+      "imports": 6
+    },
+    "tailwind-variants": {
+      "files": 5,
+      "imports": 8
+    },
+    "@hookform/resolvers": {
+      "files": 5,
+      "imports": 5
+    },
+    "react-intersection-observer": {
+      "files": 5,
+      "imports": 5
+    },
+    "react-router-dom": {
+      "files": 5,
+      "imports": 5
+    },
+    "input-otp": {
+      "files": 5,
+      "imports": 5
+    },
+    "p5": {
+      "files": 5,
+      "imports": 5
+    },
+    "@react-spring/web": {
+      "files": 5,
+      "imports": 5
+    },
+    "@react-three/postprocessing": {
+      "files": 5,
+      "imports": 5
+    },
+    "@radix-ui/react-context-menu": {
+      "files": 5,
+      "imports": 5
+    },
+    "@radix-ui/react-switch": {
+      "files": 5,
+      "imports": 5
+    },
+    "@tanstack/react-table": {
+      "files": 5,
+      "imports": 5
+    },
+    "maplibre-gl": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/core": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/sortable": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/utilities": {
+      "files": 5,
+      "imports": 5
+    },
+    "moment": {
+      "files": 4,
+      "imports": 4
+    },
+    "prop-types": {
+      "files": 4,
+      "imports": 4
+    },
+    "@radix-ui/react-tabs": {
+      "files": 4,
+      "imports": 4
+    },
+    "@radix-ui/react-slider": {
+      "files": 4,
+      "imports": 4
+    },
+    "vaul": {
+      "files": 4,
+      "imports": 4
+    },
+    "react-resizable-panels": {
+      "files": 4,
+      "imports": 4
+    },
+    "@mui/material": {
+      "files": 3,
+      "imports": 18
+    },
+    "@dotlottie/react-player": {
+      "files": 3,
+      "imports": 5
+    },
+    "@headlessui/react": {
+      "files": 3,
+      "imports": 4
+    },
+    "animejs": {
+      "files": 3,
+      "imports": 3
+    },
+    "@radix-ui/react-icons": {
+      "files": 3,
+      "imports": 3
+    },
+    "postprocessing": {
+      "files": 3,
+      "imports": 3
+    },
+    "embla-carousel": {
+      "files": 3,
+      "imports": 3
+    },
+    "@radix-ui/react-toggle": {
+      "files": 3,
+      "imports": 3
+    },
+    "@radix-ui/react-progress": {
+      "files": 3,
+      "imports": 3
+    },
+    "@intentui/icons": {
+      "files": 3,
+      "imports": 3
+    },
+    "@carbon/icons-react": {
+      "files": 3,
+      "imports": 3
+    },
+    "@radix-ui/react-hover-card": {
+      "files": 3,
+      "imports": 3
+    },
+    "remotion": {
+      "files": 3,
+      "imports": 3
+    },
+    "dotted-map": {
+      "files": 3,
+      "imports": 3
+    },
+    "react-easy-crop": {
+      "files": 3,
+      "imports": 3
+    },
+    "csstype": {
+      "files": 3,
+      "imports": 3
+    },
+    "@glideapps/glide-data-grid": {
+      "files": 2,
+      "imports": 6
+    },
+    "dialkit": {
+      "files": 2,
+      "imports": 4
+    },
+    "@embedpdf/core": {
+      "files": 2,
+      "imports": 4
+    },
+    "@mui/icons-material": {
+      "files": 2,
+      "imports": 4
+    },
+    "swiper": {
+      "files": 2,
+      "imports": 4
+    },
+    "mind-elixir": {
+      "files": 2,
+      "imports": 4
+    },
+    "react-pageflip": {
+      "files": 2,
+      "imports": 2
+    },
+    "@splinetool/react-spline": {
+      "files": 2,
+      "imports": 2
+    },
+    "@solana/wallet-adapter-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@solana/wallet-adapter-base": {
+      "files": 2,
+      "imports": 2
+    },
+    "uvcanvas": {
+      "files": 2,
+      "imports": 2
+    },
+    "unicornstudio-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@ant-design/icons": {
+      "files": 2,
+      "imports": 2
+    },
+    "shiki": {
+      "files": 2,
+      "imports": 2
+    },
+    "lucide-react-native": {
+      "files": 2,
+      "imports": 2
+    },
+    "embla-carousel-autoplay": {
+      "files": 2,
+      "imports": 2
+    },
+    "@radix-ui/react-toggle-group": {
+      "files": 2,
+      "imports": 2
+    },
+    "tone": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-dropzone": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/models": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-document-manager": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-interaction-manager": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-render": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-rotate": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-scroll": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-search": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-selection": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-thumbnail": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-tiling": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-viewport": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-zoom": {
+      "files": 2,
+      "imports": 2
+    },
+    "pdf-lib": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tsparticles/engine": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tsparticles/react": {
+      "files": 2,
+      "imports": 2
+    },
+    "tweakpane": {
+      "files": 2,
+      "imports": 2
+    },
+    "@radix-ui/react-collapsible": {
+      "files": 2,
+      "imports": 2
+    },
+    "@heroicons/react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@studio-freight/lenis": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tabler/icons-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@radix-ui/react-menubar": {
+      "files": 2,
+      "imports": 2
+    },
+    "@headless-tree/core": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-syntax-highlighter": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-tooltip": {
+      "files": 2,
+      "imports": 2
+    },
+    "ace-builds": {
+      "files": 1,
+      "imports": 18
+    },
+    "@rsuite/icons": {
+      "files": 1,
+      "imports": 5
+    },
+    "hls.js": {
+      "files": 1,
+      "imports": 3
+    },
+    "zustand": {
+      "files": 1,
+      "imports": 3
+    },
+    "@tigerabrodioss/fude": {
+      "files": 1,
+      "imports": 3
+    },
+    "slot-text": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-medium-image-zoom": {
+      "files": 1,
+      "imports": 2
+    },
+    "@pierre/diffs": {
+      "files": 1,
+      "imports": 2
+    },
+    "@pierre/trees": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-resizable": {
+      "files": 1,
+      "imports": 2
+    },
+    "leaflet": {
+      "files": 1,
+      "imports": 2
+    },
+    "@tiptap/react": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-payment-inputs": {
+      "files": 1,
+      "imports": 2
+    },
+    "@chakra-ui/react": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-phone-number-input": {
+      "files": 1,
+      "imports": 2
+    },
+    "html-to-image": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/web3.js": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-react-ui": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-backpack": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-wallets": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-pixelart-face-card": {
+      "files": 1,
+      "imports": 1
+    },
+    "color-bits": {
+      "files": 1,
+      "imports": 1
+    },
+    "qr-code-styling": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-pdf": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-barcode": {
+      "files": 1,
+      "imports": 1
+    },
+    "html2canvas": {
+      "files": 1,
+      "imports": 1
+    },
+    "@iconify/react": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/react-fontawesome": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/fontawesome-svg-core": {
+      "files": 1,
+      "imports": 1
+    },
+    "@react-hook/media-query": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-ace": {
+      "files": 1,
+      "imports": 1
+    },
+    "fmt": {
+      "files": 1,
+      "imports": 1
+    },
+    "cnippet-aos": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-player": {
+      "files": 1,
+      "imports": 1
+    },
+    "@chenglou/pretext": {
+      "files": 1,
+      "imports": 1
+    },
+    "heroui-native": {
+      "files": 1,
+      "imports": 1
+    },
+    "@use-gesture/react": {
+      "files": 1,
+      "imports": 1
+    },
+    "Component": {
+      "files": 1,
+      "imports": 1
+    },
+    "mathjs": {
+      "files": 1,
+      "imports": 1
+    },
+    "gl-matrix": {
+      "files": 1,
+      "imports": 1
+    },
+    "use-scramble": {
+      "files": 1,
+      "imports": 1
+    },
+    "stats.js": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-markdown": {
+      "files": 1,
+      "imports": 1
+    },
+    "emojibase": {
+      "files": 1,
+      "imports": 1
+    },
+    "@avenra/liquid-glass": {
+      "files": 1,
+      "imports": 1
+    },
+    "d3-delaunay": {
+      "files": 1,
+      "imports": 1
+    },
+    "vecteur": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/hover-card-1": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-alert-dialog": {
+      "files": 1,
+      "imports": 1
+    },
+    "papaparse": {
+      "files": 1,
+      "imports": 1
+    },
+    "border-beam": {
+      "files": 1,
+      "imports": 1
+    },
+    "@embedpdf/engines": {
+      "files": 1,
+      "imports": 1
+    },
+    "@extend-ai/react-xlsx": {
+      "files": 1,
+      "imports": 1
+    },
+    "tsparticles": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-use-controllable-state": {
+      "files": 1,
+      "imports": 1
+    },
+    "media-chrome": {
+      "files": 1,
+      "imports": 1
+    },
+    "flubber": {
+      "files": 1,
+      "imports": 1
+    },
+    "@paper-design/shaders": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-spring": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-confetti": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-leaflet": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-leaflet-cluster": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-error-boundary": {
+      "files": 1,
+      "imports": 1
+    },
+    "": {
+      "files": 1,
+      "imports": 1
+    },
+    "gradflow": {
+      "files": 1,
+      "imports": 1
+    },
+    "swr": {
+      "files": 1,
+      "imports": 1
+    },
+    "d3": {
+      "files": 1,
+      "imports": 1
+    },
+    "@ncdai/react-wheel-picker": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/starter-kit": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-underline": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-link": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-placeholder": {
+      "files": 1,
+      "imports": 1
+    },
+    "@origin-space/image-cropper": {
+      "files": 1,
+      "imports": 1
+    },
+    "emblor": {
+      "files": 1,
+      "imports": 1
+    },
+    "@phucbm/magnetic-button": {
+      "files": 1,
+      "imports": 1
+    },
+    "normalized-mouse-position": {
+      "files": 1,
+      "imports": 1
+    },
+    "@phucbm/ripple-effect": {
+      "files": 1,
+      "imports": 1
+    },
+    "@platejs/caption": {
+      "files": 1,
+      "imports": 1
+    },
+    "@udecode/cn": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-visually-hidden": {
+      "files": 1,
+      "imports": 1
+    },
+    "frimousse": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-scroll-area": {
+      "files": 1,
+      "imports": 1
+    },
+    "gasp": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-textarea-autosize": {
+      "files": 1,
+      "imports": 1
+    },
+    "0 0 40 40": {
+      "files": 1,
+      "imports": 1
+    },
+    "qrcode.react": {
+      "files": 1,
+      "imports": 1
+    },
+    "use-sound": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-portal": {
+      "files": 1,
+      "imports": 1
+    },
+    "lottie-web": {
+      "files": 1,
+      "imports": 1
+    },
+    "jsonwebtoken": {
+      "files": 1,
+      "imports": 1
+    },
+    "bcrypt": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-direction": {
+      "files": 1,
+      "imports": 1
+    },
+    "md5": {
+      "files": 1,
+      "imports": 1
+    },
+    "@internationalized/date": {
+      "files": 1,
+      "imports": 1
+    },
+    "@dnd-kit/modifiers": {
+      "files": 1,
+      "imports": 1
+    },
+    "embla-carousel-auto-scroll": {
+      "files": 1,
+      "imports": 1
+    },
+    "@mui/x-data-grid": {
+      "files": 1,
+      "imports": 1
+    },
+    "rsuite": {
+      "files": 1,
+      "imports": 1
+    },
+    "date-fns-tz": {
+      "files": 1,
+      "imports": 1
+    },
+    "@reach/portal": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tanstack/react-virtual": {
+      "files": 1,
+      "imports": 1
+    },
+    "@radix-ui/react-navigation-menu": {
+      "files": 1,
+      "imports": 1
+    },
+    "@zumer/snapdom": {
+      "files": 1,
+      "imports": 1
+    },
+    "nanoid": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-hotkeys-hook": {
+      "files": 1,
+      "imports": 1
+    },
+    "qrcode": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-tweet": {
+      "files": 1,
+      "imports": 1
+    },
+    "@icons-pack/react-simple-icons": {
+      "files": 1,
+      "imports": 1
+    },
+    "swapy": {
+      "files": 1,
+      "imports": 1
+    },
+    "@motionone/utils": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tsparticles/slim": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/color-convert": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/react-color-hue": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/react-color-saturation": {
+      "files": 1,
+      "imports": 1
+    },
+    "ai": {
+      "files": 1,
+      "imports": 1
+    },
+    "leva": {
+      "files": 1,
+      "imports": 1
+    },
+    "maath": {
+      "files": 1,
+      "imports": 1
+    },
+    "daisyui": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uidotdev/usehooks": {
+      "files": 1,
+      "imports": 1
+    },
+    "figma:react": {
+      "files": 1,
+      "imports": 1
+    }
+  },
+  "packageFamilies": {
+    "react": {
+      "files": 4440,
+      "imports": 4939
+    },
+    "lucide": {
+      "files": 1599,
+      "imports": 1630
+    },
+    "motion": {
+      "files": 1546,
+      "imports": 1576
+    },
+    "class-variance-authority": {
+      "files": 281,
+      "imports": 283
+    },
+    "next": {
+      "files": 270,
+      "imports": 307
+    },
+    "radix": {
+      "files": 196,
+      "imports": 268
+    },
+    "clsx": {
+      "files": 193,
+      "imports": 194
+    },
+    "tailwind-merge": {
+      "files": 144,
+      "imports": 144
+    },
+    "gsap": {
+      "files": 116,
+      "imports": 184
+    },
+    "three": {
+      "files": 106,
+      "imports": 193
+    },
+    "react-icons": {
+      "files": 56,
+      "imports": 80
+    },
+    "@react-three/fiber": {
+      "files": 51,
+      "imports": 56
+    },
+    "next-themes": {
+      "files": 50,
+      "imports": 51
+    },
+    "@heroui/react": {
+      "files": 47,
+      "imports": 51
+    },
+    "date-fns": {
+      "files": 44,
+      "imports": 45
+    },
+    "@ark-ui/react": {
+      "files": 43,
+      "imports": 56
+    },
+    "recharts": {
+      "files": 38,
+      "imports": 46
+    },
+    "radix-ui": {
+      "files": 38,
+      "imports": 38
+    },
+    "reshaped": {
+      "files": 36,
+      "imports": 144
+    },
+    "@base-ui/react": {
+      "files": 36,
+      "imports": 55
+    },
+    "hugeicons": {
+      "files": 33,
+      "imports": 67
+    },
+    "@react-three/drei": {
+      "files": 32,
+      "imports": 33
+    },
+    "@gsap/react": {
+      "files": 31,
+      "imports": 31
+    },
+    "@paper-design/shaders-react": {
+      "files": 31,
+      "imports": 31
+    },
+    "ogl": {
+      "files": 30,
+      "imports": 30
+    },
+    "styled-components": {
+      "files": 25,
+      "imports": 25
+    },
+    "@aliimam/icons": {
+      "files": 24,
+      "imports": 24
+    },
+    "react-aria-components": {
+      "files": 23,
+      "imports": 27
+    },
+    "reaviz": {
+      "files": 20,
+      "imports": 20
+    },
+    "@number-flow/react": {
+      "files": 19,
+      "imports": 19
+    },
+    "@base-ui-components/react": {
+      "files": 17,
+      "imports": 23
+    },
+    "react-native": {
+      "files": 16,
+      "imports": 16
+    },
+    "cobe": {
+      "files": 16,
+      "imports": 16
+    },
+    "react-wrap-balancer": {
+      "files": 15,
+      "imports": 15
+    },
+    "lenis": {
+      "files": 14,
+      "imports": 15
+    },
+    "@aliimam/logos": {
+      "files": 13,
+      "imports": 13
+    },
+    "react-day-picker": {
+      "files": 11,
+      "imports": 11
+    },
+    "sonner": {
+      "files": 10,
+      "imports": 10
+    },
+    "@subframe/core": {
+      "files": 9,
+      "imports": 14
+    },
+    "usehooks-ts": {
+      "files": 9,
+      "imports": 9
+    },
+    "@remixicon/react": {
+      "files": 8,
+      "imports": 8
+    },
+    "antd": {
+      "files": 7,
+      "imports": 10
+    },
+    "react-use-measure": {
+      "files": 7,
+      "imports": 7
+    },
+    "zod": {
+      "files": 7,
+      "imports": 7
+    },
+    "react-hook-form": {
+      "files": 7,
+      "imports": 7
+    },
+    "cmdk": {
+      "files": 7,
+      "imports": 7
+    },
+    "@phosphor-icons/react": {
+      "files": 7,
+      "imports": 7
+    },
+    "embla-carousel-react": {
+      "files": 7,
+      "imports": 7
+    },
+    "uuid": {
+      "files": 7,
+      "imports": 7
+    },
+    "canvas-confetti": {
+      "files": 6,
+      "imports": 8
+    },
+    "react-countup": {
+      "files": 6,
+      "imports": 6
+    },
+    "tailwind-variants": {
+      "files": 5,
+      "imports": 8
+    },
+    "@hookform/resolvers": {
+      "files": 5,
+      "imports": 5
+    },
+    "react-intersection-observer": {
+      "files": 5,
+      "imports": 5
+    },
+    "react-router-dom": {
+      "files": 5,
+      "imports": 5
+    },
+    "input-otp": {
+      "files": 5,
+      "imports": 5
+    },
+    "p5": {
+      "files": 5,
+      "imports": 5
+    },
+    "@react-spring/web": {
+      "files": 5,
+      "imports": 5
+    },
+    "@react-three/postprocessing": {
+      "files": 5,
+      "imports": 5
+    },
+    "@tanstack/react-table": {
+      "files": 5,
+      "imports": 5
+    },
+    "maplibre-gl": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/core": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/sortable": {
+      "files": 5,
+      "imports": 5
+    },
+    "@dnd-kit/utilities": {
+      "files": 5,
+      "imports": 5
+    },
+    "moment": {
+      "files": 4,
+      "imports": 4
+    },
+    "prop-types": {
+      "files": 4,
+      "imports": 4
+    },
+    "vaul": {
+      "files": 4,
+      "imports": 4
+    },
+    "react-resizable-panels": {
+      "files": 4,
+      "imports": 4
+    },
+    "@mui/material": {
+      "files": 3,
+      "imports": 18
+    },
+    "@dotlottie/react-player": {
+      "files": 3,
+      "imports": 5
+    },
+    "@headlessui/react": {
+      "files": 3,
+      "imports": 4
+    },
+    "animejs": {
+      "files": 3,
+      "imports": 3
+    },
+    "postprocessing": {
+      "files": 3,
+      "imports": 3
+    },
+    "embla-carousel": {
+      "files": 3,
+      "imports": 3
+    },
+    "@intentui/icons": {
+      "files": 3,
+      "imports": 3
+    },
+    "@carbon/icons-react": {
+      "files": 3,
+      "imports": 3
+    },
+    "remotion": {
+      "files": 3,
+      "imports": 3
+    },
+    "dotted-map": {
+      "files": 3,
+      "imports": 3
+    },
+    "react-easy-crop": {
+      "files": 3,
+      "imports": 3
+    },
+    "csstype": {
+      "files": 3,
+      "imports": 3
+    },
+    "@glideapps/glide-data-grid": {
+      "files": 2,
+      "imports": 6
+    },
+    "dialkit": {
+      "files": 2,
+      "imports": 4
+    },
+    "@embedpdf/core": {
+      "files": 2,
+      "imports": 4
+    },
+    "@mui/icons-material": {
+      "files": 2,
+      "imports": 4
+    },
+    "swiper": {
+      "files": 2,
+      "imports": 4
+    },
+    "mind-elixir": {
+      "files": 2,
+      "imports": 4
+    },
+    "react-pageflip": {
+      "files": 2,
+      "imports": 2
+    },
+    "@splinetool/react-spline": {
+      "files": 2,
+      "imports": 2
+    },
+    "@solana/wallet-adapter-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@solana/wallet-adapter-base": {
+      "files": 2,
+      "imports": 2
+    },
+    "uvcanvas": {
+      "files": 2,
+      "imports": 2
+    },
+    "unicornstudio-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@ant-design/icons": {
+      "files": 2,
+      "imports": 2
+    },
+    "shiki": {
+      "files": 2,
+      "imports": 2
+    },
+    "lucide-react-native": {
+      "files": 2,
+      "imports": 2
+    },
+    "embla-carousel-autoplay": {
+      "files": 2,
+      "imports": 2
+    },
+    "tone": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-dropzone": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/models": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-document-manager": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-interaction-manager": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-render": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-rotate": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-scroll": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-search": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-selection": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-thumbnail": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-tiling": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-viewport": {
+      "files": 2,
+      "imports": 2
+    },
+    "@embedpdf/plugin-zoom": {
+      "files": 2,
+      "imports": 2
+    },
+    "pdf-lib": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tsparticles/engine": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tsparticles/react": {
+      "files": 2,
+      "imports": 2
+    },
+    "tweakpane": {
+      "files": 2,
+      "imports": 2
+    },
+    "@heroicons/react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@studio-freight/lenis": {
+      "files": 2,
+      "imports": 2
+    },
+    "@tabler/icons-react": {
+      "files": 2,
+      "imports": 2
+    },
+    "@headless-tree/core": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-syntax-highlighter": {
+      "files": 2,
+      "imports": 2
+    },
+    "react-tooltip": {
+      "files": 2,
+      "imports": 2
+    },
+    "ace-builds": {
+      "files": 1,
+      "imports": 18
+    },
+    "@rsuite/icons": {
+      "files": 1,
+      "imports": 5
+    },
+    "hls.js": {
+      "files": 1,
+      "imports": 3
+    },
+    "zustand": {
+      "files": 1,
+      "imports": 3
+    },
+    "@tigerabrodioss/fude": {
+      "files": 1,
+      "imports": 3
+    },
+    "slot-text": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-medium-image-zoom": {
+      "files": 1,
+      "imports": 2
+    },
+    "@pierre/diffs": {
+      "files": 1,
+      "imports": 2
+    },
+    "@pierre/trees": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-resizable": {
+      "files": 1,
+      "imports": 2
+    },
+    "leaflet": {
+      "files": 1,
+      "imports": 2
+    },
+    "@tiptap/react": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-payment-inputs": {
+      "files": 1,
+      "imports": 2
+    },
+    "@chakra-ui/react": {
+      "files": 1,
+      "imports": 2
+    },
+    "react-phone-number-input": {
+      "files": 1,
+      "imports": 2
+    },
+    "html-to-image": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/web3.js": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-react-ui": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-backpack": {
+      "files": 1,
+      "imports": 1
+    },
+    "@solana/wallet-adapter-wallets": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-pixelart-face-card": {
+      "files": 1,
+      "imports": 1
+    },
+    "color-bits": {
+      "files": 1,
+      "imports": 1
+    },
+    "qr-code-styling": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-pdf": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-barcode": {
+      "files": 1,
+      "imports": 1
+    },
+    "html2canvas": {
+      "files": 1,
+      "imports": 1
+    },
+    "@iconify/react": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/react-fontawesome": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "files": 1,
+      "imports": 1
+    },
+    "@fortawesome/fontawesome-svg-core": {
+      "files": 1,
+      "imports": 1
+    },
+    "@react-hook/media-query": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-ace": {
+      "files": 1,
+      "imports": 1
+    },
+    "fmt": {
+      "files": 1,
+      "imports": 1
+    },
+    "cnippet-aos": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-player": {
+      "files": 1,
+      "imports": 1
+    },
+    "@chenglou/pretext": {
+      "files": 1,
+      "imports": 1
+    },
+    "heroui-native": {
+      "files": 1,
+      "imports": 1
+    },
+    "@use-gesture/react": {
+      "files": 1,
+      "imports": 1
+    },
+    "Component": {
+      "files": 1,
+      "imports": 1
+    },
+    "mathjs": {
+      "files": 1,
+      "imports": 1
+    },
+    "gl-matrix": {
+      "files": 1,
+      "imports": 1
+    },
+    "use-scramble": {
+      "files": 1,
+      "imports": 1
+    },
+    "stats.js": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-markdown": {
+      "files": 1,
+      "imports": 1
+    },
+    "emojibase": {
+      "files": 1,
+      "imports": 1
+    },
+    "@avenra/liquid-glass": {
+      "files": 1,
+      "imports": 1
+    },
+    "d3-delaunay": {
+      "files": 1,
+      "imports": 1
+    },
+    "vecteur": {
+      "files": 1,
+      "imports": 1
+    },
+    "papaparse": {
+      "files": 1,
+      "imports": 1
+    },
+    "border-beam": {
+      "files": 1,
+      "imports": 1
+    },
+    "@embedpdf/engines": {
+      "files": 1,
+      "imports": 1
+    },
+    "@extend-ai/react-xlsx": {
+      "files": 1,
+      "imports": 1
+    },
+    "tsparticles": {
+      "files": 1,
+      "imports": 1
+    },
+    "media-chrome": {
+      "files": 1,
+      "imports": 1
+    },
+    "flubber": {
+      "files": 1,
+      "imports": 1
+    },
+    "@paper-design/shaders": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-spring": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-confetti": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-leaflet": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-leaflet-cluster": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-error-boundary": {
+      "files": 1,
+      "imports": 1
+    },
+    "": {
+      "files": 1,
+      "imports": 1
+    },
+    "gradflow": {
+      "files": 1,
+      "imports": 1
+    },
+    "swr": {
+      "files": 1,
+      "imports": 1
+    },
+    "d3": {
+      "files": 1,
+      "imports": 1
+    },
+    "@ncdai/react-wheel-picker": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/starter-kit": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-underline": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-link": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tiptap/extension-placeholder": {
+      "files": 1,
+      "imports": 1
+    },
+    "@origin-space/image-cropper": {
+      "files": 1,
+      "imports": 1
+    },
+    "emblor": {
+      "files": 1,
+      "imports": 1
+    },
+    "@phucbm/magnetic-button": {
+      "files": 1,
+      "imports": 1
+    },
+    "normalized-mouse-position": {
+      "files": 1,
+      "imports": 1
+    },
+    "@phucbm/ripple-effect": {
+      "files": 1,
+      "imports": 1
+    },
+    "@platejs/caption": {
+      "files": 1,
+      "imports": 1
+    },
+    "@udecode/cn": {
+      "files": 1,
+      "imports": 1
+    },
+    "frimousse": {
+      "files": 1,
+      "imports": 1
+    },
+    "gasp": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-textarea-autosize": {
+      "files": 1,
+      "imports": 1
+    },
+    "0 0 40 40": {
+      "files": 1,
+      "imports": 1
+    },
+    "qrcode.react": {
+      "files": 1,
+      "imports": 1
+    },
+    "use-sound": {
+      "files": 1,
+      "imports": 1
+    },
+    "lottie-web": {
+      "files": 1,
+      "imports": 1
+    },
+    "jsonwebtoken": {
+      "files": 1,
+      "imports": 1
+    },
+    "bcrypt": {
+      "files": 1,
+      "imports": 1
+    },
+    "md5": {
+      "files": 1,
+      "imports": 1
+    },
+    "@internationalized/date": {
+      "files": 1,
+      "imports": 1
+    },
+    "@dnd-kit/modifiers": {
+      "files": 1,
+      "imports": 1
+    },
+    "embla-carousel-auto-scroll": {
+      "files": 1,
+      "imports": 1
+    },
+    "@mui/x-data-grid": {
+      "files": 1,
+      "imports": 1
+    },
+    "rsuite": {
+      "files": 1,
+      "imports": 1
+    },
+    "date-fns-tz": {
+      "files": 1,
+      "imports": 1
+    },
+    "@reach/portal": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tanstack/react-virtual": {
+      "files": 1,
+      "imports": 1
+    },
+    "@zumer/snapdom": {
+      "files": 1,
+      "imports": 1
+    },
+    "nanoid": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-hotkeys-hook": {
+      "files": 1,
+      "imports": 1
+    },
+    "qrcode": {
+      "files": 1,
+      "imports": 1
+    },
+    "react-tweet": {
+      "files": 1,
+      "imports": 1
+    },
+    "@icons-pack/react-simple-icons": {
+      "files": 1,
+      "imports": 1
+    },
+    "swapy": {
+      "files": 1,
+      "imports": 1
+    },
+    "@motionone/utils": {
+      "files": 1,
+      "imports": 1
+    },
+    "@tsparticles/slim": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/color-convert": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/react-color-hue": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uiw/react-color-saturation": {
+      "files": 1,
+      "imports": 1
+    },
+    "ai": {
+      "files": 1,
+      "imports": 1
+    },
+    "leva": {
+      "files": 1,
+      "imports": 1
+    },
+    "maath": {
+      "files": 1,
+      "imports": 1
+    },
+    "daisyui": {
+      "files": 1,
+      "imports": 1
+    },
+    "@uidotdev/usehooks": {
+      "files": 1,
+      "imports": 1
+    },
+    "figma:react": {
+      "files": 1,
+      "imports": 1
+    }
+  },
+  "siblingClosure": {
+    "statusCounts": {
+      "ambiguous-slug": 1868,
+      "gated-404": 1,
+      "not-in-harvest": 96,
+      "page-soft404": 5,
+      "parse-failure": 44,
+      "retrieved": 772
+    },
+    "resolvedRetrievedEdges": 772,
+    "unresolvedEdges": 2014
+  },
+  "byFamily": {
+    "accordion": {
+      "corpusMembers": 198,
+      "retrieved": 137,
+      "gated404": 9,
+      "otherUnavailable": 52,
+      "retrievedRate": 0.6919191919191919
+    },
+    "ai-chat": {
+      "corpusMembers": 203,
+      "retrieved": 88,
+      "gated404": 52,
+      "otherUnavailable": 63,
+      "retrievedRate": 0.43349753694581283
+    },
+    "alert": {
+      "corpusMembers": 175,
+      "retrieved": 104,
+      "gated404": 38,
+      "otherUnavailable": 33,
+      "retrievedRate": 0.5942857142857143
+    },
+    "announcement": {
+      "corpusMembers": 74,
+      "retrieved": 33,
+      "gated404": 16,
+      "otherUnavailable": 25,
+      "retrievedRate": 0.44594594594594594
+    },
+    "avatar": {
+      "corpusMembers": 244,
+      "retrieved": 153,
+      "gated404": 49,
+      "otherUnavailable": 42,
+      "retrievedRate": 0.6270491803278688
+    },
+    "background": {
+      "corpusMembers": 679,
+      "retrieved": 214,
+      "gated404": 428,
+      "otherUnavailable": 37,
+      "retrievedRate": 0.31516936671575846
+    },
+    "badge": {
+      "corpusMembers": 236,
+      "retrieved": 156,
+      "gated404": 32,
+      "otherUnavailable": 48,
+      "retrievedRate": 0.6610169491525424
+    },
+    "border": {
+      "corpusMembers": 149,
+      "retrieved": 82,
+      "gated404": 31,
+      "otherUnavailable": 36,
+      "retrievedRate": 0.5503355704697986
+    },
+    "button": {
+      "corpusMembers": 441,
+      "retrieved": 340,
+      "gated404": 29,
+      "otherUnavailable": 72,
+      "retrievedRate": 0.7709750566893424
+    },
+    "calendar": {
+      "corpusMembers": 158,
+      "retrieved": 120,
+      "gated404": 11,
+      "otherUnavailable": 27,
+      "retrievedRate": 0.759493670886076
+    },
+    "card": {
+      "corpusMembers": 613,
+      "retrieved": 510,
+      "gated404": 47,
+      "otherUnavailable": 56,
+      "retrievedRate": 0.831973898858075
+    },
+    "carousel": {
+      "corpusMembers": 310,
+      "retrieved": 227,
+      "gated404": 35,
+      "otherUnavailable": 48,
+      "retrievedRate": 0.7322580645161291
+    },
+    "checkbox": {
+      "corpusMembers": 176,
+      "retrieved": 119,
+      "gated404": 7,
+      "otherUnavailable": 50,
+      "retrievedRate": 0.6761363636363636
+    },
+    "chip": {
+      "corpusMembers": 55,
+      "retrieved": 31,
+      "gated404": 6,
+      "otherUnavailable": 18,
+      "retrievedRate": 0.5636363636363636
+    },
+    "clients": {
+      "corpusMembers": 22,
+      "retrieved": 12,
+      "gated404": 6,
+      "otherUnavailable": 4,
+      "retrievedRate": 0.5454545454545454
+    },
+    "comparison": {
+      "corpusMembers": 42,
+      "retrieved": 26,
+      "gated404": 6,
+      "otherUnavailable": 10,
+      "retrievedRate": 0.6190476190476191
+    },
+    "cta": {
+      "corpusMembers": 213,
+      "retrieved": 165,
+      "gated404": 20,
+      "otherUnavailable": 28,
+      "retrievedRate": 0.7746478873239436
+    },
+    "cursor": {
+      "corpusMembers": 190,
+      "retrieved": 105,
+      "gated404": 34,
+      "otherUnavailable": 51,
+      "retrievedRate": 0.5526315789473685
+    },
+    "dashboard": {
+      "corpusMembers": 343,
+      "retrieved": 252,
+      "gated404": 13,
+      "otherUnavailable": 78,
+      "retrievedRate": 0.7346938775510204
+    },
+    "data-visualization": {
+      "corpusMembers": 258,
+      "retrieved": 184,
+      "gated404": 18,
+      "otherUnavailable": 56,
+      "retrievedRate": 0.7131782945736435
+    },
+    "date-picker": {
+      "corpusMembers": 178,
+      "retrieved": 145,
+      "gated404": 1,
+      "otherUnavailable": 32,
+      "retrievedRate": 0.8146067415730337
+    },
+    "dock": {
+      "corpusMembers": 89,
+      "retrieved": 62,
+      "gated404": 8,
+      "otherUnavailable": 19,
+      "retrievedRate": 0.6966292134831461
+    },
+    "dropdown": {
+      "corpusMembers": 205,
+      "retrieved": 146,
+      "gated404": 16,
+      "otherUnavailable": 43,
+      "retrievedRate": 0.7121951219512195
+    },
+    "empty-state": {
+      "corpusMembers": 186,
+      "retrieved": 131,
+      "gated404": 19,
+      "otherUnavailable": 36,
+      "retrievedRate": 0.7043010752688172
+    },
+    "faq": {
+      "corpusMembers": 93,
+      "retrieved": 70,
+      "gated404": 4,
+      "otherUnavailable": 19,
+      "retrievedRate": 0.7526881720430108
+    },
+    "features": {
+      "corpusMembers": 308,
+      "retrieved": 214,
+      "gated404": 46,
+      "otherUnavailable": 48,
+      "retrievedRate": 0.6948051948051948
+    },
+    "file-tree": {
+      "corpusMembers": 53,
+      "retrieved": 36,
+      "gated404": 9,
+      "otherUnavailable": 8,
+      "retrievedRate": 0.6792452830188679
+    },
+    "footer": {
+      "corpusMembers": 198,
+      "retrieved": 130,
+      "gated404": 25,
+      "otherUnavailable": 43,
+      "retrievedRate": 0.6565656565656566
+    },
+    "form": {
+      "corpusMembers": 163,
+      "retrieved": 133,
+      "gated404": 10,
+      "otherUnavailable": 20,
+      "retrievedRate": 0.8159509202453987
+    },
+    "gallery": {
+      "corpusMembers": 323,
+      "retrieved": 219,
+      "gated404": 50,
+      "otherUnavailable": 54,
+      "retrievedRate": 0.6780185758513931
+    },
+    "globe": {
+      "corpusMembers": 42,
+      "retrieved": 36,
+      "gated404": 3,
+      "otherUnavailable": 3,
+      "retrievedRate": 0.8571428571428571
+    },
+    "grid": {
+      "corpusMembers": 366,
+      "retrieved": 241,
+      "gated404": 63,
+      "otherUnavailable": 62,
+      "retrievedRate": 0.6584699453551912
+    },
+    "hero": {
+      "corpusMembers": 517,
+      "retrieved": 414,
+      "gated404": 59,
+      "otherUnavailable": 44,
+      "retrievedRate": 0.8007736943907157
+    },
+    "hook": {
+      "corpusMembers": 60,
+      "retrieved": 20,
+      "gated404": 9,
+      "otherUnavailable": 31,
+      "retrievedRate": 0.3333333333333333
+    },
+    "icon": {
+      "corpusMembers": 293,
+      "retrieved": 193,
+      "gated404": 30,
+      "otherUnavailable": 70,
+      "retrievedRate": 0.658703071672355
+    },
+    "image": {
+      "corpusMembers": 310,
+      "retrieved": 196,
+      "gated404": 68,
+      "otherUnavailable": 46,
+      "retrievedRate": 0.632258064516129
+    },
+    "input": {
+      "corpusMembers": 213,
+      "retrieved": 154,
+      "gated404": 20,
+      "otherUnavailable": 39,
+      "retrievedRate": 0.7230046948356808
+    },
+    "link": {
+      "corpusMembers": 170,
+      "retrieved": 121,
+      "gated404": 8,
+      "otherUnavailable": 41,
+      "retrievedRate": 0.711764705882353
+    },
+    "list": {
+      "corpusMembers": 174,
+      "retrieved": 133,
+      "gated404": 17,
+      "otherUnavailable": 24,
+      "retrievedRate": 0.764367816091954
+    },
+    "map": {
+      "corpusMembers": 52,
+      "retrieved": 30,
+      "gated404": 13,
+      "otherUnavailable": 9,
+      "retrievedRate": 0.5769230769230769
+    },
+    "marquee": {
+      "corpusMembers": 136,
+      "retrieved": 74,
+      "gated404": 32,
+      "otherUnavailable": 30,
+      "retrievedRate": 0.5441176470588235
+    },
+    "menu": {
+      "corpusMembers": 269,
+      "retrieved": 171,
+      "gated404": 35,
+      "otherUnavailable": 63,
+      "retrievedRate": 0.6356877323420075
+    },
+    "modal": {
+      "corpusMembers": 270,
+      "retrieved": 195,
+      "gated404": 15,
+      "otherUnavailable": 60,
+      "retrievedRate": 0.7222222222222222
+    },
+    "navigation-menu": {
+      "corpusMembers": 320,
+      "retrieved": 223,
+      "gated404": 36,
+      "otherUnavailable": 61,
+      "retrievedRate": 0.696875
+    },
+    "notification": {
+      "corpusMembers": 192,
+      "retrieved": 121,
+      "gated404": 40,
+      "otherUnavailable": 31,
+      "retrievedRate": 0.6302083333333334
+    },
+    "number": {
+      "corpusMembers": 87,
+      "retrieved": 47,
+      "gated404": 18,
+      "otherUnavailable": 22,
+      "retrievedRate": 0.5402298850574713
+    },
+    "onboarding": {
+      "corpusMembers": 73,
+      "retrieved": 52,
+      "gated404": 13,
+      "otherUnavailable": 8,
+      "retrievedRate": 0.7123287671232876
+    },
+    "pagination": {
+      "corpusMembers": 74,
+      "retrieved": 50,
+      "gated404": 7,
+      "otherUnavailable": 17,
+      "retrievedRate": 0.6756756756756757
+    },
+    "popover": {
+      "corpusMembers": 191,
+      "retrieved": 121,
+      "gated404": 10,
+      "otherUnavailable": 60,
+      "retrievedRate": 0.6335078534031413
+    },
+    "pricing-section": {
+      "corpusMembers": 185,
+      "retrieved": 134,
+      "gated404": 21,
+      "otherUnavailable": 30,
+      "retrievedRate": 0.7243243243243244
+    },
+    "profile": {
+      "corpusMembers": 211,
+      "retrieved": 160,
+      "gated404": 13,
+      "otherUnavailable": 38,
+      "retrievedRate": 0.7582938388625592
+    },
+    "progress": {
+      "corpusMembers": 171,
+      "retrieved": 117,
+      "gated404": 32,
+      "otherUnavailable": 22,
+      "retrievedRate": 0.6842105263157895
+    },
+    "radio-group": {
+      "corpusMembers": 70,
+      "retrieved": 55,
+      "gated404": 4,
+      "otherUnavailable": 11,
+      "retrievedRate": 0.7857142857142857
+    },
+    "scroll-area": {
+      "corpusMembers": 337,
+      "retrieved": 217,
+      "gated404": 42,
+      "otherUnavailable": 78,
+      "retrievedRate": 0.6439169139465876
+    },
+    "search": {
+      "corpusMembers": 122,
+      "retrieved": 90,
+      "gated404": 9,
+      "otherUnavailable": 23,
+      "retrievedRate": 0.7377049180327869
+    },
+    "select": {
+      "corpusMembers": 152,
+      "retrieved": 98,
+      "gated404": 23,
+      "otherUnavailable": 31,
+      "retrievedRate": 0.6447368421052632
+    },
+    "sidebar": {
+      "corpusMembers": 139,
+      "retrieved": 74,
+      "gated404": 7,
+      "otherUnavailable": 58,
+      "retrievedRate": 0.5323741007194245
+    },
+    "sign-in": {
+      "corpusMembers": 139,
+      "retrieved": 103,
+      "gated404": 22,
+      "otherUnavailable": 14,
+      "retrievedRate": 0.7410071942446043
+    },
+    "sign-up": {
+      "corpusMembers": 93,
+      "retrieved": 64,
+      "gated404": 16,
+      "otherUnavailable": 13,
+      "retrievedRate": 0.6881720430107527
+    },
+    "slider": {
+      "corpusMembers": 264,
+      "retrieved": 198,
+      "gated404": 25,
+      "otherUnavailable": 41,
+      "retrievedRate": 0.75
+    },
+    "spinner": {
+      "corpusMembers": 434,
+      "retrieved": 251,
+      "gated404": 133,
+      "otherUnavailable": 50,
+      "retrievedRate": 0.5783410138248848
+    },
+    "stat": {
+      "corpusMembers": 153,
+      "retrieved": 103,
+      "gated404": 31,
+      "otherUnavailable": 19,
+      "retrievedRate": 0.673202614379085
+    },
+    "steps": {
+      "corpusMembers": 65,
+      "retrieved": 45,
+      "gated404": 11,
+      "otherUnavailable": 9,
+      "retrievedRate": 0.6923076923076923
+    },
+    "table": {
+      "corpusMembers": 180,
+      "retrieved": 112,
+      "gated404": 37,
+      "otherUnavailable": 31,
+      "retrievedRate": 0.6222222222222222
+    },
+    "tabs": {
+      "corpusMembers": 180,
+      "retrieved": 120,
+      "gated404": 14,
+      "otherUnavailable": 46,
+      "retrievedRate": 0.6666666666666666
+    },
+    "team": {
+      "corpusMembers": 91,
+      "retrieved": 73,
+      "gated404": 5,
+      "otherUnavailable": 13,
+      "retrievedRate": 0.8021978021978022
+    },
+    "testimonials": {
+      "corpusMembers": 134,
+      "retrieved": 89,
+      "gated404": 27,
+      "otherUnavailable": 18,
+      "retrievedRate": 0.664179104477612
+    },
+    "text": {
+      "corpusMembers": 439,
+      "retrieved": 265,
+      "gated404": 87,
+      "otherUnavailable": 87,
+      "retrievedRate": 0.6036446469248291
+    },
+    "textarea": {
+      "corpusMembers": 219,
+      "retrieved": 143,
+      "gated404": 14,
+      "otherUnavailable": 62,
+      "retrievedRate": 0.6529680365296804
+    },
+    "timeline": {
+      "corpusMembers": 133,
+      "retrieved": 106,
+      "gated404": 14,
+      "otherUnavailable": 13,
+      "retrievedRate": 0.7969924812030075
+    },
+    "toast": {
+      "corpusMembers": 50,
+      "retrieved": 32,
+      "gated404": 14,
+      "otherUnavailable": 4,
+      "retrievedRate": 0.64
+    },
+    "toggle": {
+      "corpusMembers": 282,
+      "retrieved": 203,
+      "gated404": 29,
+      "otherUnavailable": 50,
+      "retrievedRate": 0.7198581560283688
+    },
+    "tooltip": {
+      "corpusMembers": 244,
+      "retrieved": 167,
+      "gated404": 19,
+      "otherUnavailable": 58,
+      "retrievedRate": 0.6844262295081968
+    },
+    "untagged": {
+      "corpusMembers": 670,
+      "retrieved": 498,
+      "gated404": 82,
+      "otherUnavailable": 90,
+      "retrievedRate": 0.7432835820895523
+    },
+    "upload-download": {
+      "corpusMembers": 132,
+      "retrieved": 93,
+      "gated404": 20,
+      "otherUnavailable": 19,
+      "retrievedRate": 0.7045454545454546
+    },
+    "video": {
+      "corpusMembers": 141,
+      "retrieved": 61,
+      "gated404": 72,
+      "otherUnavailable": 8,
+      "retrievedRate": 0.4326241134751773
+    }
+  },
+  "byAuthorBand": {
+    "mid16-100": {
+      "n": 2228,
+      "retrieved": 0,
+      "retrievedRate": 0,
+      "selfContained": 1841,
+      "siblingImportSources": 387
+    },
+    "tail101+": {
+      "n": 1238,
+      "retrieved": 0,
+      "retrievedRate": 0,
+      "selfContained": 1079,
+      "siblingImportSources": 159
+    },
+    "top15": {
+      "n": 1739,
+      "retrieved": 0,
+      "retrievedRate": 0,
+      "selfContained": 1088,
+      "siblingImportSources": 651
+    }
+  }
+}

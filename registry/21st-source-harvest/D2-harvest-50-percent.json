@@ -1,0 +1,18 @@
+{
+  "markedAt": "2026-08-29T05:41:34.406Z",
+  "processed": 3975,
+  "total": 7949,
+  "n": 3975,
+  "retrieved": 2436,
+  "gated404": 822,
+  "unavailable": 1539,
+  "retrievalRate": 0.6128301886792453,
+  "outcomeCounts": {
+    "gated-404": 822,
+    "page-soft404": 119,
+    "parse-failure": 598,
+    "retrieved": 2436
+  },
+  "resumeIndex": 3975,
+  "resumeId": "meschacirung__logo-cloud-2"
+}
