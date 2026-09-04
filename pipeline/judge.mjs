@@ -44,6 +44,12 @@ function judgePanel(id) {
   let v
   try { v = JSON.parse(m[0]) } catch (e) { return { panel: id, error: 'bad json: ' + e.message, raw: m[0].slice(0, 200) } }
   v.overall = weightedOverall(v.scores)
+  const scoredAxes = AXES.filter((a) => typeof v.scores?.[a.id] === 'number')
+  if (scoredAxes.length) {
+    const weakest = scoredAxes.reduce((lowest, axis) =>
+      v.scores[axis.id] < v.scores[lowest.id] ? axis : lowest, scoredAxes[0])
+    v.reject_reason = `Weakest rubric dimension: ${weakest.id} (${v.scores[weakest.id]}/10).`
+  }
   return v
 }
 
@@ -85,4 +91,4 @@ for (const r of ok) {
 
 writeFileSync(join(here, 'scores.json'), JSON.stringify({ at: 'unstamped', results }, null, 2))
 console.log('\n  full verdicts → pipeline/scores.json')
-console.log('__JUDGE_JSON__ ' + JSON.stringify({ ranked: ok.map((r) => ({ panel: r.panel, overall: r.overall })), errors: errs.length }))
+console.log('__JUDGE_JSON__ ' + JSON.stringify({ ranked: ok.map((r) => ({ panel: r.panel, overall: r.overall, reject_reason: r.reject_reason })), errors: errs.length }))
