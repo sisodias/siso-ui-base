@@ -1,0 +1,84 @@
+{
+  "_note": "BykonzYard comp-swap spec, 18 Sep 2026. Every entry is a surface Shaan named as not good enough, with the MEASURED defect (headless Chromium, 390x844) and the bank tags to pick a replacement from. Rule: rob a comp, do not hand-roll CSS.",
+  "project": "SISO_Agency/clients/fahmy-2026-08/bykonzyard/react-preview",
+  "budget": { "cardMaxVh": 45, "titleMaxLines": 2, "minFontPx": 10, "minTapPx": 32 },
+  "surfaces": [
+    {
+      "id": "video-card", "priority": 1, "pages": ["music", "gallery"],
+      "label": "Follow the archive / Watch the sets",
+      "quote": "the thumbnail is too small, too much text, text is too big",
+      "measured": "card 283-290px tall, thumbnail only 85-93px of it, title 16px wrapping to 5-6 LINES",
+      "file": "src/site/VideoRail.tsx", "css": "src/site/video-rail.css",
+      "tags": ["video", "card", "carousel"],
+      "accept": "thumbnail >= 55% of card height, title <= 2 lines, card <= 45vh"
+    },
+    {
+      "id": "gallery-card", "priority": 2, "pages": ["gallery"],
+      "label": "Gallery archive cards",
+      "quote": "archive cards are terrible on the photo gallery, too small",
+      "measured": "13 cards at 148px tall, image only 77px — image is half the card, rest is chrome",
+      "file": "src/site/pages/GalleryPage.tsx", "css": "src/site/static-pages.css",
+      "tags": ["gallery", "grid", "image", "modal"],
+      "accept": "image >= 70% of card, 167 real photos available from bykonz-photos.pages.dev"
+    },
+    {
+      "id": "event-card", "priority": 3, "pages": ["events", "home"],
+      "label": "Next event flyer card",
+      "quote": "the new events card's too big, it's not very nice, it's because of the image there, you don't need that image",
+      "measured": "flyer image dominates; ticket-info-links block 248px for 18 words",
+      "file": "src/site/pages/EventsPage.tsx", "css": "src/site/events-redesign.css",
+      "tags": ["card", "calendar", "image"],
+      "accept": "no full-bleed flyer image; date/venue/price legible without scrolling the card"
+    },
+    {
+      "id": "ai-chat", "priority": 4, "pages": ["all"],
+      "label": "Ask the Yard chat popup",
+      "quote": "the chat UI popup still isn't been sorted, I wanted a GitHub repo which does this feature out of the box",
+      "measured": "@assistant-ui/react 0.15.20 IS installed (the out-of-the-box repo) but styled with 59 lines of hand-rolled CSS. @assistant-ui/styles 0.3.7 exists upstream and is NOT installed.",
+      "file": "src/site/AskYard.tsx", "css": "src/site/ask-yard.css",
+      "tags": ["ai-chat", "modal", "popover"],
+      "accept": "adopt @assistant-ui/styles OR a 21st chat shell; delete ask-yard.css hand-rolling"
+    },
+    {
+      "id": "contact-form", "priority": 5, "pages": ["contact"],
+      "label": "Contact / booking form",
+      "quote": "the guy wants us to put the email code in there, dropdown country code, the form could be nicer, shadcn ui or 21st.dev",
+      "measured": "form is 913px tall = 108vh — taller than the phone screen, for 65 words",
+      "file": "src/site/pages/ContactPage.tsx", "css": "src/site/about-contact-redesign.css",
+      "tags": ["form", "input", "select"],
+      "accept": "country-code dropdown on the phone field; form <= 80vh"
+    },
+    {
+      "id": "store-card", "priority": 6, "pages": ["earn"],
+      "label": "Yard store reward cards",
+      "quote": "on the rewards just feel like they could be some",
+      "measured": "6 cards at 494px = 59vh each, but image only 73px of that",
+      "file": "src/site/pages/EarnPage.tsx", "css": "src/site/earn-redesign.css",
+      "tags": ["card", "pricing-section"],
+      "accept": "card <= 45vh, image >= 45% of card"
+    },
+    {
+      "id": "earn-step", "priority": 7, "pages": ["earn"],
+      "label": "Earn 3-step rail + Join the yard",
+      "quote": "the three do the stuff could be nicer, Join the yard doesn't pop out as much as it should",
+      "measured": "3 steps at 224px = 27vh each on a snap rail; Join the yard is a plain text link",
+      "file": "src/site/pages/EarnPage.tsx", "css": "src/site/earn-redesign.css",
+      "tags": ["steps", "onboarding", "timeline"],
+      "accept": "all 3 steps visible without horizontal scroll; Join the yard reads as a primary CTA"
+    },
+    {
+      "id": "mission-card", "priority": 8, "pages": ["about"],
+      "label": "About mission cards",
+      "quote": "the three cards here could have robbed from 21st or shadcn and UI would have been way nicer",
+      "measured": "3 cards at 230px = 27vh, no image, 14 words each — plain bordered boxes",
+      "file": "src/site/pages/AboutPage.tsx", "css": "src/site/static-pages.css",
+      "tags": ["card", "features"],
+      "accept": "cards carry visual weight (border/gradient/image treatment), not plain boxes"
+    }
+  ],
+  "keep": [
+    { "what": "section background images", "quote": "I like the way you've done the background, that's really cool, you can use more of our images for stuff like that" },
+    { "what": "about page lineup + mission heading", "quote": "the about page is all right... the mission title and subtext is alright" },
+    { "what": "earn reward cards direction", "quote": "the cards are better though on the rewards" }
+  ]
+}
