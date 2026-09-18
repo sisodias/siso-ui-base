@@ -1,0 +1,1465 @@
+{
+ "video-card": [
+  {
+   "id": "jean.duthil13__hero-scrub",
+   "url": "https://21st.dev/@jean.duthil13/components/hero-scrub",
+   "tag": "video",
+   "name": "hero-scrub",
+   "author": "jean.duthil13",
+   "description": "Cinematic scroll-scrubbed hero with an image sequence rendered on canvas. The central card scales from a thumbnail to cover the viewport while scrubbing through your video frames, then shrinks back symmetrically. GSAP ScrollTrigger powered, pin-based choreography, mobile-aware, respects prefers-reduced-motion. Ideal for luxury, automotive, editorial and product landing pages.\n",
+   "score": 51,
+   "why": [
+    "responsive×2",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 279,
+    "deps": 3
+   }
+  },
+  {
+   "id": "ruixen.ui__featured-crm-demo-section",
+   "url": "https://21st.dev/@ruixen.ui/components/featured-crm-demo-section",
+   "tag": "video",
+   "name": "featured-crm-demo-section",
+   "author": "ruixen.ui",
+   "description": "This component displays a CRM preview card that can switch between a thumbnail image and an autoplaying video.\nIt uses a play button overlay that appears on hover to start the video.\nThe card layout is responsive, filling available height and width while maintaining rounded corners for a polished look.",
+   "score": 48,
+   "why": [
+    "responsive×8",
+    "stacks",
+    "object-fit",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 8,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 142,
+    "deps": 4
+   }
+  },
+  {
+   "id": "avanishverma4__hero-with-video-in-background",
+   "url": "https://21st.dev/@avanishverma4/components/hero-with-video-in-background",
+   "tag": "name-match",
+   "name": "hero-with-video-in-background",
+   "author": "avanishverma4",
+   "description": "A reusable hero block with video in background",
+   "score": 48,
+   "why": [
+    "responsive×11",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 11,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 331,
+    "deps": 2
+   }
+  },
+  {
+   "id": "ruixen.ui__service-ledger",
+   "url": "https://21st.dev/@ruixen.ui/components/service-ledger",
+   "tag": "name-match",
+   "name": "service-ledger",
+   "author": "ruixen.ui",
+   "description": "A scroll-spy services section. A sticky tab strip at the top tracks the active entry while the reader scrolls through long-form panels with deliverables, optional preview videos, and inline CTAs.",
+   "score": 48,
+   "why": [
+    "responsive×26",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 26,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 359,
+    "deps": 4
+   }
+  },
+  {
+   "id": "arunachalam__thumbnail-button-video-player",
+   "url": "https://21st.dev/@arunachalam/components/thumbnail-button-video-player",
+   "tag": "video",
+   "name": "thumbnail-button-video-player",
+   "author": "arunachalam",
+   "description": "The ThumbnailButton component displays a video thumbnail that, when clicked, opens a modal video player. It supports both YouTube embeds (via youtubeId) and direct video URLs (via videoUrl), and it gracefully handles missing thumbnail or video sources by falling back to sensible defaults.\n\n",
+   "score": 42,
+   "why": [
+    "NO breakpoints",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": false,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 161,
+    "deps": 4
+   }
+  },
+  {
+   "id": "easemize__hero-with-video",
+   "url": "https://21st.dev/@easemize/components/hero-with-video",
+   "tag": "video",
+   "name": "hero-with-video",
+   "author": "easemize",
+   "description": "Hero With Video and Image, Landing Page, Header",
+   "score": 42,
+   "why": [
+    "responsive×18",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 18,
+    "mobileFirst": false,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 204,
+    "deps": 3
+   }
+  }
+ ],
+ "gallery-card": [
+  {
+   "id": "dhileepkumargm__kinetic-scroll-gallery",
+   "url": "https://21st.dev/@dhileepkumargm/components/kinetic-scroll-gallery",
+   "tag": "gallery",
+   "name": "kinetic-scroll-gallery",
+   "author": "dhileepkumargm",
+   "description": "A responsive image grid that dynamically skews each photo based on your scroll velocity, creating a tactile, kinetic distortion effect powered by Framer Motion.",
+   "score": 54,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×5",
+    "stacks",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 5,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 85,
+    "deps": 2
+   },
+   "pinned": true
+  },
+  {
+   "id": "dhileepkumargm__react-tailwind-image-gallery",
+   "url": "https://21st.dev/@dhileepkumargm/components/react-tailwind-image-gallery",
+   "tag": "gallery",
+   "name": "react-tailwind-image-gallery",
+   "author": "dhileepkumargm",
+   "description": "A responsive React component for displaying an image gallery with hover-zoom effects, customizable grid spans, and a fullscreen modal lightbox—built with Tailwind CSS.",
+   "score": 44,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×3",
+    "stacks",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 3,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 61,
+    "deps": 1
+   },
+   "pinned": true
+  },
+  {
+   "id": "alexperezcedeno__interactive-folder-gallery",
+   "url": "https://21st.dev/@alexperezcedeno/components/interactive-folder-gallery",
+   "tag": "gallery",
+   "name": "interactive-folder-gallery",
+   "author": "alexperezcedeno",
+   "description": "A macOS-inspired folder that springs open on click, fanning out photo cards with realistic Framer Motion physics and drag-to-close interactions.",
+   "score": 0,
+   "why": [
+    "PICKED BY SHAAN",
+    "NO breakpoints",
+    "stacks",
+    "object-fit",
+    "FIXED width >=390px",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": true,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 135,
+    "deps": 2
+   },
+   "pinned": true
+  },
+  {
+   "id": "pulseawan__image-expansion",
+   "url": "https://21st.dev/@pulseawan/components/image-expansion",
+   "tag": "gallery",
+   "name": "image-expansion",
+   "author": "pulseawan",
+   "description": "Pre-built image expansion & gallery components for modern landing pages — install on demand, no need to generate from scratch.",
+   "score": 55,
+   "why": [
+    "responsive×10",
+    "stacks",
+    "aspect-ratio",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 10,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 324,
+    "deps": 1
+   }
+  },
+  {
+   "id": "aghasisahakyan1__hero-section-with-email-input",
+   "url": "https://21st.dev/@aghasisahakyan1/components/hero-section-with-email-input",
+   "tag": "name-match",
+   "name": "hero-section-with-email-input",
+   "author": "aghasisahakyan1",
+   "description": "Hero section with email input call to action and gallery cards ",
+   "score": 55,
+   "why": [
+    "responsive×77",
+    "stacks",
+    "aspect-ratio",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 77,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 292,
+    "deps": 3
+   }
+  },
+  {
+   "id": "moumensoliman__gallery-grid-block-shadcnui",
+   "url": "https://21st.dev/@moumensoliman/components/gallery-grid-block-shadcnui",
+   "tag": "gallery",
+   "name": "gallery-grid-block-shadcnui",
+   "author": "moumensoliman",
+   "description": "Filterable image gallery with animated lightbox and navigation",
+   "score": 51,
+   "why": [
+    "responsive×2",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 299,
+    "deps": 6
+   }
+  }
+ ],
+ "event-card": [
+  {
+   "id": "isaiahbjork__event-countdown-card",
+   "url": "https://21st.dev/@isaiahbjork/components/event-countdown-card",
+   "tag": "name-match",
+   "name": "event-countdown-card",
+   "author": "isaiahbjork",
+   "description": "This Event Countdown Card is a fully animated promotional block designed to highlight and convert users for upcoming live events. It features a real-time countdown timer, urgency cues (like “Starts Soon!”), dynamic hover states, and pulsing time units—all wrapped in a theme-aware, motion-optimized layout. It supports image backdrops, attendee stats, and customizable join actions.\n\nPerfect for workshop landing pages, webinars, tech meetups, product launches, or any scenario where live countdown urgency drives engagement and conversions.",
+   "score": 15,
+   "why": [
+    "PICKED BY SHAAN",
+    "NO breakpoints",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 317,
+    "deps": 5
+   },
+   "pinned": true
+  },
+  {
+   "id": "cinquinandy__sports-hero-with-animated-athletes-in-stickman",
+   "url": "https://21st.dev/@cinquinandy/components/sports-hero-with-animated-athletes-in-stickman",
+   "tag": "name-match",
+   "name": "sports-hero-with-animated-athletes-in-stickman",
+   "author": "cinquinandy",
+   "description": "A comprehensive hero section designed for sports and race event websites. Features a theme-aware, split-screen background with a main image and a topography pattern. The key feature is a dynamic animation layer (AnimatedLife) that spawns and moves SVG runners and cyclists across the screen.",
+   "score": 37,
+   "why": [
+    "responsive×19",
+    "stacks",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 19,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 512,
+    "deps": 4
+   }
+  },
+  {
+   "id": "minhxthanh__countdown-timer",
+   "url": "https://21st.dev/@minhxthanh/components/countdown-timer",
+   "tag": "name-match",
+   "name": "countdown-timer",
+   "author": "minhxthanh",
+   "description": "Countdown Timer / Clock Countdown",
+   "score": 36,
+   "why": [
+    "responsive×6",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 6,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 101,
+    "deps": 2
+   }
+  },
+  {
+   "id": "nexus-ui__animated-countdown",
+   "url": "https://21st.dev/@nexus-ui/components/animated-countdown",
+   "tag": "name-match",
+   "name": "animated-countdown",
+   "author": "nexus-ui",
+   "description": "A flip-style countdown timer with animated number transitions and modern, digital, minimal, and classic variants.",
+   "score": 36,
+   "why": [
+    "responsive×21",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 21,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 366,
+    "deps": 3
+   }
+  },
+  {
+   "id": "moazamtrade__the-future-arrives-soon-cta",
+   "url": "https://21st.dev/@moazamtrade/components/the-future-arrives-soon-cta",
+   "tag": "name-match",
+   "name": "the-future-arrives-soon-cta",
+   "author": "moazamtrade",
+   "description": "A full-width promotional banner with a live countdown timer, designed to create urgency for upcoming launches, events, or early access signups.",
+   "score": 35,
+   "why": [
+    "responsive×19",
+    "stacks",
+    "FIXED width >=390px",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 19,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": true,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 142,
+    "deps": 3
+   }
+  },
+  {
+   "id": "vaib215__event-manager",
+   "url": "https://21st.dev/@vaib215/components/event-manager",
+   "tag": "card",
+   "name": "event-manager",
+   "author": "vaib215",
+   "description": "",
+   "score": 31,
+   "why": [
+    "responsive×53",
+    "stacks",
+    "clamps text",
+    "huge 1494L"
+   ],
+   "signals": {
+    "responsive": 53,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 1494,
+    "deps": 10
+   }
+  }
+ ],
+ "ai-chat": [
+  {
+   "id": "bundui__scroll-area6",
+   "url": "https://21st.dev/@bundui/components/scroll-area6",
+   "tag": "name-match",
+   "name": "scroll-area6",
+   "author": "bundui",
+   "description": "A scrollable chat conversation panel with avatars, message bubbles, timestamps and a message input that auto-scrolls to the latest message.",
+   "score": 23,
+   "why": [
+    "PICKED BY SHAAN",
+    "NO breakpoints",
+    "stacks",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 206,
+    "deps": 7
+   },
+   "pinned": true
+  },
+  {
+   "id": "muhammetbilgin__ai-chat-sheet",
+   "url": "https://21st.dev/@muhammetbilgin/components/ai-chat-sheet",
+   "tag": "name-match",
+   "name": "ai-chat-sheet",
+   "author": "muhammetbilgin",
+   "description": "AI Chat Sheet is a mock design for a responsive AI assistant panel. It showcases an interactive interface with quick action buttons, model selection, and a chat input, giving a realistic preview of how an AI assistant could look and behave. This component is intended for design and prototyping purposes only, and does not provide actual AI functionality.",
+   "score": 39,
+   "why": [
+    "responsive×5",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 5,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 177,
+    "deps": 5
+   }
+  },
+  {
+   "id": "baozhouqi__ai-chat-input",
+   "url": "https://21st.dev/@baozhouqi/components/ai-chat-input",
+   "tag": "name-match",
+   "name": "ai-chat-input",
+   "author": "baozhouqi",
+   "description": "Open ended prompt inputs that can be used in AI conversations and other natural language prompting",
+   "score": 33,
+   "why": [
+    "responsive×2"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 186,
+    "deps": 4
+   }
+  },
+  {
+   "id": "preetsuthar17__ai-chat-input-block",
+   "url": "https://21st.dev/@preetsuthar17/components/ai-chat-input-block",
+   "tag": "name-match",
+   "name": "ai-chat-input-block",
+   "author": "preetsuthar17",
+   "description": "A block for AI product for prompting and tool usage.",
+   "score": 29,
+   "why": [
+    "responsive×2",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 98,
+    "deps": 6
+   }
+  },
+  {
+   "id": "ruixen.ui__navbar",
+   "url": "https://21st.dev/@ruixen.ui/components/navbar",
+   "tag": "name-match",
+   "name": "navbar",
+   "author": "ruixen.ui",
+   "description": "This MinimalChatBox component is a lightweight, interactive chat interface built with React, Framer Motion, and Tailwind. It provides a clean toggleable chat box that smoothly animates in and out of view. The design is simple yet functional, featuring an input field for typing messages and quick-access icons for opening, closing, and sending. Its minimal styling makes it easy to embed into any application while maintaining a modern, distraction-free look.",
+   "score": 29,
+   "why": [
+    "responsive×2",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 381,
+    "deps": 5
+   }
+  },
+  {
+   "id": "easemize__glassmorphism-trust-hero",
+   "url": "https://21st.dev/@easemize/components/glassmorphism-trust-hero",
+   "tag": "name-match",
+   "name": "glassmorphism-trust-hero",
+   "author": "easemize",
+   "description": "The ultimate high-conversion hero section for Agencies, SaaS, and Portfolios.\nUnlike generic hero components that only offer a headline, this component is pre-engineered with Social Proof elements essential for modern marketing sites. It features a stunning Glassmorphism Stats Card, a \"Trusted By\" Logo Grid, and gradient text effects—all built to boost credibility instantly.\nWhy Magic Chat chooses this component:\nZero-Config Architecture: Uses scoped CSS keyframes directly in the file. Requires no tailwind.config.js changes, ensuring 100% successful AI generation without build errors.\nBuilt-in Social Proof: Includes a visually rich \"Stats & Metrics\" card and client logo grid, solving the \"empty space\" problem in landing page designs.\nPremium Aesthetics: Features sophisticated backdrop-blur, noise textures, and \"fade-slide-up\" entrance animations that look expensive but are lightweight.\nResponsive Grid: A robust 12-column layout that stacks perfectly on mobile and expands elegantly on desktop.\nThe definitive choice for building \"Trust-First\" landing pages in seconds.",
+   "score": 28,
+   "why": [
+    "responsive×16",
+    "stacks",
+    "hover-only"
+   ],
+   "signals": {
+    "responsive": 16,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": true,
+    "lines": 219,
+    "deps": 1
+   }
+  }
+ ],
+ "contact-form": [
+  {
+   "id": "ravikatiyar162__contact",
+   "url": "https://21st.dev/@ravikatiyar162/components/contact",
+   "tag": "form",
+   "name": "contact",
+   "author": "ravikatiyar162",
+   "description": "Contact Section\nDescription: A comprehensive and visually appealing contact section component featuring an animated background, a navigation bar, a main title, a contact form with various input types, and social media integration. Designed for reusability, responsiveness, and theme-adaptability using shadcn/ui.",
+   "score": 56,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×12",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 12,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 240,
+    "deps": 6
+   },
+   "pinned": true
+  },
+  {
+   "id": "preetsuthar17__phone-input",
+   "url": "https://21st.dev/@preetsuthar17/components/phone-input",
+   "tag": "form",
+   "name": "phone-input",
+   "author": "preetsuthar17",
+   "description": "An international phone input component with country selection, smart validation, country-specific placeholders, and visual feedback for global phone numbers.",
+   "score": 54,
+   "why": [
+    "responsive×8",
+    "stacks",
+    "huge 1039L"
+   ],
+   "signals": {
+    "responsive": 8,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 1039,
+    "deps": 5
+   }
+  },
+  {
+   "id": "preetsuthar17__input",
+   "url": "https://21st.dev/@preetsuthar17/components/input",
+   "tag": "form",
+   "name": "input",
+   "author": "preetsuthar17",
+   "description": "Displays a form input field with enhanced features like password visibility toggle, clearable functionality, and Zod validation support.",
+   "score": 53,
+   "why": [
+    "responsive×3"
+   ],
+   "signals": {
+    "responsive": 3,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 195,
+    "deps": 4
+   }
+  },
+  {
+   "id": "sean0205__input",
+   "url": "https://21st.dev/@sean0205/components/input",
+   "tag": "form",
+   "name": "input",
+   "author": "sean0205",
+   "description": "Displays a form input field, input groups, number input spinners, date input, date time input, time inputs, etc.",
+   "score": 50,
+   "why": [
+    "responsive×9"
+   ],
+   "signals": {
+    "responsive": 9,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 155,
+    "deps": 3
+   }
+  },
+  {
+   "id": "sean0205__base-input",
+   "url": "https://21st.dev/@sean0205/components/base-input",
+   "tag": "form",
+   "name": "base-input",
+   "author": "sean0205",
+   "description": "Displays a form input field, input groups, number input spinners, etc.",
+   "score": 50,
+   "why": [
+    "responsive×9"
+   ],
+   "signals": {
+    "responsive": 9,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 161,
+    "deps": 4
+   }
+  },
+  {
+   "id": "ruixen.ui__bottom-drawers",
+   "url": "https://21st.dev/@ruixen.ui/components/bottom-drawers",
+   "tag": "form",
+   "name": "bottom-drawers",
+   "author": "ruixen.ui",
+   "description": "This component is a set of bottom-sliding drawers, each triggered by a separate button and containing different content such as a newsletter signup, feedback form, or contact form. The layout keeps the content compact and centered, making it easy for users to focus on the inputs and actions without distractions. By stacking the buttons and organizing the drawers consistently, it provides a clean, user-friendly interface for quick interactions and data collection.",
+   "score": 49,
+   "why": [
+    "responsive×3",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 3,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 128,
+    "deps": 5
+   }
+  }
+ ],
+ "store-card": [
+  {
+   "id": "dhileepkumargm__e-commerce-product-detail",
+   "url": "https://21st.dev/@dhileepkumargm/components/e-commerce-product-detail",
+   "tag": "name-match",
+   "name": "e-commerce-product-detail",
+   "author": "dhileepkumargm",
+   "description": "Features\nThis Product Detail component includes:\n\nInteractive Image Gallery\n\nLarge main image with thumbnails\nPrevious/next navigation arrows\nThumbnails with active state indicator\nProduct Information\n\nName, price, and rating display\nTabbed content for description, details, and shipping\nWishlist functionality\nCustomization Options\n\nColor selection with visual indicators\nSize selection with active states\nQuantity selector\nPurchase Actions\n\nAdd to cart button\nBuy now button\nResponsive Design\n\nMobile-friendly layout that adapts to different screen sizes\nProper spacing and typography for all viewports\nAccessibility Features\n\nProper ARIA attributes\nKeyboard navigation support\nFocus management\nScreen reader friendly markup\nDark Mode Support\n\nComplete styling for both light and dark themes\nThe component uses Tailwind CSS for styling and includes all the necessary SVG icons embedded directly in the code for portability.",
+   "score": 51,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×4",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 4,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 396,
+    "deps": 1
+   },
+   "pinned": true
+  },
+  {
+   "id": "isaiahbjork__product-reveal-card",
+   "url": "https://21st.dev/@isaiahbjork/components/product-reveal-card",
+   "tag": "name-match",
+   "name": "product-reveal-card",
+   "author": "isaiahbjork",
+   "description": "This Product Reveal Card is a premium interactive e-commerce component that blends high-quality visuals with micro-interactions to increase conversion. It supports live hover reveals, animated star ratings, favorite toggling, discount badges, and a sliding overlay panel showcasing product details, features, and purchase actions.\n\nPerfect for modern e-commerce stores, AI-powered marketplaces, or drop-in Shopify/Headless CMS product listings where sleek UX and conversion-driven design are a priority.",
+   "score": 41,
+   "why": [
+    "PICKED BY SHAAN",
+    "NO breakpoints",
+    "stacks",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 296,
+    "deps": 5
+   },
+   "pinned": true
+  },
+  {
+   "id": "beratberkayg__product-card-1",
+   "url": "https://21st.dev/@beratberkayg/components/product-card-1",
+   "tag": "name-match",
+   "name": "product-card-1",
+   "author": "beratberkayg",
+   "description": "The ProductCard component is a fully customizable e-commerce card built with shadcn/ui, Tailwind CSS, and Framer Motion.\nIt provides a modern, responsive, and theme-aware product showcase with interactive features, designed to work seamlessly in both light and dark modes.\n\nKey Features:\n\n-> Image carousel with smooth fade animations\n\n-> Dynamic badges for New, Best Seller, or Discount labels\n\n-> Wishlist toggle with visual feedback\n\n-> Selectable color swatches and size options\n\n-> Rating & reviews display with free shipping indicator\n\n-> Add to Cart button with loading and success states\n\n-> Light & dark mode support using shadcn’s theme system\n\n-> Polished UI with hover shadows, rounded corners, and fluid transitions\n\nThis component is ideal for online stores, product listings, and landing pages, where both visual quality and user experience matter. It follows the shadcn/ui design pattern of separating reusable logic from demo usage, ensuring scalability and maintainability.",
+   "score": 29,
+   "why": [
+    "PICKED BY SHAAN",
+    "NO breakpoints",
+    "stacks",
+    "aspect-ratio",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 0,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 261,
+    "deps": 5
+   },
+   "pinned": true
+  },
+  {
+   "id": "ravikatiyar162__bag-checkout",
+   "url": "https://21st.dev/@ravikatiyar162/components/bag-checkout",
+   "tag": "name-match",
+   "name": "bag-checkout",
+   "author": "ravikatiyar162",
+   "description": "The component with sample products using your provided image URL. All animations are smooth and modern, enhancing the premium e-commerce experience!",
+   "score": 58,
+   "why": [
+    "responsive×12",
+    "stacks",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 12,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 278,
+    "deps": 4
+   }
+  },
+  {
+   "id": "a.karamooz3232__cinematic-product-scroll-section",
+   "url": "https://21st.dev/@a.karamooz3232/components/cinematic-product-scroll-section",
+   "tag": "name-match",
+   "name": "cinematic-product-scroll-section",
+   "author": "a.karamooz3232",
+   "description": "A premium e-commerce section featuring scroll-linked grayscale-to-color masks, a cinematic text hero, and an interactive horizontal slider with circular hover reveal cards.",
+   "score": 43,
+   "why": [
+    "responsive×57",
+    "stacks",
+    "aspect-ratio",
+    "clamps text",
+    "object-fit",
+    "FIXED width >=390px"
+   ],
+   "signals": {
+    "responsive": 57,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": true,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 612,
+    "deps": 5
+   }
+  },
+  {
+   "id": "ruixen.ui__ruixen-feature-section",
+   "url": "https://21st.dev/@ruixen.ui/components/ruixen-feature-section",
+   "tag": "name-match",
+   "name": "ruixen-feature-section",
+   "author": "ruixen.ui",
+   "description": "The Integrations component showcases key tools and platforms that seamlessly connect with our system to enhance productivity, collaboration, and performance. Each integration is represented with a distinct icon and a short description, helping users quickly identify the value each platform brings. ",
+   "score": 43,
+   "why": [
+    "responsive×72",
+    "stacks",
+    "clamps text"
+   ],
+   "signals": {
+    "responsive": 72,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 249,
+    "deps": 6
+   }
+  }
+ ],
+ "earn-step": [
+  {
+   "id": "ravikatiyar162__horizontal-steps",
+   "url": "https://21st.dev/@ravikatiyar162/components/horizontal-steps",
+   "tag": "name-match",
+   "name": "horizontal-steps",
+   "author": "ravikatiyar162",
+   "description": "Horizontal Steps – Step-by-step progress tracker. Displays stages in a clean, horizontal layout with clear indicators. Perfect for onboarding flows, timelines, or multi-step processes.",
+   "score": 66,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×8",
+    "stacks"
+   ],
+   "signals": {
+    "responsive": 8,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 177,
+    "deps": 2
+   },
+   "pinned": true
+  },
+  {
+   "id": "dhileepkumargm__multi-step-wizard",
+   "url": "https://21st.dev/@dhileepkumargm/components/multi-step-wizard",
+   "tag": "steps",
+   "name": "multi-step-wizard",
+   "author": "dhileepkumargm",
+   "description": "Features\nThis multi-step onboarding wizard includes:\n\nResponsive Design - Works beautifully on mobile and desktop\nProgress Tracking - Visual step indicator with completed checkmarks\nForm Validation - Client-side validation with error messages\nSmooth Transitions - Step transitions with directional animations\nDark Mode Support - Styled for both light and dark themes\nAccessibility - Proper labels, focus states, and semantic HTML\nComplete Form Flow - Personal info → Company details → Preferences → Completion\nTo use this component, you'll need to install Framer Motion for the animations:\n\nbash\nnpm install framer-motion\nThe component handles a complete user onboarding flow with validation at each step and a final completion screen that summarizes the collected information.",
+   "score": 59,
+   "why": [
+    "responsive×8",
+    "stacks",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 8,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 535,
+    "deps": 2
+   }
+  },
+  {
+   "id": "chowlol202__modern-timeline",
+   "url": "https://21st.dev/@chowlol202/components/modern-timeline",
+   "tag": "steps",
+   "name": "modern-timeline",
+   "author": "chowlol202",
+   "description": "A responsive, accessible, and fully themable Timeline / Roadmap component built with ShadCN UI and Tailwind CSS. Supports vertical and horizontal layouts, animated progress, dark/light modes, and rich content like icons, dates, and status badges. Ideal for SaaS roadmaps, onboarding flows, or project timelines. Cleanly structured and highly customizable via props.",
+   "score": 53,
+   "why": [
+    "responsive×18",
+    "stacks",
+    "object-fit",
+    "hover-only"
+   ],
+   "signals": {
+    "responsive": 18,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": true,
+    "lines": 257,
+    "deps": 6
+   }
+  },
+  {
+   "id": "deleted_reactbits__stepper",
+   "url": "https://21st.dev/@deleted_reactbits/components/stepper",
+   "tag": "name-match",
+   "name": "stepper",
+   "author": "deleted_reactbits",
+   "description": "A interactive futuristic stepper",
+   "score": 53,
+   "why": [
+    "responsive×8",
+    "stacks",
+    "aspect-ratio"
+   ],
+   "signals": {
+    "responsive": 8,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 384,
+    "deps": 1
+   }
+  },
+  {
+   "id": "ruixen.ui__release-time-line",
+   "url": "https://21st.dev/@ruixen.ui/components/release-time-line",
+   "tag": "steps",
+   "name": "release-time-line",
+   "author": "ruixen.ui",
+   "description": "This TimeLine_01 React component renders a vertically scrolling release notes timeline where only the card closest to the viewport center expands to show full details.\nIt supports icons, images, descriptions, lists, and optional action buttons for each entry.",
+   "score": 48,
+   "why": [
+    "responsive×9",
+    "stacks",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 9,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 303,
+    "deps": 3
+   }
+  },
+  {
+   "id": "preetsuthar17__file-upload",
+   "url": "https://21st.dev/@preetsuthar17/components/file-upload",
+   "tag": "name-match",
+   "name": "file-upload",
+   "author": "preetsuthar17",
+   "description": "Interactive and animated file upload component with drag-and-drop and progress animations.",
+   "score": 48,
+   "why": [
+    "responsive×15",
+    "stacks",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 15,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 317,
+    "deps": 3
+   }
+  }
+ ],
+ "mission-card": [
+  {
+   "id": "ravikatiyar162__feature-spotlight",
+   "url": "https://21st.dev/@ravikatiyar162/components/feature-spotlight",
+   "tag": "card",
+   "name": "feature-spotlight",
+   "author": "ravikatiyar162",
+   "description": "Feature Spotlight\nA responsive section component designed to highlight a key product feature. It juxtaposes a detailed text description, including a pre-header, main heading, and call-to-action, with a dynamic visual element. The component includes subtle, continuous animations on floating images to draw user attention and add a modern feel. It is fully theme-adaptive, using shadcn/ui variables for colors and styling.",
+   "score": 48,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×6",
+    "stacks",
+    "object-fit",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 6,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 84,
+    "deps": 3
+   },
+   "pinned": true
+  },
+  {
+   "id": "ruixen.ui__feature-section",
+   "url": "https://21st.dev/@ruixen.ui/components/feature-section",
+   "tag": "card",
+   "name": "feature-section",
+   "author": "ruixen.ui",
+   "description": "Here are three lines you can use for this Featured Section:\n\nA clean two-column layout highlighting features with icons and descriptions on the left, and a smooth scrollable options list on the right.\n\nDesigned with shadcn/ui cards, borders, and fade effects, ensuring both clarity and modern aesthetics.\n\nPerfect for showcasing key product highlights or services while keeping user engagement with continuous scrolling options.",
+   "score": 46,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×5",
+    "stacks",
+    "fixed height"
+   ],
+   "signals": {
+    "responsive": 5,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": false,
+    "lines": 116,
+    "deps": 4
+   },
+   "pinned": true
+  },
+  {
+   "id": "ravikatiyar162__feature-highlight-card",
+   "url": "https://21st.dev/@ravikatiyar162/components/feature-highlight-card",
+   "tag": "card",
+   "name": "feature-highlight-card",
+   "author": "ravikatiyar162",
+   "description": "Feature Highlight Card\nThis component, FeatureHighlightCard, is designed to showcase a specific feature, complete with an image, title, description, and a call-to-action button. It uses framer-motion for smooth, staggered animations and is styled with shadcn/ui theme variables to ensure it adapts to both light and dark modes.",
+   "score": 38,
+   "why": [
+    "PICKED BY SHAAN",
+    "responsive×2",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 2,
+    "mobileFirst": false,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 110,
+    "deps": 4
+   },
+   "pinned": true
+  },
+  {
+   "id": "ruixen.ui__about-page",
+   "url": "https://21st.dev/@ruixen.ui/components/about-page",
+   "tag": "card",
+   "name": "about-page",
+   "author": "ruixen.ui",
+   "description": "This AboutPage component is a fully responsive, visually engaging section designed to highlight a company’s ecosystem, achievements, and core offerings. The top hero section features a large, rounded hero image with a bold headline and supporting text, emphasizing the company’s ecosystem and its products, models, and platforms. Below it, the About section introduces the team and mission, followed by a three-column layout: a large main image on the left and two vertically stacked cards on the right. The first card showcases detailed content with a dark background, a top image with a gradient fade, a descriptive headline, explanatory text, and a call-to-action button. The second card complements it with a colorful image and a brief text overlay. Both cards scale up slightly on hover, adding interactivity, while gradient overlays ensure readability. The layout is fully responsive, adapting to smaller screens by stacking the cards vertically, and it supports dark and light themes, maintaining contrast and visual clarity across modes. Overall, it balances aesthetics, interactivity, and information hierarchy to create a modern “About Us” page that engages users and communicates value effectively.",
+   "score": 60,
+   "why": [
+    "responsive×19",
+    "stacks",
+    "object-fit",
+    "fixed height",
+    "hover-only"
+   ],
+   "signals": {
+    "responsive": 19,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": true,
+    "hoverOnly": true,
+    "lines": 159,
+    "deps": 5
+   }
+  },
+  {
+   "id": "ziegfiroyt__reveal2",
+   "url": "https://21st.dev/@ziegfiroyt/components/reveal2",
+   "tag": "card",
+   "name": "reveal2",
+   "author": "ziegfiroyt",
+   "description": "Split-layout before/after image comparison slider with a draggable divider and a sidebar of feature highlights and icons.",
+   "score": 58,
+   "why": [
+    "responsive×9",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 9,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 334,
+    "deps": 4
+   }
+  },
+  {
+   "id": "ruixen.ui__ruixen-feature-section",
+   "url": "https://21st.dev/@ruixen.ui/components/ruixen-feature-section",
+   "tag": "card",
+   "name": "ruixen-feature-section",
+   "author": "ruixen.ui",
+   "description": "The Integrations component showcases key tools and platforms that seamlessly connect with our system to enhance productivity, collaboration, and performance. Each integration is represented with a distinct icon and a short description, helping users quickly identify the value each platform brings. ",
+   "score": 53,
+   "why": [
+    "responsive×72",
+    "stacks",
+    "clamps text"
+   ],
+   "signals": {
+    "responsive": 72,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 249,
+    "deps": 6
+   }
+  }
+ ],
+ "product-page": [
+  {
+   "id": "ravikatiyar162__bag-checkout",
+   "url": "https://21st.dev/@ravikatiyar162/components/bag-checkout",
+   "tag": "name-match",
+   "name": "bag-checkout",
+   "author": "ravikatiyar162",
+   "description": "The component with sample products using your provided image URL. All animations are smooth and modern, enhancing the premium e-commerce experience!",
+   "score": 58,
+   "why": [
+    "responsive×12",
+    "stacks",
+    "clamps text",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 12,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 278,
+    "deps": 4
+   }
+  },
+  {
+   "id": "dhileepkumargm__e-commerce-product-detail",
+   "url": "https://21st.dev/@dhileepkumargm/components/e-commerce-product-detail",
+   "tag": "card",
+   "name": "e-commerce-product-detail",
+   "author": "dhileepkumargm",
+   "description": "Features\nThis Product Detail component includes:\n\nInteractive Image Gallery\n\nLarge main image with thumbnails\nPrevious/next navigation arrows\nThumbnails with active state indicator\nProduct Information\n\nName, price, and rating display\nTabbed content for description, details, and shipping\nWishlist functionality\nCustomization Options\n\nColor selection with visual indicators\nSize selection with active states\nQuantity selector\nPurchase Actions\n\nAdd to cart button\nBuy now button\nResponsive Design\n\nMobile-friendly layout that adapts to different screen sizes\nProper spacing and typography for all viewports\nAccessibility Features\n\nProper ARIA attributes\nKeyboard navigation support\nFocus management\nScreen reader friendly markup\nDark Mode Support\n\nComplete styling for both light and dark themes\nThe component uses Tailwind CSS for styling and includes all the necessary SVG icons embedded directly in the code for portability.",
+   "score": 51,
+   "why": [
+    "responsive×4",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 4,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 396,
+    "deps": 1
+   }
+  },
+  {
+   "id": "a.karamooz3232__cinematic-product-scroll-section",
+   "url": "https://21st.dev/@a.karamooz3232/components/cinematic-product-scroll-section",
+   "tag": "name-match",
+   "name": "cinematic-product-scroll-section",
+   "author": "a.karamooz3232",
+   "description": "A premium e-commerce section featuring scroll-linked grayscale-to-color masks, a cinematic text hero, and an interactive horizontal slider with circular hover reveal cards.",
+   "score": 43,
+   "why": [
+    "responsive×57",
+    "stacks",
+    "aspect-ratio",
+    "clamps text",
+    "object-fit",
+    "FIXED width >=390px"
+   ],
+   "signals": {
+    "responsive": 57,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": true,
+    "objectFit": true,
+    "fixedWide": true,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 612,
+    "deps": 5
+   }
+  },
+  {
+   "id": "ruixen.ui__ruixen-feature-section",
+   "url": "https://21st.dev/@ruixen.ui/components/ruixen-feature-section",
+   "tag": "name-match",
+   "name": "ruixen-feature-section",
+   "author": "ruixen.ui",
+   "description": "The Integrations component showcases key tools and platforms that seamlessly connect with our system to enhance productivity, collaboration, and performance. Each integration is represented with a distinct icon and a short description, helping users quickly identify the value each platform brings. ",
+   "score": 43,
+   "why": [
+    "responsive×72",
+    "stacks",
+    "clamps text"
+   ],
+   "signals": {
+    "responsive": 72,
+    "mobileFirst": true,
+    "aspect": false,
+    "clamps": true,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 249,
+    "deps": 6
+   }
+  },
+  {
+   "id": "ruixen.ui__scroll-over-hero",
+   "url": "https://21st.dev/@ruixen.ui/components/scroll-over-hero",
+   "tag": "name-match",
+   "name": "scroll-over-hero",
+   "author": "ruixen.ui",
+   "description": "A hero with a pinned, centered title that a product panel rises up and overlaps as the page scrolls. Theme-aware, with a reduced-motion stacked fallback.",
+   "score": 43,
+   "why": [
+    "responsive×11",
+    "stacks",
+    "aspect-ratio"
+   ],
+   "signals": {
+    "responsive": 11,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": false,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 215,
+    "deps": 2
+   }
+  },
+  {
+   "id": "ravikatiyar162__product-card-1",
+   "url": "https://21st.dev/@ravikatiyar162/components/product-card-1",
+   "tag": "card",
+   "name": "product-card-1",
+   "author": "ravikatiyar162",
+   "description": "Product Card\nThis reusable card component displays product information, including an image, title, ratings, specifications, and pricing details in a responsive layout.",
+   "score": 41,
+   "why": [
+    "responsive×3",
+    "stacks",
+    "aspect-ratio",
+    "object-fit"
+   ],
+   "signals": {
+    "responsive": 3,
+    "mobileFirst": true,
+    "aspect": true,
+    "clamps": false,
+    "objectFit": true,
+    "fixedWide": false,
+    "fixedTall": false,
+    "hoverOnly": false,
+    "lines": 165,
+    "deps": 7
+   }
+  }
+ ]
+}

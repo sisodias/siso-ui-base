@@ -1,127 +1,138 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BykonzYard — comp review</title>
+<title>BykonzYard — comp picker</title>
 <style>
-:root{--bg:#0b0412;--panel:#150826;--line:#33204a;--gold:#d4a45c;--gold2:#f0c884;--ink:#ece4f5;--dim:#9e91af;--good:#3fb27f;--bad:#c9566a}
+:root{--bg:#0b0412;--panel:#150826;--line:#33204a;--gold:#d4a45c;--gold2:#f0c884;--ink:#ece4f5;--dim:#9e91af;--good:#3fb27f}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
-header{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px;background:#0b0412ee;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+header{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px;background:#0b0412f2;border-bottom:1px solid var(--line)}
 h1{margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
-.sp{flex:1}
-select,button,input{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:7px 10px;font:12px ui-monospace,monospace}
-button{cursor:pointer}
+select,button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:7px 10px;font:12px ui-monospace,monospace;cursor:pointer}
 button:hover{border-color:var(--gold)}
-button.on{background:var(--gold);color:#1a0a2e;border-color:var(--gold);font-weight:700}
-.wrap{display:grid;grid-template-columns:minmax(300px,390px) 1fr;gap:14px;padding:14px;align-items:start}
-@media(max-width:900px){.wrap{grid-template-columns:1fr}}
-.live{position:sticky;top:58px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px}
-.live h2{margin:0 0 8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-.live img{width:100%;border-radius:6px;display:block;border:1px solid var(--line)}
-.shotbox{max-height:74vh;overflow:auto;border-radius:6px}
-.meta{margin-top:8px;font-size:11px;color:var(--dim);word-break:break-all;line-height:1.7}
+button.on{background:var(--gold);color:#1a0a2e;font-weight:700}
+.sp{flex:1}.count{font-size:11px;color:var(--dim)}
+.wrap{display:grid;grid-template-columns:minmax(300px,400px) 1fr;gap:14px;padding:14px;align-items:start}
+@media(max-width:940px){.wrap{grid-template-columns:1fr}}
+.live{position:sticky;top:56px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.live h2{margin:0 0 6px;font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em}
+.quote{margin:8px 0;padding:9px 11px;border-left:2px solid var(--gold);background:#1f0f33;color:#e4d8f0;font-size:12px;font-style:italic;line-height:1.5}
+.measured{margin:8px 0;padding:9px 11px;border-left:2px solid #c9566a;background:#24101c;color:#f0c8d0;font-size:11px;line-height:1.55}
+.accept{margin:8px 0;padding:9px 11px;border-left:2px solid var(--good);background:#0f2419;color:#b8e8cf;font-size:11px;line-height:1.55}
+.live img{width:100%;border-radius:6px;border:1px solid var(--line);display:block}
+.shotbox{max-height:52vh;overflow:auto;border-radius:6px;margin-top:8px}
+.meta{margin-top:8px;font-size:10.5px;color:var(--dim);word-break:break-all;line-height:1.7}
 .meta code{color:var(--gold2)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
 .card.v-yes{border-color:var(--good);box-shadow:0 0 0 1px var(--good)}
-.card.v-no{opacity:.35}
-.card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#000;display:block;cursor:zoom-in}
-.card .b{padding:9px 10px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card.v-no{opacity:.3}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#000;cursor:zoom-in;display:block}
+.b{padding:9px 10px;display:flex;flex-direction:column;gap:6px;flex:1}
 .nm{font-size:12px;color:var(--gold2);font-weight:700;text-transform:capitalize}
 .au{font-size:10px;color:var(--dim)}
-.ds{font-size:10.5px;color:#c6b9d6;line-height:1.5;max-height:46px;overflow:hidden}
+.ds{font-size:10.5px;color:#c6b9d6;max-height:44px;overflow:hidden;line-height:1.5}
 .row{display:flex;gap:5px;margin-top:auto;flex-wrap:wrap}
-.row button{flex:1;min-width:52px;padding:5px;font-size:10px}
+.row button,.row a{flex:1;min-width:48px}
+.row button{padding:5px;font-size:10px}
+.row a{text-decoration:none}
+.row a button{width:100%}
 .tag{font-size:9px;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:1px 7px;align-self:flex-start}
-.note{width:100%;font-size:10px;padding:5px;min-height:0;display:none}
-.card.v-yes .note{display:block}
+.src{color:var(--good)}
 #lb{position:fixed;inset:0;z-index:99;background:#000d;display:none;place-items:center;padding:20px}
-#lb.on{display:grid}
-#lb img{max-width:96vw;max-height:92vh;object-fit:contain}
-.count{font-size:11px;color:var(--dim)}
+#lb.on{display:grid}#lb img{max-width:96vw;max-height:92vh;object-fit:contain}
 </style></head><body>
 <header>
-  <h1>BykonzYard · comp review</h1>
+  <h1>BykonzYard · comp picker</h1>
   <select id="surface"></select>
   <button id="prev">←</button><button id="next">→</button>
   <span class="count" id="count"></span>
   <span class="sp"></span>
-  <label class="count"><input type="checkbox" id="onlyYes" style="vertical-align:-1px"> picked only</label>
-  <button id="export">export picks</button>
+  <label class="count"><input type="checkbox" id="showAll"> show all (else top 6)</label>
+  <button id="export">export work order</button>
 </header>
 <div class="wrap">
   <div class="live">
-    <h2 id="lt">live</h2>
-    <div class="shotbox"><img id="shot" alt="live mobile screenshot"></div>
-    <div class="meta" id="lm"></div>
+    <h2 id="lt"></h2>
+    <div class="quote" id="lq"></div>
+    <div class="measured" id="lm"></div>
+    <div class="accept" id="la"></div>
+    <div class="shotbox"><img id="shot" alt=""></div>
+    <div class="meta" id="lf"></div>
   </div>
   <div><div class="grid" id="grid"></div></div>
 </div>
 <div id="lb"><img id="lbi"></div>
 <script>
 const $=s=>document.querySelector(s)
-let S=[],cur=0,votes={},cands=[]
+let S=[],cur=0,picks={},cands=[]
 const key=(s,c)=>s+'|'+c
 async function boot(){
-  S=(await (await fetch('/api/surfaces')).json()).surfaces
-  votes=await (await fetch('/api/votes')).json()
-  $('#surface').innerHTML=S.map((s,i)=>`<option value="${i}">${s.page} · ${s.label}</option>`).join('')
+  try{
+    const spec=await (await fetch('/api/spec')).json()
+    S=spec.surfaces
+    picks=await (await fetch('/api/picks')).json()
+  }catch(e){
+    document.querySelector('.wrap').innerHTML='<div class="measured">Could not load the spec: '+e+'</div>'
+    return
+  }
+  $('#surface').innerHTML=S.map((s,i)=>`<option value="${i}">P${s.priority} · ${s.label}</option>`).join('')
   $('#surface').onchange=e=>{cur=+e.target.value;render()}
   $('#prev').onclick=()=>{cur=(cur-1+S.length)%S.length;$('#surface').value=cur;render()}
   $('#next').onclick=()=>{cur=(cur+1)%S.length;$('#surface').value=cur;render()}
-  $('#onlyYes').onchange=render
-  $('#export').onclick=exportPicks
+  $('#showAll').onchange=render
+  $('#export').onclick=exportOrder
   $('#lb').onclick=()=>$('#lb').classList.remove('on')
   render()
 }
 async function render(){
   const s=S[cur]
-  $('#lt').textContent=s.page+' · '+s.label
-  $('#shot').src='/shot/full-'+(s.page==='all'?'home':s.page)+'.png'
-  $('#lm').innerHTML=`<code>${s.file}</code><br><code>${s.css}</code><br>tags: ${s.tags.join(', ')}`
+  $('#lt').textContent=`P${s.priority} · ${s.label} · ${s.pages.join(', ')}`
+  $('#lq').textContent='"'+s.quote+'"'
+  $('#lm').innerHTML='<b>MEASURED:</b> '+s.measured
+  $('#la').innerHTML='<b>ACCEPT:</b> '+s.accept
+  $('#shot').src='/shot/full-'+(s.pages[0]==='all'?'home':s.pages[0])+'.png'
+  $('#lf').innerHTML=`<code>${s.file}</code><br><code>${s.css}</code><br>tags: ${s.tags.join(', ')}`
   $('#grid').innerHTML='<div class="count">loading…</div>'
-  cands=await (await fetch('/api/candidates?surface='+s.id)).json()
-  $('#count').textContent=cands.length+' candidates'
+  cands=await (await fetch('/api/candidates?surface='+s.id+($('#showAll').checked?'&all=1':''))).json()
   draw()
 }
 function draw(){
-  const s=S[cur],only=$('#onlyYes').checked
-  const list=only?cands.filter(c=>(votes[key(s.id,c.id)]||{}).v==='yes'):cands
-  $('#grid').innerHTML=list.map(c=>{
-    const v=(votes[key(s.id,c.id)]||{})
-    return `<div class="card ${v.v?'v-'+v.v:''}" data-id="${c.id}">
+  const s=S[cur]
+  const list=cands
+  $('#count').textContent=list.length+($('#showAll').checked?' candidates (all)':' shortlisted');
+  $('#grid').innerHTML=list.slice(0,120).map(c=>{
+    const v=(picks[key(s.id,c.id)]||{})
+    return `<div class="card ${v.v?'v-'+v.v:''}">
       <img loading="lazy" src="/harvest/${c.id}/preview.webp" onclick="zoom('/harvest/${c.id}/preview.webp')">
-      <div class="b">
-        <span class="tag">${c.tag}</span>
-        <div class="nm">${c.name}</div>
-        <div class="au">@${c.author}${c.hasSource?' · src':''}${c.hasBundle?' · demo':''}</div>
-        <div class="ds">${(c.description||'').slice(0,150)}</div>
-        <input class="note" placeholder="why / what to change" value="${(v.note||'').replace(/"/g,'&quot;')}" onchange="note('${c.id}',this.value)">
-        <div class="row">
-          <button class="${v.v==='yes'?'on':''}" onclick="vote('${c.id}','yes')">use</button>
-          <button class="${v.v==='maybe'?'on':''}" onclick="vote('${c.id}','maybe')">maybe</button>
-          <button class="${v.v==='no'?'on':''}" onclick="vote('${c.id}','no')">no</button>
-          <a href="${c.url}" target="_blank"><button>21st</button></a>
-          ${c.hasBundle?`<a href="/harvest/${c.id}/bundle.html" target="_blank"><button>demo</button></a>`:''}
-          ${c.hasSource?`<a href="/source/${c.id}/code.tsx" target="_blank"><button>code</button></a>`:''}
-        </div>
-      </div></div>`
-  }).join('')||'<div class="count">nothing here</div>'
+      <div class="b"><span class="tag">${c.tag}</span>
+      <div class="nm">${c.name}</div>
+      <div class="au">@${c.author}${c.hasSource?' · <span class="src">src</span>':''}${c.score!=null?' · score '+c.score:''}</div>
+      <div class="ds">${(c.description||'').slice(0,140)}</div>
+      <div class="row">
+        <button class="${v.v==='yes'?'on':''}" onclick="vote('${c.id}','yes')">use</button>
+        <button class="${v.v==='no'?'on':''}" onclick="vote('${c.id}','no')">no</button>
+        ${c.hasBundle?`<a href="/harvest/${c.id}/bundle.html" target="_blank"><button>demo</button></a>`:''}
+        ${c.hasSource?`<a href="/source/${c.id}/code.tsx" target="_blank"><button>code</button></a>`:''}
+      </div></div></div>`
+  }).join('')||'<div class="count">none</div>'
 }
 function zoom(u){$('#lbi').src=u;$('#lb').classList.add('on')}
 async function vote(id,v){
   const s=S[cur],k=key(s.id,id)
-  votes[k]={...(votes[k]||{}),v,at:new Date().toISOString(),surface:s.id,file:s.file}
-  await save();draw()
+  picks[k]={v,at:new Date().toISOString(),surface:s.id,file:s.file,css:s.css,accept:s.accept}
+  await fetch('/api/picks',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(picks)})
+  draw()
 }
-async function note(id,n){const k=key(S[cur].id,id);votes[k]={...(votes[k]||{}),note:n};await save()}
-const save=()=>fetch('/api/votes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(votes)})
-function exportPicks(){
-  const lines=Object.entries(votes).filter(([,v])=>v.v&&v.v!=='no').map(([k,v])=>{
-    const [sid,cid]=k.split('|');const s=S.find(x=>x.id===sid)||{}
-    return `${v.v.toUpperCase()}  ${sid}  ${cid}\n    file: ${s.file}\n    css:  ${s.css}\n    note: ${v.note||'-'}\n    src:  registry/21st-source-harvest/source/${cid}/code.tsx`
-  })
-  const blob=new Blob([lines.join('\n\n')||'no picks yet'],{type:'text/plain'})
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bykonz-picks.txt';a.click()
+function exportOrder(){
+  const chosen=Object.entries(picks).filter(([,v])=>v.v==='yes')
+  const out=S.map(s=>{
+    const mine=chosen.filter(([k])=>k.startsWith(s.id+'|')).map(([k])=>k.split('|')[1])
+    return {priority:s.priority,surface:s.id,label:s.label,file:s.file,css:s.css,
+      quote:s.quote,measured:s.measured,accept:s.accept,
+      picked:mine,source:mine.map(i=>`registry/21st-source-harvest/source/${i}/code.tsx`)}
+  }).filter(x=>x.picked.length)
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'})
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bykonz-work-order.json';a.click()
 }
 boot()
 </script></body></html>

@@ -13,6 +13,7 @@ const HARVEST = join(ROOT, 'registry', '21st', 'harvest')
 const SOURCE = join(ROOT, 'registry', '21st-source-harvest', 'source')
 const SHOTS = process.env.SHOTS || '/tmp/byk-mobile'
 const PICKS = join(HERE, 'picks.json')
+const SHORTLIST = join(HERE, 'shortlist.json')
 const PORT = Number(process.env.PORT || 8813)
 const MIME = { '.html':'text/html; charset=utf-8', '.json':'application/json', '.webp':'image/webp', '.png':'image/png', '.jpg':'image/jpeg', '.tsx':'text/plain; charset=utf-8' }
 const spec = JSON.parse(await readFile(join(HERE, 'surfaces.json'), 'utf8'))
@@ -46,7 +47,17 @@ createServer(async (req, res) => {
     if (p === '/api/spec') return send(res, 200, JSON.stringify(spec))
     if (p === '/api/candidates') {
       const s = spec.surfaces.find(x => x.id === u.searchParams.get('surface'))
-      return send(res, s ? 200 : 404, JSON.stringify(s ? candidates(s) : []))
+      if (!s) return send(res, 404, '[]')
+      // Default: the ranked shortlist (6). 7,984 comps is not a choice a human
+      // can make. ?all=1 opens the full tagged pool if the 6 all miss.
+      if (u.searchParams.get('all') !== '1' && existsSync(SHORTLIST)) {
+        const sl = JSON.parse(await readFile(SHORTLIST, 'utf8'))
+        if (sl[s.id]?.length) return send(res, 200, JSON.stringify(sl[s.id].map(c => ({
+          ...c, hasSource: existsSync(join(SOURCE, c.id, 'code.tsx')),
+          hasBundle: existsSync(join(HARVEST, c.id, 'bundle.html')),
+        }))))
+      }
+      return send(res, 200, JSON.stringify(candidates(s)))
     }
     if (p === '/api/picks') {
       if (req.method === 'POST') { let b=''; for await (const c of req) b+=c; JSON.parse(b); await writeFile(PICKS, b); return send(res,200,'{"ok":true}') }
